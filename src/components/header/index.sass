@@ -1,0 +1,76 @@
+header
+  position: relative
+  background-color: #171321
+  padding: 1.3rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+  box-shadow: none
+  overflow: hidden
+
+  span.logo
+    font-weight: 700
+    font-size: 1.4rem
+
+  .hamburgerIcon
+    width: 2.2rem
+    height: 1.5rem
+    position: relative
+    cursor: pointer
+
+    .line
+      background-color: white
+      position: absolute
+      height: .16rem
+      border-radius: .2rem
+      transition: .35s
+
+    .line1
+      top: 0
+      width: 85%
+
+    .line2
+      top: calc(50% - .08rem)
+      width: 60%
+
+    .line3
+      top: calc(100% - .16rem)
+      width: 100%
+
+  .hamburgerIcon:hover
+    .line
+      width: 100%
+
+  .socialMedias
+    position: absolute
+    display: flex
+    align-items: center
+    gap: 1.8rem
+    font-size: .8rem
+    transition: .35s
+    right: -100%
+
+    a
+      color: white
+      text-decoration: none
+      text-transform: uppercase
+      letter-spacing: .5rem
+
+header.open
+  .hamburgerIcon
+    .line1,
+    .line3
+      top: 40%
+      width: 100%
+
+    .line1
+      transform: rotate(45deg)
+
+    .line2
+      opacity: 0
+
+    .line3
+      transform: rotate(-45deg)
+
+  .socialMedias
+    right: 8%
