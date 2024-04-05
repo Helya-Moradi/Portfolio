@@ -1,5 +1,8 @@
 header
-  position: relative
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
   background-color: #171321
   padding: 1.3rem
   display: flex
@@ -10,10 +13,12 @@ header
 
   span.logo
     font-weight: 700
-    font-size: 1.4rem
+    font-size: 1.1rem
+    text-transform: uppercase
+    letter-spacing: .4rem
 
   .hamburgerIcon
-    width: 2.2rem
+    width: 2rem
     height: 1.5rem
     position: relative
     cursor: pointer
@@ -21,8 +26,7 @@ header
     .line
       background-color: white
       position: absolute
-      height: .16rem
-      border-radius: .2rem
+      height: .2rem
       transition: .35s
 
     .line1
@@ -30,11 +34,11 @@ header
       width: 85%
 
     .line2
-      top: calc(50% - .08rem)
+      top: calc(50% - .1rem)
       width: 60%
 
     .line3
-      top: calc(100% - .16rem)
+      top: calc(100% - .2rem)
       width: 100%
 
   .hamburgerIcon:hover
@@ -54,7 +58,7 @@ header
       color: white
       text-decoration: none
       text-transform: uppercase
-      letter-spacing: .5rem
+      letter-spacing: .4rem
 
 header.open
   .hamburgerIcon
