@@ -7,6 +7,7 @@
     "target": "es5",
     "jsx": "react-jsx",
     "allowJs": true,
-    "moduleResolution": "Node"
+    "moduleResolution": "node",
+    "esModuleInterop": true
   }
 }
