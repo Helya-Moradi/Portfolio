@@ -1,13 +1,13 @@
-import Header from "./components/header";
+import Header from "./sections/header";
 import {useState} from "react";
-import MainContent from "./components/main_content";
+import MainContent from "./sections/main_content";
+import Sidebar from "./sections/header/sidebar";
 
 function App() {
-    const [openMenu, setOpenMenu] = useState(false);
 
     return (
         <div>
-            <Header open={openMenu} setOpen={setOpenMenu}/>
+            <Header/>
             <MainContent/>
         </div>
     );

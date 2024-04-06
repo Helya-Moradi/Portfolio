@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './index.sass'
-import Home from "./components/home";
+import Home from "./sections/home";
 
 function MainContent() {
     return (

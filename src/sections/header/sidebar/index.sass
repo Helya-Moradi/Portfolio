@@ -1,0 +1,45 @@
+.sidebar
+  position: fixed
+  top: 4rem
+  right: -40%
+  padding: 3rem 5rem
+  z-index: 1
+  height: 100vh
+  background-color: #171321
+  transition: .45s
+
+  .list
+    display: flex
+    list-style: none
+    flex-direction: column
+    margin-right: 2rem
+    gap: 2rem
+
+    li
+      a
+        text-decoration: none
+        color: white
+        font-weight: 500
+        transition: .3s
+
+      a:hover
+        color: #f393a4
+
+.sidebar.open
+  right: 0
+
+@media screen and (min-width: 1300px)
+  .sidebar
+    right: 50%
+    left: 50%
+    transform: translate(-50%,0)
+    top: -10%
+    height: auto
+    padding: 2rem
+
+    .list
+      flex-direction: row
+      justify-content: center
+
+  .sidebar.open
+    top: 0

@@ -3,7 +3,7 @@ import style from './index.sass'
 import zigzagImg from '../../../../assets/images/zigzag.png'
 
 function Home() {
-    return (<div className={style.home}>
+    return (<div className={style.home} id='home'>
         {/*TODO: add image*/}
 
         <div className={style.imageContainer}>
