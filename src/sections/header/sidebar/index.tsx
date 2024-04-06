@@ -1,8 +1,11 @@
-import React from 'react';
 import style from './index.sass'
 import cls from "../../../utils/class_names";
 
-function Sidebar({open}) {
+interface SidebarProps {
+    open: Boolean;
+}
+
+function Sidebar({open}: SidebarProps) {
     return (
         <div className={cls(style.sidebar, open && style.open)}>
             <ul className={style.list}>

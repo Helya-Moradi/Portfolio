@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import style from './index.sass'
 import cls from "../../utils/class_names";
 import Sidebar from "./sidebar";
