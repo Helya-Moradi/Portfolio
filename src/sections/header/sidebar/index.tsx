@@ -1,5 +1,5 @@
 import style from './index.sass'
-import cls from "../../../utils/class_names";
+import cls from "src/utils/class_names";
 
 interface SidebarProps {
     open: Boolean;

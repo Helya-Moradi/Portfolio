@@ -1,5 +1,4 @@
 import {createRoot} from "react-dom/client";
-import './theme/colors.sass';
 import App from "./App";
 import './index.sass';
 

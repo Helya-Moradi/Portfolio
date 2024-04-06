@@ -6,6 +6,14 @@ module.exports = function (api) {
             ['@babel/preset-env'],
             ['@babel/preset-react', {runtime: 'automatic'}],
             ['@babel/preset-typescript',]
-        ]
+        ],
+        plugins: [
+            ['module-resolver', {
+                root: ['./src'],
+                alias: {
+                    src: './src',
+                },
+            }]
+        ],
     };
 };
