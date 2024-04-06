@@ -5,14 +5,15 @@ import cls from "../../utils/class_names";
 function Header({open, setOpen}) {
     return (
         <header
-            className={cls(open && style.open)}
-            onClick={() => {
-                setOpen(prev => !prev)
-            }}>
+            className={cls(open && style.open)}>
 
             <span className={style.logo}>Helya Moradi</span>
 
-            <div className={style.hamburgerIcon}>
+            <div
+                className={style.hamburgerIcon}
+                onClick={() => {
+                    setOpen(prev => !prev)
+                }}>
                 <span className={cls(style.line, style.line1)}/>
                 <span className={cls(style.line, style.line2)}/>
                 <span className={cls(style.line, style.line3)}/>

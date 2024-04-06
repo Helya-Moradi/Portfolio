@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../index.sass'
+import style from './index.sass'
 import zigzagImg from '../../../../assets/images/zigzag.png'
 
 function Home() {
