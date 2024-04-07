@@ -1,5 +1,5 @@
 import style from './index.sass'
-import zigzagImg from 'src/assets/images/zigzag.png'
+import zigzagImg from 'src/assets/images/shapes/zigzag.png'
 import flowerImg from 'src/assets/images/flower.jpg'
 
 function Home() {
