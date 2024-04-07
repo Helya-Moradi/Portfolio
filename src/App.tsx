@@ -1,5 +1,6 @@
 import Header from "./sections/header";
 import MainContent from "./sections/main_content";
+import Footer from "src/sections/footer";
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
         <div>
             <Header/>
             <MainContent/>
+            <Footer/>
         </div>
     );
 }
