@@ -1,12 +1,13 @@
 import style from './index.sass'
 import zigzagImg from 'src/assets/images/zigzag.png'
+import flowerImg from 'src/assets/images/flower.jpg'
 
 function Home() {
     return (<div className={style.home} id='home'>
-        {/*TODO: add image*/}
+        {/*TODO: change image*/}
 
         <div className={style.imageContainer}>
-            {/*<img src="" alt=""/>*/}
+            <img src={flowerImg} alt="image"/>
         </div>
 
         <div className={style.introduce}>
