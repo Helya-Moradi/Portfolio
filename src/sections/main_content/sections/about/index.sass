@@ -1,0 +1,58 @@
+@import 'src/theme/colors'
+
+.about
+  padding: 6rem 8rem
+  color: $purple6
+
+  >*:not(:last-child)
+    margin-bottom: 3rem
+
+  h3,p
+    line-height: 2rem
+
+  h3
+    font-size: 1.3rem
+    font-weight: 600
+
+  p
+    font-size: 1rem
+
+  .aboutContainer
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .list
+      list-style: none
+
+      &> *:not(:last-child)
+        margin-bottom: .8rem
+
+      li
+        .label
+          font-weight: 600
+          text-transform: uppercase
+          font-size: 1rem
+
+        .value
+          margin-inline-start: .4rem
+          font-weight: 400
+          font-size: 1rem
+
+    .downloadCvContainer
+      a
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 1rem
+        color: inherit
+        text-decoration: none
+
+        img
+          width: 12rem
+          height: 12rem
+
+        .downloadCv
+          font-size: .8rem
+          font-weight: 500
+          text-transform: uppercase

@@ -4,18 +4,19 @@ import cls from "src/utils/class_names";
 
 interface TemplateProps {
     color: 'pink' | 'darkPurple' | 'lightPurple';
+    direction: 'ltr' | 'rtl';
     title: String;
     children?: any;
 }
 
-function Template({color, title, children}: TemplateProps) {
+function Template({color, direction, title, children}: TemplateProps) {
     return (
-        <div className={cls(style.template, style[color])}>
+        <div className={cls(style.template, style[color], style[direction])}>
 
             <div className={style.titleContainer}>
-                <span className={style.title}>
+                <h2 className={style.title}>
                     {title}
-                </span>
+                </h2>
             </div>
 
             <div className={style.childrenContainer}>
