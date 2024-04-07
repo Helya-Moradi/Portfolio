@@ -6,6 +6,10 @@ import Skills from "src/sections/main_content/sections/skills";
 import Education from "src/sections/main_content/sections/Education";
 import Experience from "src/sections/main_content/sections/Experience";
 import Contact from "src/sections/main_content/sections/contact";
+import Widget from "src/sections/main_content/components/widget";
+import secureImg from 'src/assets/images/icon_secure.png';
+import preciseImg from 'src/assets/images/icon_preciese.png';
+import responsiveImg from 'src/assets/images/icon_responsive.png';
 
 function MainContent() {
     return (
@@ -15,7 +19,11 @@ function MainContent() {
             <Portfolio/>
             <Skills/>
 
-            {/*TODO: three flex section here*/}
+            <div className={style.widgets}>
+                <Widget image={preciseImg} color='lightPurple' text='pixel precise'/>
+                <Widget image={secureImg} color='pink' text='secure'/>
+                <Widget image={responsiveImg} color='darkPurple' text='responsive'/>
+            </div>
 
             <Education/>
             <Experience/>
