@@ -1,3 +1,5 @@
+@import "src/theme/colors"
+
 .sidebar
   position: fixed
   top: 4rem
@@ -5,7 +7,7 @@
   padding: 3rem 5rem
   z-index: 1
   height: 100vh
-  background-color: #171321
+  background-color: $purple1
   transition: .35s
 
   .list
@@ -18,12 +20,12 @@
     li
       a
         text-decoration: none
-        color: white
+        color: $white
         font-weight: 500
         transition: .3s
 
       a:hover
-        color: #f393a4
+        color: $pink
 
 .sidebar.open
   right: 0

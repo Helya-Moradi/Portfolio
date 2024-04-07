@@ -1,9 +1,11 @@
+@import "src/theme/colors"
+
 header
   position: fixed
   top: 0
   right: 0
   left: 0
-  background-color: #171321
+  background-color: $purple1
   padding: 1.3rem
   display: flex
   justify-content: space-between
@@ -25,7 +27,7 @@ header
     cursor: pointer
 
     .line
-      background-color: white
+      background-color: $white
       position: absolute
       height: .2rem
       transition: .35s
@@ -56,7 +58,7 @@ header
     right: -40%
 
     a
-      color: white
+      color: $white
       text-decoration: none
       text-transform: uppercase
       letter-spacing: .4rem
