@@ -1,5 +1,4 @@
-import React from 'react';
-import Template from "src/components/template";
+import Template from "src/sections/main_content/components/template";
 import style from './index.sass'
 import downloadImg from 'src/assets/images/icon_download_cv.png'
 
@@ -44,7 +43,7 @@ function About() {
 
                     <div className={style.downloadCvContainer}>
                         <a href="">
-                            <img src={downloadImg} alt=""/>
+                            <img src={downloadImg} alt="download cv image"/>
                             <span className={style.downloadCv}>Download cv</span></a>
                     </div>
 

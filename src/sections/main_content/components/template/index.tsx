@@ -1,4 +1,3 @@
-import React from 'react';
 import style from './index.sass'
 import cls from "src/utils/class_names";
 
