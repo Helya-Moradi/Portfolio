@@ -4,7 +4,7 @@ import style from "./index.sass"
 function Contact() {
     return (
         // TODO: add children
-        <Template title='Contact' color='darkPurple' direction='ltr'>
+        <Template title='Contact' color='lightPurple' direction='ltr'>
 
         </Template>
     );

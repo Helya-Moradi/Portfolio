@@ -1,0 +1,33 @@
+@import 'src/theme/colors'
+
+.educationWrapper
+  position: relative
+  display: flex
+  gap: 1rem
+
+  &:not(.lastItem)::before
+    content: ''
+    position: absolute
+    width: 3px
+    height: 100%
+    background-color: $purple6
+    top: 2.5rem
+    left: 4.22rem
+
+  .date
+    font-weight: 600
+
+  .circle
+    width: 2rem
+    height: 2rem
+    border: 3px solid $purple6
+    border-radius: 50%
+    margin-top: -.5rem
+
+  .descriptionWrapper
+    display: flex
+    flex-direction: column
+    gap: .7rem
+
+    .degree
+      font-weight: 600

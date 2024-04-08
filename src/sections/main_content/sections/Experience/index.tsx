@@ -4,7 +4,7 @@ import style from "./index.sass"
 function Experience() {
     return (
         // TODO: add children
-        <Template title='Experience' color='lightPurple' direction='rtl'>
+        <Template title='Experience' color='darkPurple' direction='rtl'>
 
         </Template>
     );

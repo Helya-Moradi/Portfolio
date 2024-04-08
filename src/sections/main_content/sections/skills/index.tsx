@@ -25,8 +25,8 @@ function Skills() {
             <Template title='Skills' color='lightPurple' direction='rtl'>
                 <div className={style.skills}>
                     {
-                        skills.map((skill,index) => (
-                            <Skill key={`skill-${index}`} title={skill.title} percent={skill.percent}/>
+                        skills.map((skill, index) => (
+                            <Skill key={`skill-${index + 1}`} title={skill.title} percent={skill.percent}/>
                         ))
                     }
                 </div>

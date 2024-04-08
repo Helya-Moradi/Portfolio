@@ -1,0 +1,31 @@
+@import 'src/theme/colors'
+
+.educationContainer
+  position: relative
+
+  .education
+    display: flex
+    flex-direction: column
+    gap: 4rem
+    padding: 6rem 8rem
+    color: $purple6
+
+  img.animatedShapes
+    position: absolute
+    left: 3.5rem
+    bottom: 3.5rem
+    width: 7rem
+    height: 5rem
+    object-fit: contain
+    animation: 2.3s shapeAnimate infinite ease-out
+
+@keyframes shapeAnimate
+  0%
+    left: 3.5rem
+    bottom: 3.5rem
+  50%
+    left: 5.5rem
+    bottom: .5rem
+  100%
+    left: 3.5rem
+    bottom: 3.5rem

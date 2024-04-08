@@ -34,7 +34,7 @@ function Portfolio() {
                     <div className={style.projects}>
                         {
                             projects.map((project, index) => (
-                                <Project key={`project-${index}`} img={project.img} url={project.url}/>
+                                <Project key={`project-${index+1}`} img={project.img} url={project.url}/>
                             ))
                         }
                     </div>

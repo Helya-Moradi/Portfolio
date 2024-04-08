@@ -1,12 +1,48 @@
 import Template from "src/sections/main_content/components/template";
 import style from "./index.sass"
+import EducationItem from "src/sections/main_content/components/educationItem";
+import triangleImg from "src/assets/images/shapes/triangle.png";
 
 function Education() {
-    return (
-        // TODO: add children
-        <Template title='Education' color='pink' direction='ltr'>
 
-        </Template>
+    const educations = [
+        {
+            date: '2014',
+            degree: 'Diploma',
+            filed: 'Mathematics',
+            institute: 'Public Exemplary HighSchool'
+        },
+        {
+            date: '2018',
+            degree: 'Bachelor\'s Degree',
+            filed: 'Computer Engineering',
+            institute: 'Ershad damavand University',
+            isLastItem: true
+        },
+    ]
+
+    return (
+        <div className={style.educationContainer}>
+            <Template title='Education' color='pink' direction='ltr'>
+                <div className={style.education}>
+                    {
+                        educations.map((education, index) => (
+                            <EducationItem
+                                key={`educationItem-${index + 1}`}
+                                date={education.date}
+                                degree={education.degree}
+                                field={education.filed}
+                                institute={education.institute}
+                                isLastItem={education.isLastItem || false}
+                            />
+                        ))
+                    }
+                </div>
+            </Template>
+
+            <img src={triangleImg} alt="" className={style.animatedShapes}/>
+        </div>
+
     );
 }
 
