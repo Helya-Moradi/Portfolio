@@ -1,0 +1,28 @@
+@import "src/theme/colors"
+
+.projectWrapper
+  overflow: hidden
+
+  a
+    text-decoration: none
+    color: $white
+    position: relative
+
+    img
+      display: block
+      object-fit: cover
+      width: 100%
+      height: 100%
+
+    .showMore
+      position: absolute
+      background-color: $purple1
+      bottom: -3rem
+      left: 0
+      padding: .8rem
+      font-size: .9rem
+      transition: .40s
+
+    &:hover
+      .showMore
+        bottom: 0
