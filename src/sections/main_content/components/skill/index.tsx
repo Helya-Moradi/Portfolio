@@ -1,12 +1,11 @@
-import React from 'react';
 import style from './index.sass'
 
-interface RangeProps {
+interface SkillProps {
     title: String;
     percent: Number;
 }
 
-function Range({title, percent}: RangeProps) {
+function Skill({title, percent}: SkillProps) {
     return (
         <div className={style.mainContainer}>
             <div className={style.rangeContainer}>
@@ -22,4 +21,4 @@ function Range({title, percent}: RangeProps) {
     );
 }
 
-export default Range
+export default Skill
