@@ -1,6 +1,6 @@
 import style from './index.sass'
-import zigzagImg from 'src/assets/images/shapes/zigzag.png'
 import flowerImg from 'src/assets/images/flower.jpg'
+import zigzagImg from 'src/assets/images/shapes/zigzag.png'
 
 function Home() {
     return (<div className={style.home} id='home'>

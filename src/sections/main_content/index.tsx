@@ -6,10 +6,7 @@ import Skills from "src/sections/main_content/sections/skills";
 import Education from "src/sections/main_content/sections/Education";
 import Experience from "src/sections/main_content/sections/Experience";
 import Contact from "src/sections/main_content/sections/contact";
-import Widget from "src/sections/main_content/components/widget";
-import secureImg from 'src/assets/images/widgets/icon_secure.png';
-import preciseImg from 'src/assets/images/widgets/icon_preciese.png';
-import responsiveImg from 'src/assets/images/widgets/icon_responsive.png';
+import Widgets from "src/sections/widgets";
 
 function MainContent() {
     return (
@@ -19,11 +16,7 @@ function MainContent() {
             <Portfolio/>
             <Skills/>
 
-            <div className={style.widgets}>
-                <Widget image={preciseImg} color='lightPurple' text='pixel precise'/>
-                <Widget image={secureImg} color='pink' text='secure'/>
-                <Widget image={responsiveImg} color='darkPurple' text='responsive'/>
-            </div>
+            <Widgets/>
 
             <Education/>
             <Experience/>

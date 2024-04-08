@@ -1,6 +1,8 @@
 import Template from "src/sections/main_content/components/template";
 import style from "./index.sass"
 import Skill from "src/sections/main_content/components/skill";
+import circleImg from "src/assets/images/shapes/circle.png";
+import zigzagImg from 'src/assets/images/shapes/zigzag.png'
 
 function Skills() {
 
@@ -19,15 +21,20 @@ function Skills() {
     ]
 
     return (
-        <Template title='Skills' color='lightPurple' direction='rtl'>
-            <div className={style.skills}>
-                {
-                    skills.map((skill,index) => (
-                        <Skill key={`skill-${index}`} title={skill.title} percent={skill.percent}/>
-                    ))
-                }
-            </div>
-        </Template>
+        <div className={style.skillsContainer}>
+            <Template title='Skills' color='lightPurple' direction='rtl'>
+                <div className={style.skills}>
+                    {
+                        skills.map((skill,index) => (
+                            <Skill key={`skill-${index}`} title={skill.title} percent={skill.percent}/>
+                        ))
+                    }
+                </div>
+            </Template>
+
+            <img src={circleImg} alt="" className={style.circleAnimatedShapes}/>
+            <img src={zigzagImg} alt="" className={style.zigzagAnimatedShapes}/>
+        </div>
     );
 }
 
