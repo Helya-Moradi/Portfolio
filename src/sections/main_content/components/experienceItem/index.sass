@@ -1,10 +1,40 @@
+@import 'src/theme/colors'
+
 .experienceItem
-  i
-    width: 2rem
-    height: 2rem
-    background-color: red
-//  .title
-//
-//  .collapseWrapper
-//    .date
-//    .location
+  &.open
+    .titleContainer
+      .icon
+        transform: rotate(180deg)
+
+    .collapseWrapper
+      height: 6rem
+      opacity: 1
+      visibility: visible
+
+  .titleContainer
+    background-color: $purple6
+    color: $white
+    padding: .8rem 1rem
+    display: flex
+    justify-content: space-between
+    gap: 2rem
+
+    .title
+      font-weight: 600
+
+  .collapseWrapper
+    background-color: $white
+    height: 0
+    opacity: 0
+    visibility: hidden
+    transition: .3s
+    font-size: .9rem
+
+    .collapseContent
+      padding: 1.6rem
+      display: flex
+      flex-direction: column
+      gap: .7rem
+
+      .date
+        font-weight: 600
