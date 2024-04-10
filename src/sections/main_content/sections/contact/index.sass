@@ -1,0 +1,68 @@
+@import "src/theme/colors"
+
+.contactContainer
+  position: relative
+
+  .contact
+    padding: 6rem 8rem
+    color: $purple6
+
+    > *:not(:last-child)
+      margin-bottom: 3rem
+
+    h3, p
+      line-height: 2rem
+
+    h3
+      font-size: 1.3rem
+      font-weight: 600
+
+    p
+      font-size: 1rem
+
+    .contactForm
+      display: flex
+      flex-direction: column
+      gap: 3.4em
+
+      .inputWrapper
+        position: relative
+        display: flex
+        flex-direction: column
+
+        label
+          position: absolute
+          top: -1.3rem
+          font-weight: 600
+          font-size: 1.2rem
+          transition: .3s
+
+          &:has(+ input:focus,+ textarea:focus)
+            font-size: .8rem
+
+        input,textarea
+          border: none
+          background-color: inherit
+          border-bottom: 2px solid $purple6
+          padding: .4rem
+          font-size: 1.1rem
+          color: $purple6
+
+          &:focus
+            outline: none
+
+        textarea
+          resize: vertical
+
+      button
+        padding: 1.4rem
+        border: 2px solid $purple6
+        background-color: inherit
+        font-size: 1.2rem
+        font-weight: 600
+        color: $purple6
+        transition: .3s
+
+        &:hover
+          background-color: $purple6
+          color: $white
