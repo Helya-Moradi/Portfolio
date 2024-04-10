@@ -3,7 +3,7 @@
 .educationWrapper
   position: relative
   display: flex
-  gap: 1rem
+  gap: 1.5rem
 
   &:not(.lastItem)::before
     content: ''
@@ -12,22 +12,44 @@
     height: 100%
     background-color: $purple6
     top: 2.5rem
-    left: 4.22rem
+    left: 4.6rem
+
+  &:hover
+    .descriptionWrapper
+      margin-inline-start: 1rem
+
+    .circle
+      &::after
+        background-color: $purple6
 
   .date
     font-weight: 600
 
   .circle
+    position: relative
     width: 2rem
     height: 2rem
     border: 3px solid $purple6
     border-radius: 50%
     margin-top: -.5rem
 
+    &::after
+      position: absolute
+      content: ''
+      width: 1rem
+      height: 1rem
+      background-color: inherit
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      border-radius: 50%
+      transition: .3s
+
   .descriptionWrapper
     display: flex
     flex-direction: column
     gap: .7rem
+    transition: .3s
 
     .degree
       font-weight: 600
