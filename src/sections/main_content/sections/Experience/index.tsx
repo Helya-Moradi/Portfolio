@@ -1,6 +1,7 @@
 import Template from "src/sections/main_content/components/template";
 import style from "./index.sass"
 import ExperienceItem from "src/sections/main_content/components/experienceItem";
+import circleImg from "src/assets/images/shapes/circle.png";
 
 function Experience() {
 
@@ -33,6 +34,8 @@ function Experience() {
                     }
                 </div>
             </Template>
+
+            <img src={circleImg} alt="" className={style.animatedShapes}/>
         </div>
 
     );
