@@ -24,8 +24,8 @@ function Header() {
                 </div>
 
                 <div className={style.socialMedias}>
-                    <a href="https://www.linkedin.com/in/helya-moradi">li.</a>
-                    <a href="https://github.com/Helya-Moradi">gh.</a>
+                    <a href="https://www.linkedin.com/in/helya-moradi" target='_blank'>li.</a>
+                    <a href="https://github.com/Helya-Moradi" target='_blank'>gh.</a>
                 </div>
 
             </header>

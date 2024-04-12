@@ -1,6 +1,27 @@
+@import 'src/theme/colors'
+
 .footer
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
   margin-bottom: 6rem
+  gap: 1rem
+
+  .socialsMedias
+    display: flex
+    align-items: center
+    gap: 2rem
+
+    span
+      a
+        font-size: 1.8rem
+
+  .copyright,.socialsMedias
+    a
+      color: $white
+      text-decoration: none
+      transition: .35s
+
+      &:hover
+        color: $pink
