@@ -23,7 +23,15 @@
     .contactForm
       display: flex
       flex-direction: column
-      gap: 3.2rem
+      gap: 3.4rem
+
+      //TODO: add style
+      //&.invalid
+      //  background-color: red
+      //
+      //  .required
+      //    background-color: blue
+
 
       .inputWrapper
         position: relative
@@ -32,7 +40,7 @@
 
         label
           position: absolute
-          top: -1.3rem
+          top: -1.5rem
           font-weight: 600
           font-size: 1.2rem
           transition: .3s
@@ -40,7 +48,7 @@
           &:has(+ input:focus,+ textarea:focus)
             font-size: .8rem
 
-        input,textarea
+        input, textarea
           border: none
           background-color: inherit
           border-bottom: 2px solid $purple6
@@ -67,3 +75,16 @@
         &:hover
           background-color: $purple6
           color: $white
+
+      .messageStatus
+        padding: .7rem 1rem
+        display: none
+
+        &.show
+          display: block
+
+          &.success
+            border: 2px solid $green
+
+          &.wrong
+            border: 2px solid $red

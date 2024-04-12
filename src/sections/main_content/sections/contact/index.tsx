@@ -1,6 +1,8 @@
 import Template from "src/sections/main_content/components/template";
 import style from "./index.sass"
-import {useEffect, useState} from "react";
+import {FormEvent, useEffect, useState} from "react";
+import emailjs from '@emailjs/browser';
+import cls from "src/utils/class_names";
 
 function Contact() {
     const [contactData, setContactData] = useState({
@@ -8,7 +10,10 @@ function Contact() {
         email: '',
         subject: '',
         message: ''
-    })
+    });
+
+    const [isLoading, setIsLoading] = useState(false);
+    const [messageStatus, setMessageStatus] = useState(null);
 
     type objType = {
         name?: string,
@@ -22,9 +27,46 @@ function Contact() {
         setContactData(prev => ({...prev, ...obj}))
     }
 
-    const contactFormSubmitHandler = () => {
-        // TODO: send email
+    const contactFormSubmitHandler = (e: any) => {
+        e.preventDefault();
+        e.target.classList.remove(style.invalid);
+        const serviceId = 'service_aa436to';
+        const templateId = 'template_9n5r43i';
+
+        if (contactData.name && contactData.email) {
+            setIsLoading(true);
+
+            emailjs.send(serviceId, templateId, contactData)
+                .then((result) => {
+                    setIsLoading(false);
+                    setMessageStatus('success')
+
+                    setTimeout(() => {
+                        setMessageStatus(null);
+                    }, 5000);
+                }, (error) => {
+                    setIsLoading(false);
+                    setMessageStatus('wrong')
+
+                    setTimeout(() => {
+                        setMessageStatus(null);
+                    }, 5000);
+                });
+
+            setContactData({
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
+            })
+        } else {
+            e.target.classList.add(style.invalid);
+        }
     }
+
+    useEffect(() => {
+        emailjs.init('VfT4-hFCfe-cPKKb4')
+    }, [])
 
     return (
         <div className={style.contactContainer}>
@@ -47,6 +89,8 @@ function Contact() {
                             <label>Name</label>
                             <input
                                 type="text"
+                                className={contactData.name || style.required}
+                                value={contactData.name}
                                 onChange={e => {
                                     setContactDataValue({name: e.target.value})
                                 }}/>
@@ -56,6 +100,8 @@ function Contact() {
                             <label>Email</label>
                             <input
                                 type="email"
+                                className={contactData.email || style.required}
+                                value={contactData.email}
                                 onChange={e => {
                                     setContactDataValue({email: e.target.value})
                                 }}/>
@@ -65,6 +111,7 @@ function Contact() {
                             <label>Subject</label>
                             <input
                                 type="text"
+                                value={contactData.subject}
                                 onChange={e => {
                                     setContactDataValue({subject: e.target.value})
                                 }}/>
@@ -74,14 +121,24 @@ function Contact() {
                             <label>Message</label>
                             <textarea
                                 rows={7}
+                                value={contactData.message}
                                 onChange={e => {
                                     setContactDataValue({message: e.target.value})
                                 }}/>
                         </div>
 
-                        <button type="submit">
+                        <button type="submit" className={cls(isLoading && style.loading)}>
                             Send Message
                         </button>
+
+                        <div
+                            className={cls(style.messageStatus, messageStatus && style.show, messageStatus && style[messageStatus])}>
+                            {messageStatus === 'success'
+                                ? 'Thank you for your message. It has been sent.'
+                                : messageStatus === 'wrong'
+                                    ? 'Something went wrong, please try again later.'
+                                    : null}
+                        </div>
                     </form>
                 </div>
             </Template>
