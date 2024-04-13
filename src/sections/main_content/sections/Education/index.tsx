@@ -1,7 +1,7 @@
 import Template from "src/sections/main_content/components/template";
 import style from "./index.sass"
 import EducationItem from "src/sections/main_content/components/educationItem";
-import TriangleAnimation from "src/components/triangle";
+import TriangleAnimation from "src/components/triangleAnimation";
 
 function Education() {
 

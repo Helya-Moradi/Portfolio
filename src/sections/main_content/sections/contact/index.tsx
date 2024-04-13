@@ -3,7 +3,6 @@ import style from "./index.sass"
 import {useEffect, useState} from "react";
 import emailjs from '@emailjs/browser';
 import cls from "src/utils/class_names";
-import zigzagImg from "src/assets/images/shapes/zigzag.png";
 import ZigzagAnimation from "src/components/zigzagAnimation";
 
 function Contact() {

@@ -10,7 +10,7 @@ import pinterestImg from 'src/assets/images/projects/pinterest.png'
 import ticTacToeImg from 'src/assets/images/projects/tictactoe.png'
 import todoImg from 'src/assets/images/projects/todo.png'
 import weatherAppImg from 'src/assets/images/projects/weather-app.png'
-import TriangleAnimation from "src/components/triangle";
+import TriangleAnimation from "src/components/triangleAnimation";
 
 
 function Portfolio() {
