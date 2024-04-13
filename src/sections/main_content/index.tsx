@@ -6,7 +6,7 @@ import Skills from "src/sections/main_content/sections/skills";
 import Education from "src/sections/main_content/sections/Education";
 import Experience from "src/sections/main_content/sections/Experience";
 import Contact from "src/sections/main_content/sections/contact";
-import Widgets from "src/sections/widgets";
+import Widgets from "src/sections/main_content/sections/widgets";
 
 function MainContent() {
     return (

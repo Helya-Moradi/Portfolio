@@ -2,7 +2,7 @@ import Template from "src/sections/main_content/components/template";
 import style from "./index.sass"
 import Skill from "src/sections/main_content/components/skill";
 import circleImg from "src/assets/images/shapes/circle.png";
-import zigzagImg from 'src/assets/images/shapes/zigzag.png'
+import ZigzagAnimation from "src/components/zigzagAnimation";
 
 function Skills() {
 
@@ -33,7 +33,7 @@ function Skills() {
             </Template>
 
             <img src={circleImg} alt="" className={style.circleAnimatedShapes}/>
-            <img src={zigzagImg} alt="" className={style.zigzagAnimatedShapes}/>
+            <ZigzagAnimation right={45} bottom={2}/>
         </div>
     );
 }

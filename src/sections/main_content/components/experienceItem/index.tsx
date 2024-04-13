@@ -15,13 +15,13 @@ interface ExperienceItemProps {
 function ExperienceItem({data}: ExperienceItemProps) {
     const [open, setOpen] = useState(false);
 
-    const openCollapeHandler = () => {
+    const openCollapseHandler = () => {
         setOpen(prev => !prev)
     }
 
     return (
         <div className={cls(style.experienceItem, open && style.open)}>
-            <div className={style.titleContainer} onClick={openCollapeHandler}>
+            <div className={style.titleContainer} onClick={openCollapseHandler}>
                 <span className={style.title}>
                   {data.title}
                 </span>

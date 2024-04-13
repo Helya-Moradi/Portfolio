@@ -3,7 +3,7 @@ import Widget from "src/sections/main_content/components/widget";
 import secureImg from 'src/assets/images/widgets/icon_secure.png';
 import preciseImg from 'src/assets/images/widgets/icon_preciese.png';
 import responsiveImg from 'src/assets/images/widgets/icon_responsive.png';
-import zigzagImg from "src/assets/images/shapes/zigzag.png";
+import ZigzagAnimation from "src/components/zigzagAnimation";
 
 function Widgets() {
     return (
@@ -14,7 +14,7 @@ function Widgets() {
                 <Widget image={responsiveImg} color='darkPurple' text='responsive'/>
             </div>
 
-            <img src={zigzagImg} alt="" className={style.animatedShapes}/>
+            <ZigzagAnimation right={65} bottom={2}/>
         </div>
     );
 }

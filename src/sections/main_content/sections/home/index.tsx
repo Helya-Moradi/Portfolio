@@ -1,6 +1,6 @@
 import style from './index.sass'
 import flowerImg from 'src/assets/images/flower.jpg'
-import zigzagImg from 'src/assets/images/shapes/zigzag.png'
+import ZigzagAnimation from "src/components/zigzagAnimation";
 
 function Home() {
     return (<div className={style.home} id='home'>
@@ -15,12 +15,12 @@ function Home() {
                     Hello <br/>I’m Helya Moradi
                 </span>
 
-                <span className={style.description}>
+            <span className={style.description}>
                     Self-motivated and creative Web Designer and Front-end Developer. Interested in learning, programming, web design, artwork and problem solving.
                 </span>
         </div>
 
-        <img src={zigzagImg} alt="" className={style.animatedShapes}/>
+        <ZigzagAnimation right={-9} bottom={3}/>
 
     </div>);
 }
