@@ -10,7 +10,7 @@
 
     .projects
       display: grid
-      grid-template-columns: repeat(2,1fr)
+      grid-template-columns: repeat(2, 1fr)
 
     .loadMoreButton
       text-align: center
@@ -24,6 +24,10 @@
         text-decoration: none
         font-weight: 600
         font-size: 1.2rem
+        transition: .35s
+
+        &:hover
+          color: darken($pink,12)
 
   img.animatedShapes
     position: absolute
