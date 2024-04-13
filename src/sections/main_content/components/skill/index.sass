@@ -16,13 +16,22 @@
       background-color: $purple6
       color: $white
       display: block
-      width: auto
+      //width: auto
       padding: .3rem .6rem
       margin-top: -.3rem
       text-transform: uppercase
       letter-spacing: .1rem
       font-size: .7rem
 
+
+      &.rangeAnimation
+        animation: .5s rangeWidthAnimation linear
+        animation-fill-mode: forwards
+
   .percent
     font-size: 1.3rem
     font-weight: 500
+
+@keyframes rangeWidthAnimation
+  from
+    width: 0
