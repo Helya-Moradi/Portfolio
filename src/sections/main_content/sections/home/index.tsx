@@ -3,7 +3,7 @@ import flowerImg from 'src/assets/images/flower.jpg'
 import ZigzagAnimation from "src/components/zigzagAnimation";
 
 function Home() {
-    return (<div className={style.home} id='Home'>
+    return (<div className={style.home} id='home'>
         {/*TODO: change image*/}
 
         <div className={style.imageContainer}>

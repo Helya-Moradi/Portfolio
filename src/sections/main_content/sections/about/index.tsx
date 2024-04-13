@@ -6,7 +6,7 @@ import cv from 'src/assets/files/HelyaMoradiCV.pdf'
 function About() {
     return (
         <Template color='pink' title='About' direction='ltr'>
-            <div className={style.about} id='About'>
+            <div className={style.about} id='about'>
 
                 <h3>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fugit harum nihil

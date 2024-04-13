@@ -70,7 +70,7 @@ function Contact() {
     }, [])
 
     return (
-        <div className={style.contactContainer} id='Contact'>
+        <div className={style.contactContainer} id='contact'>
             <Template title='Contact' color='lightPurple' direction='ltr'>
                 <div className={style.contact}>
                     <h3>

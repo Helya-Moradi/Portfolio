@@ -22,7 +22,7 @@ function Education() {
     ]
 
     return (
-        <div className={style.educationContainer} id='Education'>
+        <div className={style.educationContainer} id='education'>
             <Template title='Education' color='pink' direction='ltr'>
                 <div className={style.education}>
                     {

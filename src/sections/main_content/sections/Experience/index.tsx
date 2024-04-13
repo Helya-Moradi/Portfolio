@@ -24,7 +24,7 @@ function Experience() {
     ]
 
     return (
-        <div className={style.experienceContainer} id='Experience'>
+        <div className={style.experienceContainer} id='experience'>
             <Template title='Experience' color='darkPurple' direction='rtl'>
                 <div className={style.experience}>
                     <h3>

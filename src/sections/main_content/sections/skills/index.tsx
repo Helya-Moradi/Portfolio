@@ -21,7 +21,7 @@ function Skills() {
     ]
 
     return (
-        <div className={style.skillsContainer} id='Skills'>
+        <div className={style.skillsContainer} id='skills'>
             <Template title='Skills' color='lightPurple' direction='rtl'>
                 <div className={style.skills}>
                     {

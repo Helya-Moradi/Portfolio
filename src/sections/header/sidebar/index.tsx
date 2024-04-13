@@ -11,25 +11,25 @@ function Sidebar({open}: SidebarProps) {
         <div className={cls(style.sidebar, open && style.open)}>
             <ul className={style.list}>
                 <li>
-                    <a href="#Home">Home</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li>
-                    <a href="#About">About</a>
+                    <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="#Portfolio">Portfolio</a>
+                    <a href="#portfolio">Portfolio</a>
                 </li>
                 <li>
-                    <a href="#Skills">Skills</a>
+                    <a href="#skills">Skills</a>
                 </li>
                 <li>
-                    <a href="#Education">Education</a>
+                    <a href="#education">Education</a>
                 </li>
                 <li>
-                    <a href="#Experience">Experience</a>
+                    <a href="#experience">Experience</a>
                 </li>
                 <li>
-                    <a href="#Contact">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
