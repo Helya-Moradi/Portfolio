@@ -2,8 +2,6 @@ import Template from "src/sections/main_content/components/template";
 import style from "./index.sass"
 import Project from "src/sections/main_content/components/project";
 
-import triangleImg from "src/assets/images/shapes/triangle.png";
-
 import amiriImg from 'src/assets/images/projects/amiri.png'
 import dashboardImg from 'src/assets/images/projects/dashboard.png'
 import musicPlayerImg from 'src/assets/images/projects/music-player.png'
@@ -12,6 +10,7 @@ import pinterestImg from 'src/assets/images/projects/pinterest.png'
 import ticTacToeImg from 'src/assets/images/projects/tictactoe.png'
 import todoImg from 'src/assets/images/projects/todo.png'
 import weatherAppImg from 'src/assets/images/projects/weather-app.png'
+import TriangleAnimation from "src/components/triangle";
 
 
 function Portfolio() {
@@ -47,7 +46,7 @@ function Portfolio() {
                 </div>
             </Template>
 
-            <img src={triangleImg} alt="" className={style.animatedShapes}/>
+            <TriangleAnimation left={-7} top={2}/>
 
         </div>
     );

@@ -1,7 +1,7 @@
 import Template from "src/sections/main_content/components/template";
 import style from "./index.sass"
 import EducationItem from "src/sections/main_content/components/educationItem";
-import triangleImg from "src/assets/images/shapes/triangle.png";
+import TriangleAnimation from "src/components/triangle";
 
 function Education() {
 
@@ -40,7 +40,8 @@ function Education() {
                 </div>
             </Template>
 
-            <img src={triangleImg} alt="" className={style.animatedShapes}/>
+            <TriangleAnimation left={3.5} top={17}/>
+
         </div>
 
     );
