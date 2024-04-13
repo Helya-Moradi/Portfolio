@@ -21,17 +21,37 @@
       font-size: 1rem
 
     .contactForm
+      position: relative
       display: flex
       flex-direction: column
       gap: 3.4rem
 
-      //TODO: add style
-      //&.invalid
-      //  background-color: red
-      //
-      //  .required
-      //    background-color: blue
+      &.invalid
+        padding-bottom: 3rem
 
+        &:after
+          position: absolute
+          content: 'One or more fields have an error. Please check and try again.'
+          color: $white
+          background-color: $pink
+          padding: .4rem
+          font-size: .8rem
+          text-align: center
+          bottom: 0
+          left: 0
+          right: 0
+
+        .inputWrapper.required
+          &:after
+            position: absolute
+            content: 'The field is required.'
+            bottom: .1rem
+            right: 0
+            text-align: center
+            color: $white
+            background-color: $pink
+            padding: .4rem
+            font-size: .7rem
 
       .inputWrapper
         position: relative
@@ -61,6 +81,7 @@
 
         textarea
           resize: vertical
+          font-family: montserrat
 
       button
         padding: 1.4rem
@@ -70,11 +91,32 @@
         font-weight: 600
         color: $purple6
         cursor: pointer
+        display: flex
+        justify-content: center
         transition: .3s
 
         &:hover
           background-color: $purple6
           color: $white
+
+        .loader
+          position: relative
+          width: 2rem
+          height: 2rem
+          background-color: $purple1
+          border-radius: 50%
+          animation: 1s loaderAnimation infinite linear
+
+          &:after
+            position: absolute
+            content: ''
+            display: block
+            width: .7rem
+            height: .7rem
+            top: .3rem
+            left: .3rem
+            background-color: $pink
+            border-radius: 50%
 
       .messageStatus
         padding: .7rem 1rem
@@ -88,3 +130,9 @@
 
           &.wrong
             border: 2px solid $red
+
+@keyframes loaderAnimation
+  from
+    transform: rotate(0)
+  to
+    transform: rotate(360deg)

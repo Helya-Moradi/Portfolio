@@ -85,22 +85,20 @@ function Contact() {
                         className={style.contactForm}
                         onSubmit={contactFormSubmitHandler}
                     >
-                        <div className={style.inputWrapper}>
+                        <div className={cls(style.inputWrapper, contactData.name || style.required)}>
                             <label>Name</label>
                             <input
                                 type="text"
-                                className={contactData.name || style.required}
                                 value={contactData.name}
                                 onChange={e => {
                                     setContactDataValue({name: e.target.value})
                                 }}/>
                         </div>
 
-                        <div className={style.inputWrapper}>
+                        <div className={cls(style.inputWrapper, contactData.email || style.required)}>
                             <label>Email</label>
                             <input
                                 type="email"
-                                className={contactData.email || style.required}
                                 value={contactData.email}
                                 onChange={e => {
                                     setContactDataValue({email: e.target.value})
@@ -127,8 +125,14 @@ function Contact() {
                                 }}/>
                         </div>
 
-                        <button type="submit" className={cls(isLoading && style.loading)}>
-                            Send Message
+                        <button type="submit">
+                            {
+                                isLoading ? (
+                                    <div className={style.loader}/>
+                                ) : (
+                                    <span> Send Message </span>
+                                )
+                            }
                         </button>
 
                         <div
