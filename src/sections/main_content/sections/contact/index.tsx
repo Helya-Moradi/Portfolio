@@ -1,8 +1,9 @@
 import Template from "src/sections/main_content/components/template";
 import style from "./index.sass"
-import {FormEvent, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import emailjs from '@emailjs/browser';
 import cls from "src/utils/class_names";
+import zigzagImg from "src/assets/images/shapes/zigzag.png";
 
 function Contact() {
     const [contactData, setContactData] = useState({
@@ -146,6 +147,8 @@ function Contact() {
                     </form>
                 </div>
             </Template>
+
+            <img src={zigzagImg} alt="" className={style.animatedShapes}/>
         </div>
     );
 }
