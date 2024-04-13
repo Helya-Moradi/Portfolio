@@ -7,6 +7,7 @@ interface SidebarProps {
 
 function Sidebar({open}: SidebarProps) {
     return (
+        // TODO: handle active menu
         <div className={cls(style.sidebar, open && style.open)}>
             <ul className={style.list}>
                 <li>

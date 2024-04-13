@@ -1,11 +1,12 @@
 import Template from "src/sections/main_content/components/template";
 import style from './index.sass'
 import downloadImg from 'src/assets/images/download/icon_download_cv.png'
+import cv from 'src/assets/files/HelyaMoradiCV.pdf'
 
 function About() {
     return (
         <Template color='pink' title='About' direction='ltr'>
-            <div className={style.about}>
+            <div className={style.about} id='About'>
 
                 <h3>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fugit harum nihil
@@ -42,9 +43,10 @@ function About() {
                     </ul>
 
                     <div className={style.downloadCvContainer}>
-                        <a href="">
+                        <a href={cv} download="HelyaMoradiCV.pdf" target='-blank'>
                             <img src={downloadImg} alt="download cv image"/>
-                            <span className={style.downloadCv}>Download cv</span></a>
+                            <span className={style.downloadCv}>Download cv</span>
+                        </a>
                     </div>
 
                 </div>

@@ -20,7 +20,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Helya Moradi | Portfolio',
-            template:path.resolve(__dirname,'./index.html')
+            template: path.resolve(__dirname, './index.html')
         }),
 
         new MiniCssExtractPlugin()
@@ -47,20 +47,20 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
-                    options:{
-                        configFile:path.resolve(__dirname,'babel.config.js')
+                    options: {
+                        configFile: path.resolve(__dirname, 'babel.config.js')
                     }
                 }
             },
 
             {
-                test:/\.s[ac]ss$/,
-                use:[
+                test: /\.s[ac]ss$/,
+                use: [
                     MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
-                        options:{
-                            modules:{
+                        options: {
+                            modules: {
                                 localIdentName: '[local]_[hash:base64:4]'
                             }
                         }
@@ -72,14 +72,21 @@ module.exports = {
             },
 
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
             },
 
             {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                type: 'asset/resource',
-            },
+                test: /\.(png|svg|jpg|gif|pdf)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]'
+                        }
+                    }
+                ]
+            }
         ],
     },
 };

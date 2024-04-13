@@ -27,7 +27,7 @@ function Portfolio() {
     ]
 
     return (
-        <div className={style.portfolioContainer}>
+        <div className={style.portfolioContainer} id='Portfolio'>
             <Template title='Portfolio' color='darkPurple' direction='rtl'>
                 <div className={style.portfolio}>
                     <div className={style.projects}>
