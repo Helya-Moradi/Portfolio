@@ -4,7 +4,7 @@ import cls from "src/utils/class_names";
 
 interface HeaderProps {
     open: boolean;
-    setOpen: (open: boolean) => | void
+    setOpen: Function
 }
 
 function Header({open, setOpen}: HeaderProps) {
@@ -19,7 +19,7 @@ function Header({open, setOpen}: HeaderProps) {
                 <div
                     className={style.hamburgerIcon}
                     onClick={() => {
-                        setOpen(prev => !prev)
+                        setOpen((prev: boolean) => !prev)
                     }}>
                     <span className={cls(style.line, style.line1)}/>
                     <span className={cls(style.line, style.line2)}/>
