@@ -1,22 +1,25 @@
 import {useState} from 'react';
 import style from './index.sass'
 import cls from "src/utils/class_names";
-import Sidebar from "./sidebar";
 
-function Header() {
-    const [openMenu, setOpenMenu] = useState(false);
+interface HeaderProps {
+    open: boolean;
+    setOpen: (open: boolean) => | void
+}
+
+function Header({open, setOpen}: HeaderProps) {
 
     return (
         <>
             <header
-                className={cls(openMenu && style.open)}>
+                className={cls(open && style.open)}>
 
                 <span className={style.logo}>Helya Moradi</span>
 
                 <div
                     className={style.hamburgerIcon}
                     onClick={() => {
-                        setOpenMenu(prev => !prev)
+                        setOpen(prev => !prev)
                     }}>
                     <span className={cls(style.line, style.line1)}/>
                     <span className={cls(style.line, style.line2)}/>
@@ -29,8 +32,6 @@ function Header() {
                 </div>
 
             </header>
-
-            <Sidebar open={openMenu}/>
         </>
     );
 }

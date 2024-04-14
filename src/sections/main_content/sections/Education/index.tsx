@@ -3,7 +3,7 @@ import style from "./index.sass"
 import EducationItem from "src/sections/main_content/components/educationItem";
 import TriangleAnimation from "src/components/triangleAnimation";
 
-function Education() {
+function Education({observerRef}:any) {
 
     const educations = [
         {
@@ -22,7 +22,7 @@ function Education() {
     ]
 
     return (
-        <div className={style.educationContainer} id='education'>
+        <div className={style.educationContainer} id='education' ref={observerRef}>
             <Template title='Education' color='pink' direction='ltr'>
                 <div className={style.education}>
                     {

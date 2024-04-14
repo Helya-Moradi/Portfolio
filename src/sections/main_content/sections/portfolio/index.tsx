@@ -13,7 +13,7 @@ import weatherAppImg from 'src/assets/images/projects/weather-app.png'
 import TriangleAnimation from "src/components/triangleAnimation";
 
 
-function Portfolio() {
+function Portfolio({observerRef}: any) {
 
     const projects = [
         {img: dashboardImg, url: 'https://helya-moradi.github.io/Figma-Dashboard/'},
@@ -27,7 +27,7 @@ function Portfolio() {
     ]
 
     return (
-        <div className={style.portfolioContainer} id='portfolio'>
+        <div className={style.portfolioContainer} id='portfolio' ref={observerRef}>
             <Template title='Portfolio' color='darkPurple' direction='rtl'>
                 <div className={style.portfolio}>
                     <div className={style.projects}>

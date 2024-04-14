@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import cls from "src/utils/class_names";
 import ZigzagAnimation from "src/components/zigzagAnimation";
 
-function Contact() {
+function Contact({observerRef}:any) {
     const [contactData, setContactData] = useState({
         name: '',
         email: '',
@@ -70,7 +70,7 @@ function Contact() {
     }, [])
 
     return (
-        <div className={style.contactContainer} id='contact'>
+        <div className={style.contactContainer} id='contact' ref={observerRef}>
             <Template title='Contact' color='lightPurple' direction='ltr'>
                 <div className={style.contact}>
                     <h3>

@@ -4,7 +4,7 @@ import Skill from "src/sections/main_content/components/skill";
 import ZigzagAnimation from "src/components/zigzagAnimation";
 import CircleAnimation from "src/components/circleAnimation";
 
-function Skills() {
+function Skills({observerRef}:any) {
 
     const skills = [
         {title: 'html5', percent: 95},
@@ -21,7 +21,7 @@ function Skills() {
     ]
 
     return (
-        <div className={style.skillsContainer} id='skills'>
+        <div className={style.skillsContainer} id='skills' ref={observerRef}>
             <Template title='Skills' color='lightPurple' direction='rtl'>
                 <div className={style.skills}>
                     {

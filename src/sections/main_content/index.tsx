@@ -1,3 +1,4 @@
+import {Fragment, useEffect, useRef} from "react";
 import style from './index.sass'
 import Home from "./sections/home";
 import About from "src/sections/main_content/sections/about";
@@ -8,19 +9,45 @@ import Experience from "src/sections/main_content/sections/Experience";
 import Contact from "src/sections/main_content/sections/contact";
 import Widgets from "src/sections/main_content/sections/widgets";
 
-function MainContent() {
+interface MainContentPops {
+    activeItem: string;
+    setActiveItem: (activeItem: string) => void
+}
+
+function MainContent({activeItem, setActiveItem}: MainContentPops) {
+    const observerRef = useRef([]);
+
+    useEffect(() => {
+        observerRef.current.forEach(ref => {
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    console.log({id: entry.target.id, observer: entry})
+                    if (entry.target.id !== activeItem && entry.isIntersecting) {
+                        setActiveItem(entry.target.id);
+                    }
+                })
+            });
+
+            observer.observe(ref);
+        })
+
+    }, []);
+
+    const componentsArray = [Home, About, Portfolio, Skills, Education, Experience, Contact];
+
     return (
         <div className={style.mainContent}>
-            <Home/>
-            <About/>
-            <Portfolio/>
-            <Skills/>
-
-            <Widgets/>
-
-            <Education/>
-            <Experience/>
-            <Contact/>
+            {
+                componentsArray.map((CMP, index) => (
+                    <Fragment key={`section-${index + 1}`}>
+                        <CMP observerRef={(el: HTMLElement) => (observerRef.current[index] = el)}/>
+                        {
+                            CMP === Skills && <Widgets/>
+                        }
+                    </Fragment>
+                ))
+            }
         </div>
     );
 }

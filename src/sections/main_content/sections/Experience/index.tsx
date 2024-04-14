@@ -3,7 +3,7 @@ import style from "./index.sass"
 import ExperienceItem from "src/sections/main_content/components/experienceItem";
 import CircleAnimation from "src/components/circleAnimation";
 
-function Experience() {
+function Experience({observerRef}:any) {
 
     const experienceItems = [
         {
@@ -24,7 +24,7 @@ function Experience() {
     ]
 
     return (
-        <div className={style.experienceContainer} id='experience'>
+        <div className={style.experienceContainer} id='experience' ref={observerRef}>
             <Template title='Experience' color='darkPurple' direction='rtl'>
                 <div className={style.experience}>
                     <h3>
