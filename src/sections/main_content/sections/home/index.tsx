@@ -1,5 +1,6 @@
 import style from './index.sass'
 import flowerImg from 'src/assets/images/flower.jpg'
+import mainTest from 'src/assets/images/main_01.jpg'
 import ZigzagAnimation from "src/components/zigzagAnimation";
 
 function Home() {
@@ -7,7 +8,7 @@ function Home() {
         {/*TODO: change image*/}
 
         <div className={style.imageContainer}>
-            <img src={flowerImg} alt="image"/>
+            <img src={mainTest} alt="image"/>
         </div>
 
         <div className={style.introduce}>

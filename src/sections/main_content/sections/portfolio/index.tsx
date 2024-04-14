@@ -38,8 +38,7 @@ function Portfolio() {
                         }
                     </div>
                     <div className={style.loadMoreButton}>
-                        {/*TODO: add projects link*/}
-                        <a href="#">
+                        <a href="https://helya-moradi.github.io/Projects/" target='-blank'>
                             load more
                         </a>
                     </div>
