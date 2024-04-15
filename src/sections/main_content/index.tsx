@@ -1,4 +1,4 @@
-import {Fragment, useEffect, useRef} from "react";
+import {Fragment, useEffect, useRef, useState} from "react";
 import style from './index.sass'
 import Home from "./sections/home";
 import About from "src/sections/main_content/sections/about";
@@ -11,27 +11,31 @@ import Widgets from "src/sections/main_content/sections/widgets";
 
 interface MainContentPops {
     activeItem: string;
-    setActiveItem: (activeItem: string) => void
+    setActiveItem: (activeItem: string) => void;
 }
 
 function MainContent({activeItem, setActiveItem}: MainContentPops) {
     const observerRef = useRef([]);
 
+    const observerHandler = (entries: any[]) => {
+        entries.forEach(entry => {
+
+            if (entry.target.id !== activeItem && entry.isIntersecting) {
+                setActiveItem(entry.target.id);
+            }
+        })
+    }
+
+    const options = {
+        threshold: 0.8
+    }
+
     useEffect(() => {
+        const observer = new IntersectionObserver(observerHandler, options);
+
         observerRef.current.forEach(ref => {
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    console.log({id: entry.target.id, observer: entry})
-                    if (entry.target.id !== activeItem && entry.isIntersecting) {
-                        setActiveItem(entry.target.id);
-                    }
-                })
-            });
-
             observer.observe(ref);
         })
-
     }, []);
 
     const componentsArray = [Home, About, Portfolio, Skills, Education, Experience, Contact];
