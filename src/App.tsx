@@ -5,7 +5,7 @@ import Sidebar from "src/sections/sidebar";
 import {useState} from "react";
 
 function App() {
-    const [openMenu, setOpenMenu] = useState(true);
+    const [openMenu, setOpenMenu] = useState(false);
     const [activeItem, setActiveItem] = useState('');
 
     return (

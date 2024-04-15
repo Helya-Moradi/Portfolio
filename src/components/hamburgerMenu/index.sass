@@ -1,0 +1,44 @@
+@import "src/theme/colors"
+
+.hamburgerIcon
+  width: 2rem
+  height: 1.5rem
+  position: relative
+  cursor: pointer
+
+  &.open
+    .line1,
+    .line3
+      top: 40%
+      width: 100%
+
+    .line1
+      transform: rotate(45deg)
+
+    .line2
+      opacity: 0
+
+    .line3
+      transform: rotate(-45deg)
+
+  .line
+    background-color: $white
+    position: absolute
+    height: .2rem
+    transition: .35s
+
+  .line1
+    top: 0
+    width: 85%
+
+  .line2
+    top: calc(50% - .1rem)
+    width: 60%
+
+  .line3
+    top: calc(100% - .2rem)
+    width: 100%
+
+  .hamburgerIcon:hover
+    .line
+      width: 100%

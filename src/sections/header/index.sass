@@ -20,33 +20,14 @@ header
     text-transform: uppercase
     letter-spacing: .4rem
 
-  .hamburgerIcon
-    width: 2rem
-    height: 1.5rem
-    position: relative
-    cursor: pointer
+  .wrapper
+    display: flex
+    align-items: center
+    gap: 1.2rem
 
-    .line
-      background-color: $white
-      position: absolute
-      height: .2rem
-      transition: .35s
-
-    .line1
-      top: 0
-      width: 85%
-
-    .line2
-      top: calc(50% - .1rem)
-      width: 60%
-
-    .line3
-      top: calc(100% - .2rem)
-      width: 100%
-
-  .hamburgerIcon:hover
-    .line
-      width: 100%
+    .icon
+      font-size: 1.8rem
+      cursor: pointer
 
   .socialMedias
     position: absolute
@@ -55,7 +36,10 @@ header
     gap: 1.8rem
     font-size: .8rem
     transition: .35s
-    right: -40%
+    right: -30%
+
+    &.open
+      right: 8.3rem
 
     a
       color: $white
@@ -66,25 +50,6 @@ header
 
       &:hover
         color: $pink
-
-header.open
-  .hamburgerIcon
-    .line1,
-    .line3
-      top: 40%
-      width: 100%
-
-    .line1
-      transform: rotate(45deg)
-
-    .line2
-      opacity: 0
-
-    .line3
-      transform: rotate(-45deg)
-
-  .socialMedias
-    right: 8%
 
 @media screen and (min-width: 1300px)
   header
@@ -100,13 +65,16 @@ header.open
     span.logo
       white-space: nowrap
       order: 2
-      transform: rotate(-90deg) translate(-6rem,5.7rem)
+      transform: rotate(-90deg) translate(-6rem, 5.7rem)
 
-    .hamburgerIcon
+    .wrapper
+      justify-content: center
+      flex-direction: column-reverse
+      gap: 1.8rem
       order: 1
 
     .socialMedias
       position: static
       order: 3
       transition: unset
-      transform: rotate(-90deg) translate(-15rem,2rem)
+      transform: rotate(-90deg) translate(-15rem, 2rem)

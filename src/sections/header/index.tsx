@@ -1,5 +1,8 @@
 import style from './index.sass'
 import cls from "src/utils/class_names";
+import HamburgerMenu from "src/components/hamburgerMenu";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faEarth} from '@fortawesome/free-solid-svg-icons';
 
 interface HeaderProps {
     open: boolean;
@@ -9,26 +12,18 @@ interface HeaderProps {
 function Header({open, setOpen}: HeaderProps) {
 
     return (
-        <header
-            className={cls(open && style.open)}>
-
+        <header>
             <span className={style.logo}>Helya Moradi</span>
 
-            <div
-                className={style.hamburgerIcon}
-                onClick={() => {
-                    setOpen((prev: boolean) => !prev)
-                }}>
-                <span className={cls(style.line, style.line1)}/>
-                <span className={cls(style.line, style.line2)}/>
-                <span className={cls(style.line, style.line3)}/>
+            <div className={style.wrapper}>
+                <FontAwesomeIcon icon={faEarth} className={style.icon}/>
+                <HamburgerMenu open={open} setOpen={setOpen} classNames={style.hamburgerIcon}/>
             </div>
 
-            <div className={style.socialMedias}>
+            <div className={cls(style.socialMedias, open && style.open)}>
                 <a href="https://www.linkedin.com/in/helya-moradi" target='_blank'>li.</a>
                 <a href="https://github.com/Helya-Moradi" target='_blank'>gh.</a>
             </div>
-
         </header>
     );
 }
