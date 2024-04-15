@@ -1,5 +1,5 @@
 import style from './index.sass'
-import mainTest from 'src/assets/images/main_01.jpg'
+import iImg from 'src/assets/images/i.png'
 import ZigzagAnimation from "src/components/zigzagAnimation";
 
 function Home({observerRef}: any) {
@@ -7,7 +7,7 @@ function Home({observerRef}: any) {
         {/*TODO: change image*/}
 
         <div className={style.imageContainer}>
-            <img src={mainTest} alt="image"/>
+            <img src={iImg} alt="image"/>
         </div>
 
         <div className={style.introduce}>
