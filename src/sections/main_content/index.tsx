@@ -1,4 +1,4 @@
-import {Fragment, useEffect, useRef, useState} from "react";
+import {Fragment, useEffect, useRef} from "react";
 import style from './index.sass'
 import Home from "./sections/home";
 import About from "src/sections/main_content/sections/about";
@@ -19,7 +19,6 @@ function MainContent({activeItem, setActiveItem}: MainContentPops) {
 
     const observerHandler = (entries: any[]) => {
         entries.forEach(entry => {
-
             if (entry.target.id !== activeItem && entry.isIntersecting) {
                 setActiveItem(entry.target.id);
             }
