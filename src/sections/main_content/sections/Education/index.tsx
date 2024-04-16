@@ -23,7 +23,7 @@ function Education({observerRef}:any) {
 
     return (
         <div className={style.educationContainer} id='education' ref={observerRef}>
-            <Template title='Education' color='pink' direction='ltr'>
+            <Template title='Education' color='first' direction='ltr'>
                 <div className={style.education}>
                     {
                         educations.map((education, index) => (

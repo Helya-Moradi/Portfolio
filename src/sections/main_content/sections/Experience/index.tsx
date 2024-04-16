@@ -25,7 +25,7 @@ function Experience({observerRef}:any) {
 
     return (
         <div className={style.experienceContainer} id='experience' ref={observerRef}>
-            <Template title='Experience' color='darkPurple' direction='rtl'>
+            <Template title='Experience' color='second' direction='rtl'>
                 <div className={style.experience}>
                     <h3>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fugit harum nihil

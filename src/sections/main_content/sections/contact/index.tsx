@@ -71,7 +71,7 @@ function Contact({observerRef}:any) {
 
     return (
         <div className={style.contactContainer} id='contact' ref={observerRef}>
-            <Template title='Contact' color='lightPurple' direction='ltr'>
+            <Template title='Contact' color='third' direction='ltr'>
                 <div className={style.contact}>
                     <h3>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fugit harum nihil

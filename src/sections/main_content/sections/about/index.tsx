@@ -6,7 +6,7 @@ import cv from 'src/assets/files/HelyaMoradiCV.pdf'
 function About({observerRef}:any) {
     return (
         <div ref={observerRef} id='about'>
-            <Template color='pink' title='About' direction='ltr'>
+            <Template color='first' title='About' direction='ltr'>
                 <div className={style.about} >
 
                     <h3>

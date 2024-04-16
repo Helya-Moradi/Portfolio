@@ -7,15 +7,15 @@
   &.rtl
     flex-direction: row-reverse
 
-  &.pink
+  &.first
     --titleContainerBg: #{$primary1}
-    --childrenContainerBg: #{$primaryText}
+    --childrenContainerBg: #{$secondary1}
 
-  &.darkPurple
+  &.second
     --titleContainerBg: #{$primary2}
     --childrenContainerBg: #{$secondary2}
 
-  &.lightPurple
+  &.third
     --titleContainerBg: #{$primary3}
     --childrenContainerBg: #{$secondary3}
 
@@ -30,6 +30,7 @@
       font-size: 3.3rem
       font-weight: 300
       letter-spacing: -.2rem
+      color: $secondary1
 
   .childrenContainer
     background-color: var(--childrenContainerBg)

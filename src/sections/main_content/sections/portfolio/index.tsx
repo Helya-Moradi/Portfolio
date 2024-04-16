@@ -28,7 +28,7 @@ function Portfolio({observerRef}: any) {
 
     return (
         <div className={style.portfolioContainer} id='portfolio' ref={observerRef}>
-            <Template title='Portfolio' color='darkPurple' direction='rtl'>
+            <Template title='Portfolio' color='second' direction='rtl'>
                 <div className={style.portfolio}>
                     <div className={style.projects}>
                         {

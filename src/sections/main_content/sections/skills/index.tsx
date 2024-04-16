@@ -22,7 +22,7 @@ function Skills({observerRef}:any) {
 
     return (
         <div className={style.skillsContainer} id='skills' ref={observerRef}>
-            <Template title='Skills' color='lightPurple' direction='rtl'>
+            <Template title='Skills' color='third' direction='rtl'>
                 <div className={style.skills}>
                     {
                         skills.map((skill, index) => (

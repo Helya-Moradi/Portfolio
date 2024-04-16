@@ -1,0 +1,1249 @@
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/header/index.sass ***!
+  \*********************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--primaryBg);
+  padding: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: none;
+  overflow: hidden;
+  z-index: 2;
+}
+header span.logo_FF5Y {
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+header .wrapper_EJU1 {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+header .wrapper_EJU1 .icon_wPVl {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+header .socialMedias_Id_J {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  font-size: 0.8rem;
+  transition: 0.35s;
+  right: -30%;
+}
+header .socialMedias_Id_J.open_GO5z {
+  right: 8.3rem;
+}
+header .socialMedias_Id_J a {
+  color: var(--primaryText);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  transition: 0.35s;
+}
+header .socialMedias_Id_J a:hover {
+  color: var(--primary1);
+}
+
+@media screen and (min-width: 1300px) {
+  header {
+    flex-direction: column;
+    align-items: end;
+    justify-content: start;
+    gap: 3rem;
+    padding: 2rem 1.3rem;
+    right: unset;
+    bottom: 0;
+    width: 5rem;
+  }
+  header span.logo_FF5Y {
+    white-space: nowrap;
+    order: 2;
+    transform: rotate(-90deg) translate(-6rem, 5.7rem);
+  }
+  header .wrapper_EJU1 {
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 1.8rem;
+    order: 1;
+  }
+  header .socialMedias_Id_J {
+    position: static;
+    order: 3;
+    transition: unset;
+    transform: rotate(-90deg) translate(-15rem, 2rem);
+  }
+}
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/hamburgerMenu/index.sass ***!
+  \******************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.hamburgerIcon_dvBd {
+  width: 2rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+.hamburgerIcon_dvBd.open_Rx5P .line1_qCxy,
+.hamburgerIcon_dvBd.open_Rx5P .line3_Dc82 {
+  top: 40%;
+  width: 100%;
+}
+.hamburgerIcon_dvBd.open_Rx5P .line1_qCxy {
+  transform: rotate(45deg);
+}
+.hamburgerIcon_dvBd.open_Rx5P .line2_zGvx {
+  opacity: 0;
+}
+.hamburgerIcon_dvBd.open_Rx5P .line3_Dc82 {
+  transform: rotate(-45deg);
+}
+.hamburgerIcon_dvBd .line_hZ9I {
+  background-color: var(--primaryText);
+  position: absolute;
+  height: 0.2rem;
+  transition: 0.35s;
+}
+.hamburgerIcon_dvBd .line1_qCxy {
+  top: 0;
+  width: 85%;
+}
+.hamburgerIcon_dvBd .line2_zGvx {
+  top: calc(50% - 0.1rem);
+  width: 60%;
+}
+.hamburgerIcon_dvBd .line3_Dc82 {
+  top: calc(100% - 0.2rem);
+  width: 100%;
+}
+.hamburgerIcon_dvBd:hover .line_hZ9I {
+  width: 100%;
+}
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/index.sass ***!
+  \***************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.mainContent_YXDl {
+  position: relative;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto 4rem auto;
+}
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/home/index.sass ***!
+  \*****************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.home_hGOr {
+  position: relative;
+  margin-top: 3rem;
+  height: calc(100vh - 3rem);
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.home_hGOr .imageContainer_FFJY {
+  height: 15rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home_hGOr .imageContainer_FFJY img {
+  object-fit: cover;
+  width: 35rem;
+  filter: brightness(75%);
+}
+.home_hGOr .introduce_e3iB {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 3rem;
+}
+.home_hGOr .introduce_e3iB .title_VgM4 {
+  font-size: 5.8em;
+  font-weight: 300;
+  line-height: 6rem;
+}
+.home_hGOr .introduce_e3iB .description_RaNS {
+  line-height: 1.9rem;
+}
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/zigzagAnimation/index.sass ***!
+  \********************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.zigzag_oMmm {
+  position: absolute;
+  width: 9rem;
+  height: 2rem;
+  object-fit: contain;
+  z-index: 2;
+}
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/components/template/index.sass ***!
+  \***********************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.template_CA9o {
+  display: flex;
+}
+.template_CA9o.ltr_dItg {
+  flex-direction: row;
+}
+.template_CA9o.rtl_ztIt {
+  flex-direction: row-reverse;
+}
+.template_CA9o.first_rV6O {
+  --titleContainerBg: var(--primary1);
+  --childrenContainerBg: var(--secondary1);
+}
+.template_CA9o.second_admX {
+  --titleContainerBg: var(--primary2);
+  --childrenContainerBg: var(--secondary2);
+}
+.template_CA9o.third_W8Nj {
+  --titleContainerBg: var(--primary3);
+  --childrenContainerBg: var(--secondary1);
+}
+.template_CA9o .titleContainer_rWOJ {
+  background-color: var(--titleContainerBg);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.template_CA9o .titleContainer_rWOJ .title_e082 {
+  font-size: 3.3rem;
+  font-weight: 300;
+  letter-spacing: -0.2rem;
+  color: var(--secondary1);
+}
+.template_CA9o .childrenContainer_glye {
+  background-color: var(--childrenContainerBg);
+  flex: 2;
+}
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/about/index.sass ***!
+  \******************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.about_BX1l {
+  padding: 6rem 8rem;
+  color: var(--secondaryText);
+}
+.about_BX1l > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.about_BX1l h3, .about_BX1l p {
+  line-height: 2rem;
+}
+.about_BX1l h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.about_BX1l p {
+  font-size: 1rem;
+}
+.about_BX1l .aboutContainer_jkCB {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about_BX1l .aboutContainer_jkCB .list_NMqk {
+  list-style: none;
+}
+.about_BX1l .aboutContainer_jkCB .list_NMqk > *:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+.about_BX1l .aboutContainer_jkCB .list_NMqk li .label_DiUf {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.about_BX1l .aboutContainer_jkCB .list_NMqk li .value_Nz4B {
+  margin-inline-start: 0.4rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.about_BX1l .aboutContainer_jkCB .downloadCvContainer_dvja a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+.about_BX1l .aboutContainer_jkCB .downloadCvContainer_dvja a img {
+  width: 12rem;
+  height: 12rem;
+  object-fit: contain;
+}
+.about_BX1l .aboutContainer_jkCB .downloadCvContainer_dvja a .downloadCv_DU9C {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/portfolio/index.sass ***!
+  \**********************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.portfolioContainer_wj13 {
+  position: relative;
+}
+.portfolioContainer_wj13 .portfolio_KWtV {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolioContainer_wj13 .portfolio_KWtV .projects_DKyF {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.portfolioContainer_wj13 .portfolio_KWtV .loadMoreButton_Upu6 {
+  text-align: center;
+  width: 100%;
+  background-color: var(--primary1);
+}
+.portfolioContainer_wj13 .portfolio_KWtV .loadMoreButton_Upu6 a {
+  color: var(--secondary1);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: 0.35s;
+  display: block;
+  padding: 1.5rem;
+}
+.portfolioContainer_wj13 .portfolio_KWtV .loadMoreButton_Upu6 a:hover {
+  color: var(--primary1Darker);
+}
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/components/project/index.sass ***!
+  \**********************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.projectWrapper_r2nL {
+  overflow: hidden;
+}
+.projectWrapper_r2nL a {
+  text-decoration: none;
+  color: var(--primaryText);
+  position: relative;
+}
+.projectWrapper_r2nL a img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.projectWrapper_r2nL a .showMore_EMmo {
+  position: absolute;
+  background-color: var(--primaryBg);
+  bottom: -3rem;
+  left: 0;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  transition: 0.4s;
+}
+.projectWrapper_r2nL a:hover .showMore_EMmo {
+  bottom: 0;
+}
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/triangleAnimation/index.sass ***!
+  \**********************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.triangle_PgIW {
+  position: absolute;
+  width: 7rem;
+  height: 5rem;
+  object-fit: contain;
+  z-index: 2;
+}
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/skills/index.sass ***!
+  \*******************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.skillsContainer_UkSd {
+  position: relative;
+}
+.skillsContainer_UkSd .skills_aps3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 6rem 8rem;
+}
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/components/skill/index.sass ***!
+  \********************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.mainContainer_J6QR {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--secondaryText);
+  gap: 1.7rem;
+}
+.mainContainer_J6QR .rangeContainer_R2i_ {
+  flex: 1;
+  background-color: var(--white);
+  height: 0.8rem;
+}
+.mainContainer_J6QR .rangeContainer_R2i_ .range_jxDw {
+  background-color: var(--secondaryText);
+  color: var(--secondary1);
+  display: block;
+  padding: 0.3rem 0.6rem;
+  margin-top: -0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+.mainContainer_J6QR .rangeContainer_R2i_ .range_jxDw.rangeAnimation_MXvN {
+  animation: 0.5s rangeWidthAnimation_QaIV linear;
+  animation-fill-mode: forwards;
+}
+.mainContainer_J6QR .percent_nHdw {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+@keyframes rangeWidthAnimation_QaIV {
+  from {
+    width: 0;
+  }
+}
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/circleAnimation/index.sass ***!
+  \********************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.circle_v_7S {
+  position: absolute;
+  width: 9rem;
+  height: 6rem;
+  object-fit: contain;
+  z-index: 2;
+}
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/Education/index.sass ***!
+  \**********************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.educationContainer_u1dk {
+  position: relative;
+}
+.educationContainer_u1dk .education_tVMp {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 6rem 8rem;
+  color: var(--secondaryText);
+}
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/components/educationItem/index.sass ***!
+  \****************************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.educationWrapper_nzVP {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+}
+.educationWrapper_nzVP:not(.lastItem_F1ZJ)::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: var(--secondaryText);
+  top: 2.5rem;
+  left: 4.6rem;
+}
+.educationWrapper_nzVP:hover .descriptionWrapper_IbVe {
+  margin-inline-start: 1rem;
+}
+.educationWrapper_nzVP:hover .circle_SEVd::after {
+  background-color: var(--secondaryText);
+}
+.educationWrapper_nzVP .date_hrXq {
+  font-weight: 600;
+}
+.educationWrapper_nzVP .circle_SEVd {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid var(--secondaryText);
+  border-radius: 50%;
+  margin-top: -0.5rem;
+}
+.educationWrapper_nzVP .circle_SEVd::after {
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.educationWrapper_nzVP .descriptionWrapper_IbVe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  transition: 0.3s;
+}
+.educationWrapper_nzVP .descriptionWrapper_IbVe .degree_kE6L {
+  font-weight: 600;
+}
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/Experience/index.sass ***!
+  \***********************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.experienceContainer_L15l {
+  position: relative;
+}
+.experienceContainer_L15l .experience_J_O0 {
+  padding: 6rem 8rem;
+  color: var(--secondaryText);
+}
+.experienceContainer_L15l .experience_J_O0 > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.experienceContainer_L15l .experience_J_O0 h3, .experienceContainer_L15l .experience_J_O0 p {
+  line-height: 2rem;
+}
+.experienceContainer_L15l .experience_J_O0 h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.experienceContainer_L15l .experience_J_O0 p {
+  font-size: 1rem;
+}
+.experienceContainer_L15l .experience_J_O0 .experienceItems_DIT9 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/components/experienceItem/index.sass ***!
+  \*****************************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.experienceItem_Brzo {
+  cursor: pointer;
+}
+.experienceItem_Brzo.open_K2Ym .titleContainer_yHHa .icon_U_rh {
+  transform: rotate(180deg);
+}
+.experienceItem_Brzo.open_K2Ym .collapseWrapper_YMWL {
+  height: 6rem;
+  opacity: 1;
+  visibility: visible;
+}
+.experienceItem_Brzo .titleContainer_yHHa {
+  background-color: var(--secondaryText);
+  color: var(--primaryText);
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.experienceItem_Brzo .titleContainer_yHHa .title_wtli {
+  font-weight: 600;
+}
+.experienceItem_Brzo .collapseWrapper_YMWL {
+  background-color: var(--primaryText);
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  font-size: 0.9rem;
+}
+.experienceItem_Brzo .collapseWrapper_YMWL .collapseContent_jBCU {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.experienceItem_Brzo .collapseWrapper_YMWL .collapseContent_jBCU .date_UimO {
+  font-weight: 600;
+}
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/contact/index.sass ***!
+  \********************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.contactContainer_WjIV {
+  position: relative;
+}
+.contactContainer_WjIV .contact_lcw3 {
+  padding: 6rem 8rem;
+  color: var(--secondaryText);
+}
+.contactContainer_WjIV .contact_lcw3 > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.contactContainer_WjIV .contact_lcw3 h3, .contactContainer_WjIV .contact_lcw3 p {
+  line-height: 2rem;
+}
+.contactContainer_WjIV .contact_lcw3 h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.contactContainer_WjIV .contact_lcw3 p {
+  font-size: 1rem;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3.4rem;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV.invalid_v4pY {
+  padding-bottom: 3rem;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV.invalid_v4pY:after {
+  position: absolute;
+  content: "One or more fields have an error. Please check and try again.";
+  color: var(--primaryText);
+  background-color: var(--primary1);
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV.invalid_v4pY .inputWrapper_RAw9.required_zkHr:after {
+  position: absolute;
+  content: "The field is required.";
+  bottom: 0.1rem;
+  right: 0;
+  text-align: center;
+  color: var(--primaryText);
+  background-color: var(--primary1);
+  padding: 0.4rem;
+  font-size: 0.7rem;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 label {
+  position: absolute;
+  top: -1.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 label:has(+ input:focus, + textarea:focus) {
+  font-size: 0.8rem;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 input, .contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 textarea {
+  border: none;
+  background-color: inherit;
+  border-bottom: 2px solid var(--secondaryText);
+  padding: 0.4rem;
+  font-size: 1.1rem;
+  color: var(--secondaryText);
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 input:focus, .contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 textarea:focus {
+  outline: none;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 textarea {
+  resize: vertical;
+  font-family: montserrat;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button {
+  padding: 1.4rem;
+  border: 2px solid var(--secondaryText);
+  background-color: inherit;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondaryText);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button:hover {
+  background-color: var(--secondaryText);
+  color: var(--primaryText);
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button .loader_Z_oE {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primaryBg);
+  border-radius: 50%;
+  animation: 1s loaderAnimation_K4Gl infinite linear;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button .loader_Z_oE:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  top: 0.3rem;
+  left: 0.3rem;
+  background-color: var(--primary1);
+  border-radius: 50%;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .messageStatus_kTjn {
+  padding: 0.7rem 1rem;
+  display: none;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .messageStatus_kTjn.show_MyOq {
+  display: block;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .messageStatus_kTjn.show_MyOq.success_QOUT {
+  border: 2px solid var(--success);
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .messageStatus_kTjn.show_MyOq.wrong_hGum {
+  border: 2px solid var(--danger);
+}
+
+@keyframes loaderAnimation_K4Gl {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/widgets/index.sass ***!
+  \********************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.widgetContainer_EGLh {
+  position: relative;
+}
+.widgetContainer_EGLh .widgets_IcsN {
+  display: flex;
+}
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/components/widget/index.sass ***!
+  \*********************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.widget_v_LK {
+  background-color: var(--widgetBg);
+  padding: 9rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+.widget_v_LK.pink_sqYI {
+  --widgetBg: var(--primary1);
+}
+.widget_v_LK.darkPurple_Tc6H {
+  --widgetBg: var(--primary2);
+}
+.widget_v_LK.lightPurple_h44U {
+  --widgetBg: var(--primary3);
+}
+.widget_v_LK img {
+  width: 12rem;
+  height: 12rem;
+  object-fit: contain;
+}
+.widget_v_LK .text_Pec_ {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/footer/index.sass ***!
+  \*********************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.footer_qYHC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+  gap: 1rem;
+}
+.footer_qYHC .socialsMedias_ChHp {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.footer_qYHC .socialsMedias_ChHp span a {
+  font-size: 1.8rem;
+}
+.footer_qYHC .copyright_VBya a, .footer_qYHC .socialsMedias_ChHp a {
+  color: var(--primaryText);
+  text-decoration: none;
+  transition: 0.35s;
+}
+.footer_qYHC .copyright_VBya a:hover, .footer_qYHC .socialsMedias_ChHp a:hover {
+  color: var(--primary1);
+}
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/sidebar/index.sass ***!
+  \**********************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.sidebar_Xrt9 {
+  position: fixed;
+  top: 4rem;
+  right: -40%;
+  padding: 3rem 7.3rem 3rem 3rem;
+  z-index: 1;
+  height: 100vh;
+  background-color: var(--primaryBg);
+  transition: 0.35s;
+}
+.sidebar_Xrt9 .list_BQZn {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  margin-right: 2rem;
+  gap: 2rem;
+}
+.sidebar_Xrt9 .list_BQZn li a {
+  text-decoration: none;
+  color: var(--primaryText);
+  font-weight: 500;
+  transition: 0.3s;
+}
+.sidebar_Xrt9 .list_BQZn li a:hover {
+  color: var(--primary1);
+}
+.sidebar_Xrt9 .list_BQZn li a.active_a3Cz {
+  color: var(--primary1);
+}
+
+.sidebar_Xrt9.open_HTlS {
+  right: 0;
+}
+
+@media screen and (min-width: 1300px) {
+  .sidebar_Xrt9 {
+    right: 0;
+    left: 0;
+    top: -10%;
+    height: auto;
+    padding: 2rem;
+  }
+  .sidebar_Xrt9 .list_BQZn {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .sidebar_Xrt9.open_HTlS {
+    top: 0;
+  }
+}
+/*!*****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/index.sass ***!
+  \*****************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(7179b7d2ac9b599db5f9.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: montserrat;
+  src: url(24785cc015b27a3e964b.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: montserrat;
+  src: url(b8c6753baa964ccac1ba.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: montserrat;
+  src: url(93b37a465fc4ec0d0415.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: montserrat;
+  src: url(50f0257aa1e905f4bfaf.ttf);
+  font-weight: 700;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: montserrat;
+  background-color: var(--primaryBg);
+  color: var(--primaryText);
+  overflow-x: hidden;
+}
+body[data-theme=light] {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #7a5932;
+  --secondaryText: #bea17d;
+  --primaryBg: #faeddf;
+  --primary1: #188497;
+  --primary1Darker: #24c1dc;
+  --secondary1: #fcf7f1;
+  --primary2: #f8a577;
+  --secondary2: #f0deca;
+  --primary3: #fff48f;
+}
+
+/*# sourceMappingURL=main.css.map*/

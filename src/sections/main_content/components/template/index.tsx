@@ -2,7 +2,7 @@ import style from './index.sass'
 import cls from "src/utils/class_names";
 
 interface TemplateProps {
-    color: 'pink' | 'darkPurple' | 'lightPurple';
+    color: 'first' | 'second' | 'third';
     direction: 'ltr' | 'rtl';
     title: String;
     children?: any;

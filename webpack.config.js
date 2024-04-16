@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: './src/index.tsx',
@@ -9,7 +10,7 @@ module.exports = {
 
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'docs'),
         clean: true,
     },
 
@@ -23,7 +24,16 @@ module.exports = {
             template: path.resolve(__dirname, './index.html')
         }),
 
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
+
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: 'public',
+                    to: '.'
+                }
+            ],
+        }),
     ],
 
     module: {
