@@ -6,6 +6,7 @@
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -13,6 +14,8 @@
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -106,6 +109,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -113,6 +117,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -166,6 +172,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -173,6 +180,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -191,6 +200,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -198,6 +208,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -212,11 +224,12 @@ header .socialMedias_Id_J a:hover {
   gap: 4rem;
 }
 .home_hGOr .imageContainer_FFJY {
-  height: 15rem;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--secondary2);
+  border-radius: 50%;
 }
 .home_hGOr .imageContainer_FFJY img {
   object-fit: cover;
@@ -246,6 +259,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -253,6 +267,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -272,6 +288,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -279,6 +296,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -303,6 +322,9 @@ header .socialMedias_Id_J a:hover {
 .template_CA9o.third_W8Nj {
   --titleContainerBg: var(--primary3);
   --childrenContainerBg: var(--secondary1);
+}
+.template_CA9o.third_W8Nj .title_e082 {
+  color: var(--secondary3) !important;
 }
 .template_CA9o .titleContainer_rWOJ {
   background-color: var(--titleContainerBg);
@@ -329,6 +351,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -336,6 +359,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -405,6 +430,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -412,6 +438,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -454,6 +482,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -461,6 +490,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -499,6 +530,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -506,6 +538,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -525,6 +559,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -532,6 +567,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -555,6 +592,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -562,6 +600,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -570,7 +610,7 @@ header .socialMedias_Id_J a:hover {
   width: 100%;
   display: flex;
   align-items: center;
-  color: var(--secondaryText);
+  color: var(--secondary2Text);
   gap: 1.7rem;
 }
 .mainContainer_J6QR .rangeContainer_R2i_ {
@@ -579,7 +619,7 @@ header .socialMedias_Id_J a:hover {
   height: 0.8rem;
 }
 .mainContainer_J6QR .rangeContainer_R2i_ .range_jxDw {
-  background-color: var(--secondaryText);
+  background-color: var(--special);
   color: var(--secondary1);
   display: block;
   padding: 0.3rem 0.6rem;
@@ -611,6 +651,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -618,6 +659,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -637,6 +680,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -644,6 +688,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -666,6 +712,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -673,6 +720,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -687,7 +736,7 @@ header .socialMedias_Id_J a:hover {
   position: absolute;
   width: 3px;
   height: 100%;
-  background-color: var(--secondaryText);
+  background-color: var(--special);
   top: 2.5rem;
   left: 4.6rem;
 }
@@ -695,16 +744,17 @@ header .socialMedias_Id_J a:hover {
   margin-inline-start: 1rem;
 }
 .educationWrapper_nzVP:hover .circle_SEVd::after {
-  background-color: var(--secondaryText);
+  background-color: var(--special);
 }
 .educationWrapper_nzVP .date_hrXq {
   font-weight: 600;
+  color: var(--special);
 }
 .educationWrapper_nzVP .circle_SEVd {
   position: relative;
   width: 2rem;
   height: 2rem;
-  border: 3px solid var(--secondaryText);
+  border: 3px solid var(--special);
   border-radius: 50%;
   margin-top: -0.5rem;
 }
@@ -737,6 +787,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -744,6 +795,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -781,6 +834,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -788,6 +842,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -804,8 +860,8 @@ header .socialMedias_Id_J a:hover {
   visibility: visible;
 }
 .experienceItem_Brzo .titleContainer_yHHa {
-  background-color: var(--secondaryText);
-  color: var(--primaryText);
+  background-color: var(--special);
+  color: var(--white);
   padding: 0.8rem 1rem;
   display: flex;
   justify-content: space-between;
@@ -815,7 +871,7 @@ header .socialMedias_Id_J a:hover {
   font-weight: 600;
 }
 .experienceItem_Brzo .collapseWrapper_YMWL {
-  background-color: var(--primaryText);
+  background-color: var(--white);
   height: 0;
   opacity: 0;
   visibility: hidden;
@@ -839,6 +895,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -846,6 +903,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -946,7 +1005,7 @@ header .socialMedias_Id_J a:hover {
 }
 .contactContainer_WjIV .contact_lcw3 .contactForm_mijV button:hover {
   background-color: var(--secondaryText);
-  color: var(--primaryText);
+  color: var(--secondary1);
 }
 .contactContainer_WjIV .contact_lcw3 .contactForm_mijV button .loader_Z_oE {
   position: relative;
@@ -997,6 +1056,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -1004,6 +1064,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -1022,6 +1084,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -1029,6 +1092,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -1071,6 +1136,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -1078,6 +1144,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -1114,6 +1182,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -1121,6 +1190,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -1183,6 +1254,7 @@ header .socialMedias_Id_J a:hover {
   --white: #fff;
   --primaryText: #fff;
   --secondaryText: #605777;
+  --secondary2Text: #605777;
   --primaryBg: #171321;
   --primary1: #f393a4;
   --primary1Darker: #ed5c76;
@@ -1190,6 +1262,8 @@ header .socialMedias_Id_J a:hover {
   --primary2: #362f47;
   --secondary2: #eae0e9;
   --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
   --success: #46b450;
   --danger: #bb1d3b;
 }
@@ -1236,14 +1310,17 @@ body[data-theme=light] {
   --black: #000;
   --white: #fff;
   --primaryText: #7a5932;
-  --secondaryText: #bea17d;
+  --secondaryText: #7a5932;
+  --secondary2Text: #bea17d;
   --primaryBg: #faeddf;
   --primary1: #188497;
   --primary1Darker: #24c1dc;
   --secondary1: #fcf7f1;
   --primary2: #f8a577;
   --secondary2: #f0deca;
+  --special: #188497;
   --primary3: #fff48f;
+  --secondary3: #9e7e63;
 }
 
 /*# sourceMappingURL=main.css.map*/
