@@ -3,7 +3,7 @@
 
   .contact
     padding: 6rem 8rem
-    color: $purple6
+    color: $secondaryText
 
     > *:not(:last-child)
       margin-bottom: 3rem
@@ -30,8 +30,8 @@
         &:after
           position: absolute
           content: 'One or more fields have an error. Please check and try again.'
-          color: $white
-          background-color: $pink
+          color: $primaryText
+          background-color: $primary1
           padding: .4rem
           font-size: .8rem
           text-align: center
@@ -46,8 +46,8 @@
             bottom: .1rem
             right: 0
             text-align: center
-            color: $white
-            background-color: $pink
+            color: $primaryText
+            background-color: $primary1
             padding: .4rem
             font-size: .7rem
 
@@ -69,10 +69,10 @@
         input, textarea
           border: none
           background-color: inherit
-          border-bottom: 2px solid $purple6
+          border-bottom: 2px solid $secondaryText
           padding: .4rem
           font-size: 1.1rem
-          color: $purple6
+          color: $secondaryText
 
           &:focus
             outline: none
@@ -83,25 +83,25 @@
 
       button
         padding: 1.4rem
-        border: 2px solid $purple6
+        border: 2px solid $secondaryText
         background-color: inherit
         font-size: 1.2rem
         font-weight: 600
-        color: $purple6
+        color: $secondaryText
         cursor: pointer
         display: flex
         justify-content: center
         transition: .3s
 
         &:hover
-          background-color: $purple6
-          color: $white
+          background-color: $secondaryText
+          color: $primaryText
 
         .loader
           position: relative
           width: 2rem
           height: 2rem
-          background-color: $purple1
+          background-color: $primaryBg
           border-radius: 50%
           animation: 1s loaderAnimation infinite linear
 
@@ -113,7 +113,7 @@
             height: .7rem
             top: .3rem
             left: .3rem
-            background-color: $pink
+            background-color: $primary1
             border-radius: 50%
 
       .messageStatus
@@ -124,10 +124,10 @@
           display: block
 
           &.success
-            border: 2px solid $green
+            border: 2px solid $success
 
           &.wrong
-            border: 2px solid $red
+            border: 2px solid $danger
 
 @keyframes loaderAnimation
   from
