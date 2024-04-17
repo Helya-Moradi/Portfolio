@@ -38,3 +38,24 @@
   .childrenContainer
     background-color: var(--childrenContainerBg)
     flex: 2
+
+@media screen and (max-width: 1000px)
+  .template
+    .titleContainer
+      .title
+        font-size: 2.5rem
+
+@media screen and (max-width: 770px)
+  .template
+    flex-direction: column !important
+
+    .titleContainer
+      padding: 1.5rem
+
+@media screen and (max-width: 410px)
+  .template
+    .titleContainer
+      padding: 1.2rem
+
+      .title
+        font-size: 1.9rem
