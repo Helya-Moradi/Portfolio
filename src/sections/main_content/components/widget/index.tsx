@@ -3,7 +3,7 @@ import cls from "src/utils/class_names";
 
 interface WidgetProps {
     image: string;
-    color: 'pink' | 'darkPurple' | 'lightPurple';
+    color: 'first' | 'second' | 'third';
     text: String;
 }
 

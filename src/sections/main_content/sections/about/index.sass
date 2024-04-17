@@ -47,8 +47,8 @@
         text-decoration: none
 
         img
-          width: 12rem
-          height: 12rem
+          width: 10rem
+          height: 10rem
           object-fit: contain
 
         .downloadCv
@@ -56,3 +56,24 @@
           font-weight: 600
           text-transform: uppercase
           letter-spacing: .1rem
+
+@media screen and (max-width: 1000px)
+  .about
+    padding: 4rem 5rem
+
+@media screen and (max-width: 900px)
+  .about
+    >*:not(:last-child)
+      margin-bottom: 2rem
+
+    .aboutContainer
+      flex-direction: column
+      align-items: start
+      gap: 2rem
+
+      .downloadCvContainer
+        margin: auto
+
+@media screen and (max-width: 770px)
+  .about
+    padding: 1.5rem

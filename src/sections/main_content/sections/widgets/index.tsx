@@ -9,9 +9,9 @@ function Widgets() {
     return (
         <div className={style.widgetContainer}>
             <div className={style.widgets}>
-                <Widget image={preciseImg} color='lightPurple' text='pixel precise'/>
-                <Widget image={secureImg} color='pink' text='secure'/>
-                <Widget image={responsiveImg} color='darkPurple' text='responsive'/>
+                <Widget image={preciseImg} color='third' text='pixel precise'/>
+                <Widget image={secureImg} color='first' text='secure'/>
+                <Widget image={responsiveImg} color='second' text='responsive'/>
             </div>
 
             <ZigzagAnimation right={65} bottom={2}/>

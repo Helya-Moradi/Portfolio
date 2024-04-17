@@ -7,19 +7,21 @@
   justify-content: center
   align-items: center
   gap: .3rem
+  --text-color: #{$secondary1}
 
-  &.pink
+  &.first
     --widgetBg: #{$primary1}
 
-  &.darkPurple
+  &.second
     --widgetBg: #{$primary2}
 
-  &.lightPurple
+  &.third
     --widgetBg: #{$primary3}
+    --text-color: #{$secondary3}
 
   img
-    width: 12rem
-    height: 12rem
+    width: 10rem
+    height: 10rem
     object-fit: contain
 
   .text
@@ -27,3 +29,8 @@
     font-weight: 600
     text-transform: uppercase
     letter-spacing: .1rem
+    color: var(--text-color)
+
+@media screen and (max-width: 770px)
+  .widget
+    padding: 02rem
