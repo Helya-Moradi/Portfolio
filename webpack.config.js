@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
     entry: './src/index.tsx',
@@ -25,6 +26,8 @@ module.exports = {
         }),
 
         new MiniCssExtractPlugin(),
+
+        new FaviconsWebpackPlugin('./src/assets/favicon.ico'),
 
         new CopyPlugin({
             patterns: [
