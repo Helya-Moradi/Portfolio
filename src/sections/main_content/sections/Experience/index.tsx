@@ -27,13 +27,8 @@ function Experience({observerRef}:any) {
         <div className={style.experienceContainer} id='experience' ref={observerRef}>
             <Template title='Experience' color='second' direction='rtl'>
                 <div className={style.experience}>
-                    <h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fugit harum nihil
-                    </h3>
-
                     <p>
-                        Self-motivated and creative Web Designer and Front-end Developer. Interested in learning,
-                        programming, web design, artwork and problem solving.
+                        I started front-end development from December 2021.
                     </p>
 
                     <div className={style.experienceItems}>

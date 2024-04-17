@@ -73,13 +73,8 @@ function Contact({observerRef}:any) {
         <div className={style.contactContainer} id='contact' ref={observerRef}>
             <Template title='Contact' color='third' direction='ltr'>
                 <div className={style.contact}>
-                    <h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fugit harum nihil
-                    </h3>
-
                     <p>
-                        Self-motivated and creative Web Designer and Front-end Developer. Interested in learning,
-                        programming, web design, artwork and problem solving.
+                        To contact me, send me your email through this form.
                     </p>
 
                     <form

@@ -16,7 +16,7 @@ function Home({observerRef}: any) {
                 </span>
 
             <span className={style.description}>
-                    Self-motivated and creative Web Designer and Front-end Developer. Interested in learning, programming, web design, artwork and problem solving.
+                    Self-motivated and creative web designer and front-end developer. Interested in learning, programming, web design, artwork and problem solving.
                 </span>
         </div>
 

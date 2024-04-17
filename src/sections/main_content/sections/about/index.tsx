@@ -10,11 +10,11 @@ function About({observerRef}:any) {
                 <div className={style.about} >
 
                     <h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fugit harum nihil
+                        I am a front-end developer from Iran.
                     </h3>
 
                     <p>
-                        Self-motivated and creative Web Designer and Front-end Developer. Interested in learning,
+                        Self-motivated and creative web designer and front-end developer. Interested in learning,
                         programming, web design, artwork and problem solving.
                     </p>
 
