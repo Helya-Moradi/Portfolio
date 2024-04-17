@@ -29,9 +29,51 @@ header
     align-items: center
     gap: 1.2rem
 
-    .icon
-      font-size: 1.8rem
+    .themeButton
       cursor: pointer
+      border-radius: 50%
+      width: 30px
+      height: 30px
+      position: relative
+      box-shadow: inset 10px -10px 0 0 $primaryText
+      transform: scale(1) rotate(-2deg)
+      transition: box-shadow .5s ease 0s, transform .4s ease .1s
+
+      &:before
+        content: ''
+        width: inherit
+        height: inherit
+        border-radius: inherit
+        position: absolute
+        left: 0
+        top: 0
+        transition: background .3s ease
+
+      &:after
+        content: ''
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        margin: -3px 0 0 -3px
+        position: absolute
+        top: 50%
+        left: 50%
+        box-shadow: 0 -20px 0 $primaryText, 0 20px 0 $primaryText, 20px 0 0 $primaryText, -20px 0 0 $primaryText, 14px 14px 0 $primaryText, -14px 14px 0 $primaryText, 14px -14px 0 $primaryText, -14px -14px 0 $primaryText
+        transform: scale(0)
+        transition: all .3s ease
+
+      &.light
+        box-shadow: inset 22px -22px 0 0 $primaryText
+        transform: scale(.5) rotate(0deg)
+        transition: transform .3s ease .1s, box-shadow .2s ease 0s
+
+        &:before
+          background: $primaryText
+          transition: background .3s ease .1s
+
+        &:after
+          transform: scale(1.5)
+          transition: transform .5s ease .15s
 
   .socialMedias
     position: absolute
@@ -97,5 +139,13 @@ header
     .wrapper
       gap: .7rem
 
-      .icon
-        font-size: 1.4rem
+      .themeButton
+        width: 25px
+        height: 25px
+        box-shadow: inset 7px -7px 0 0 $primaryText
+
+        &:after
+          width: 5px
+          height: 5px
+          margin: -2.5px 0 0 -2.5px
+          box-shadow: 0 -16px 0 $primaryText, 0 16px 0 $primaryText, 16px 0 0 $primaryText, -16px 0 0 $primaryText, 12px 12px 0 $primaryText, -12px 12px 0 $primaryText, 12px -12px 0 $primaryText, -12px -12px 0 $primaryText

@@ -1,8 +1,6 @@
 import style from './index.sass'
 import cls from "src/utils/class_names";
 import HamburgerMenu from "src/components/hamburgerMenu";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faPaintBrush} from '@fortawesome/free-solid-svg-icons';
 import {useEffect, useState} from "react";
 
 interface HeaderProps {
@@ -45,7 +43,7 @@ function Header({open, setOpen}: HeaderProps) {
             <span className={style.logo}>Helya Moradi</span>
 
             <div className={style.wrapper}>
-                <FontAwesomeIcon icon={faPaintBrush} className={style.icon} onClick={changeThemeHandler}/>
+                <div className={cls(style.themeButton, !light && style.light)} title={light ? 'Dark' : 'Light'} onClick={changeThemeHandler}/>
                 <HamburgerMenu open={open} setOpen={setOpen} classNames={style.hamburgerIcon}/>
             </div>
 
