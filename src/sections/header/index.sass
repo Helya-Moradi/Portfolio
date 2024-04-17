@@ -12,11 +12,17 @@ header
   overflow: hidden
   z-index: 2
 
+  &.open
+    .socialMedias
+      right: 8.3rem
+
   span.logo
     font-weight: 700
     font-size: 1.1rem
     text-transform: uppercase
     letter-spacing: .4rem
+    visibility: visible
+    opacity: 1
 
   .wrapper
     display: flex
@@ -34,10 +40,7 @@ header
     gap: 1.8rem
     font-size: .8rem
     transition: .35s
-    right: -30%
-
-    &.open
-      right: 8.3rem
+    right: -100%
 
     a
       color: $primaryText
@@ -76,3 +79,23 @@ header
       order: 3
       transition: unset
       transform: rotate(-90deg) translate(-15rem, 2rem)
+
+@media screen and (max-width: 570px)
+  header
+    &.open
+      span.logo
+        visibility: hidden
+        opacity: 0
+
+@media screen and (max-width: 410px)
+  header
+    padding: .7rem 1rem
+
+    span.logo
+      font-size: .9rem
+
+    .wrapper
+      gap: .7rem
+
+      .icon
+        font-size: 1.4rem

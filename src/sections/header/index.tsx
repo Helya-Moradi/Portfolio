@@ -22,7 +22,7 @@ function Header({open, setOpen}: HeaderProps) {
     }
 
     return (
-        <header>
+        <header className={cls(open && style.open)}>
             <span className={style.logo}>Helya Moradi</span>
 
             <div className={style.wrapper}>
@@ -30,7 +30,7 @@ function Header({open, setOpen}: HeaderProps) {
                 <HamburgerMenu open={open} setOpen={setOpen} classNames={style.hamburgerIcon}/>
             </div>
 
-            <div className={cls(style.socialMedias, open && style.open)}>
+            <div className={style.socialMedias}>
                 <a href="https://www.linkedin.com/in/helya-moradi" target='_blank'>li.</a>
                 <a href="https://github.com/Helya-Moradi" target='_blank'>gh.</a>
             </div>

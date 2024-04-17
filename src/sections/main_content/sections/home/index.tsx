@@ -4,8 +4,6 @@ import ZigzagAnimation from "src/components/zigzagAnimation";
 
 function Home({observerRef}: any) {
     return (<div className={style.home} id='home' ref={observerRef}>
-        {/*TODO: change image*/}
-
         <div className={style.imageContainer}>
             <img src={iImg} alt="image"/>
         </div>

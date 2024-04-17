@@ -1,7 +1,7 @@
 .sidebar
   position: fixed
   top: 4rem
-  right: -40%
+  right: -100%
   padding: 3rem 7.3rem 3rem 3rem
   z-index: 1
   height: 100vh
@@ -45,3 +45,10 @@
 
   .sidebar.open
     top: 0
+
+@media screen and (max-width: 570px)
+  .sidebar
+    width: 100%
+    padding: 3rem
+    display: flex
+    justify-content: center
