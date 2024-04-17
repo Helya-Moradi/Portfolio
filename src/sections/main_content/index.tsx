@@ -26,7 +26,7 @@ function MainContent({activeItem, setActiveItem}: MainContentPops) {
     }
 
     const options = {
-        threshold: 0.8
+        threshold: 0.5
     }
 
     useEffect(() => {
