@@ -3,6 +3,7 @@ import cls from "src/utils/class_names";
 import HamburgerMenu from "src/components/hamburgerMenu";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPaintBrush} from '@fortawesome/free-solid-svg-icons';
+import {useEffect, useState} from "react";
 
 interface HeaderProps {
     open: boolean;
@@ -10,15 +11,33 @@ interface HeaderProps {
 }
 
 function Header({open, setOpen}: HeaderProps) {
-    const changeThemeHandler = () => {
+    const [light, setLight] = useState(false);
+
+    useEffect(() => {
+        const theme = localStorage.getItem('theme');
+
+        if (theme === 'light') {
+            setLight(true)
+        } else {
+            setLight(false)
+        }
+    }, []);
+
+    useEffect(() => {
         const body = document.body;
 
-        if (body.dataset.theme === 'light') {
+        if (light) {
+            body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light')
+        } else {
             body.removeAttribute('data-theme');
-            return
+            localStorage.setItem('theme', 'dark')
         }
 
-        body.setAttribute('data-theme', 'light');
+    }, [light])
+
+    const changeThemeHandler = () => {
+        setLight(prev => !prev)
     }
 
     return (
