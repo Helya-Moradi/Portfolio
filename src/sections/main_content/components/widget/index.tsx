@@ -1,16 +1,17 @@
 import style from "./index.sass"
 import cls from "src/utils/class_names";
+import Icon from "src/components/icon";
 
 interface WidgetProps {
-    image: string;
+    icon: any;
     color: 'first' | 'second' | 'third';
     text: String;
 }
 
-function Widget({image, color, text}: WidgetProps) {
+function Widget({icon, color, text}: WidgetProps) {
     return (
         <div className={cls(style.widget, style[color])}>
-            <img src={image} alt="widget image"/>
+            <Icon icon={icon} classNameIcon={style.icon} classNameBg={style.bg}/>
             <span className={style.text}>
                 {text}
             </span>

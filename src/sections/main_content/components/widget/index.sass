@@ -9,15 +9,27 @@
   gap: .3rem
   --text-color: #{$secondary1}
 
-  &.first
-    --widgetBg: #{$primary1}
+  .icon
+    color: var(--icon)
+
+  .bg
+    background-color: var(--bg)
 
   &.second
     --widgetBg: #{$primary2}
+    --icon: #{$special}
+    --bg: #{$secondary2Text}
+
+  &.first
+    --widgetBg: #{$primary1}
+    --icon: #{$primary2}
+    --bg: #{$secondary1}
 
   &.third
     --widgetBg: #{$primary3}
     --text-color: #{$secondary3}
+    --icon: #{$special}
+    --bg: #{$secondary1}
 
   img
     width: 10rem

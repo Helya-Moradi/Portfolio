@@ -1,13 +1,14 @@
 import Template from "src/sections/main_content/components/template";
 import style from './index.sass'
-import downloadImg from 'src/assets/images/download/icon_download_cv.png'
 import cv from 'src/assets/files/HelyaMoradiCV.pdf'
+import Icon from "src/components/icon";
+import downloadIcon from 'src/assets/icons/file-download.svg'
 
-function About({observerRef}:any) {
+function About({observerRef}: any) {
     return (
         <div ref={observerRef} id='about'>
             <Template color='first' title='About' direction='ltr'>
-                <div className={style.about} >
+                <div className={style.about}>
 
                     <h3>
                         I am a front-end developer from Iran.
@@ -45,7 +46,7 @@ function About({observerRef}:any) {
 
                         <div className={style.downloadCvContainer}>
                             <a href={cv} download="HelyaMoradiCV.pdf" target='-blank'>
-                                <img src={downloadImg} alt="download cv image"/>
+                                <Icon icon={downloadIcon} classNameIcon={style.icon} classNameBg={style.bg}/>
                                 <span className={style.downloadCv}>Download cv</span>
                             </a>
                         </div>

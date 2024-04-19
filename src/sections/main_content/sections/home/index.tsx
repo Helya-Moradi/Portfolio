@@ -13,7 +13,7 @@ function Home({observerRef}: any) {
                     Hello <br/>I’m Helya Moradi
                 </span>
 
-            <span className={style.description}>
+                <span className={style.description}>
                     Self-motivated and creative web designer and front-end developer. Interested in learning, programming, web design, artwork and problem solving.
                 </span>
         </div>
