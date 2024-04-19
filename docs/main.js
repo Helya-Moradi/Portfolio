@@ -1456,12 +1456,15 @@ function Header(_ref) {
     }
   }, []);
   (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(function () {
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
     var body = document.body;
     if (light) {
       body.setAttribute('data-theme', 'light');
+      metaThemeColor.setAttribute('content', '#188497');
       localStorage.setItem('theme', 'light');
     } else {
       body.removeAttribute('data-theme');
+      metaThemeColor.setAttribute('content', '#605777');
       localStorage.setItem('theme', 'dark');
     }
   }, [light]);
