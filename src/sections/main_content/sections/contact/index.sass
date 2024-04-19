@@ -22,7 +22,7 @@
         &:after
           position: absolute
           content: 'One or more fields have an error. Please check and try again.'
-          color: $primaryText
+          color: $secondary1
           background-color: $primary1
           padding: .4rem
           font-size: .8rem
@@ -74,20 +74,40 @@
           font-family: montserrat
 
       button
+        position: relative
         padding: 1.4rem
         border: 2px solid $secondaryText
         background-color: inherit
-        font-size: 1.2rem
-        font-weight: 600
-        color: $secondaryText
         cursor: pointer
         display: flex
         justify-content: center
-        transition: .3s
+        overflow: hidden
+
+        span
+          z-index: 1
+          font-size: 1.2rem
+          font-weight: 600
+          color: $secondaryText
+          transition: .6s
+
+        &::after
+          content: ''
+          position: absolute
+          aspect-ratio: 1
+          width: 0
+          top: var(--y, 0px)
+          left: var(--x, 0px)
+          border-radius: 50%
+          transform: translate(-50%, -50%)
+          background-color: $secondaryText
+          transition: .6s ease-out, top 0s, left 0s
 
         &:hover
-          background-color: $secondaryText
-          color: $secondary1
+          span
+            color: $secondary1
+
+          &::after
+            width: 65rem
 
         .loader
           position: relative

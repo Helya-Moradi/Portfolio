@@ -4,8 +4,9 @@ import {useEffect, useState} from "react";
 import emailjs from '@emailjs/browser';
 import cls from "src/utils/class_names";
 import ZigzagAnimation from "src/components/zigzagAnimation";
+import * as events from "events";
 
-function Contact({observerRef}:any) {
+function Contact({observerRef}: any) {
     const [contactData, setContactData] = useState({
         name: '',
         email: '',
@@ -65,6 +66,19 @@ function Contact({observerRef}:any) {
         }
     }
 
+    const buttonMouseOverHandler = (e: any) => {
+        if (e.target.tagName === 'BUTTON') {
+            const button = e.target;
+            const buttonBounds = button.getBoundingClientRect()
+
+            const x = e.pageX - Math.round(buttonBounds.x);
+            const y = e.clientY - Math.round(buttonBounds.y);
+
+            button.style.setProperty("--x", `${x}px`);
+            button.style.setProperty("--y", `${y}px`);
+        }
+    }
+
     useEffect(() => {
         emailjs.init('VfT4-hFCfe-cPKKb4')
     }, [])
@@ -121,14 +135,9 @@ function Contact({observerRef}:any) {
                                 }}/>
                         </div>
 
-                        <button type="submit">
-                            {
-                                isLoading ? (
-                                    <div className={style.loader}/>
-                                ) : (
-                                    <span> Send Message </span>
-                                )
-                            }
+                        <button type="submit" onMouseOver={buttonMouseOverHandler}>
+                            {isLoading && <div className={style.loader}/>}
+                            {!isLoading && <span> Send Message </span>}
                         </button>
 
                         <div
