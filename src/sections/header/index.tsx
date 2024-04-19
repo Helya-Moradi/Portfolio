@@ -20,15 +20,19 @@ function Header({open, setOpen}: HeaderProps) {
             setLight(false)
         }
     }, []);
-
     useEffect(() => {
+        const metaThemeColor = document.querySelector("meta[name=theme-color]");
         const body = document.body;
 
         if (light) {
             body.setAttribute('data-theme', 'light');
+            metaThemeColor.setAttribute('content', '#188497')
+
             localStorage.setItem('theme', 'light')
         } else {
             body.removeAttribute('data-theme');
+            metaThemeColor.setAttribute('content', '#605777')
+
             localStorage.setItem('theme', 'dark')
         }
 
