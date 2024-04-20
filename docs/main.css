@@ -45,6 +45,15 @@
   pointer-events: none;
   transition: transform ease-out 120ms;
 }
+
+@media screen and (max-width: 460px) {
+  .app_OXwE .cursor_Gwnb {
+    display: none;
+  }
+  .app_OXwE .stalker_efM4 {
+    display: none;
+  }
+}
 /*!*********************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/header/index.sass ***!
   \*********************************************************************************************************************************************************************************/
@@ -393,6 +402,7 @@ header .socialMedias_Id_J a:hover {
     flex-direction: column;
     align-items: start;
     height: auto;
+    padding-top: 6rem;
   }
   .home_hGOr .imageContainer_FFJY {
     width: 18rem;
@@ -400,7 +410,7 @@ header .socialMedias_Id_J a:hover {
 }
 @media screen and (max-width: 410px) {
   .home_hGOr {
-    padding: 1.5rem;
+    padding: 5rem 1.5rem 1.5rem;
     align-items: center;
     gap: 2rem;
   }
@@ -593,10 +603,11 @@ header .socialMedias_Id_J a:hover {
   color: inherit;
   text-decoration: none;
 }
-.about_BX1l .aboutContainer_jkCB .downloadCvContainer_dvja a img {
-  width: 10rem;
-  height: 10rem;
-  object-fit: contain;
+.about_BX1l .aboutContainer_jkCB .downloadCvContainer_dvja a .icon_HQx2 {
+  fill: var(--secondaryText);
+}
+.about_BX1l .aboutContainer_jkCB .downloadCvContainer_dvja a .bg__hjf {
+  background-color: var(--primary1);
 }
 .about_BX1l .aboutContainer_jkCB .downloadCvContainer_dvja a .downloadCv_DU9C {
   font-size: 0.8rem;
@@ -627,6 +638,47 @@ header .socialMedias_Id_J a:hover {
   .about_BX1l {
     padding: 1.5rem;
   }
+}
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/icon/index.sass ***!
+  \*********************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --secondary2Text: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.iconWrapper_0V9P {
+  position: relative;
+  margin-bottom: 2.3rem;
+  transform: translateX(-0.7rem);
+}
+.iconWrapper_0V9P .fontawesome_La6D {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  z-index: 1;
+}
+.iconWrapper_0V9P .bg_XoFz {
+  position: absolute;
+  width: 5.5rem;
+  height: 5.5rem;
+  top: 1rem;
+  left: 2rem;
+  border-radius: 2rem 0.4rem;
 }
 /*!**********************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/portfolio/index.sass ***!
@@ -1171,7 +1223,7 @@ header .socialMedias_Id_J a:hover {
 .contactContainer_WjIV .contact_lcw3 .contactForm_mijV.invalid_v4pY:after {
   position: absolute;
   content: "One or more fields have an error. Please check and try again.";
-  color: var(--primaryText);
+  color: var(--secondary1);
   background-color: var(--primary1);
   padding: 0.4rem;
   font-size: 0.8rem;
@@ -1222,20 +1274,39 @@ header .socialMedias_Id_J a:hover {
   font-family: montserrat;
 }
 .contactContainer_WjIV .contact_lcw3 .contactForm_mijV button {
+  position: relative;
   padding: 1.4rem;
   border: 2px solid var(--secondaryText);
   background-color: inherit;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--secondaryText);
   cursor: pointer;
   display: flex;
   justify-content: center;
-  transition: 0.3s;
+  overflow: hidden;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button:hover {
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button span {
+  z-index: 1;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondaryText);
+  transition: 0.6s;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button::after {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1;
+  width: 0;
+  top: var(--y, 0px);
+  left: var(--x, 0px);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--secondaryText);
+  transition: 0.6s ease-out, top 0s, left 0s;
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button:hover span {
   color: var(--secondary1);
+}
+.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button:hover::after {
+  width: 65rem;
 }
 .contactContainer_WjIV .contact_lcw3 .contactForm_mijV button .loader_Z_oE {
   position: relative;
@@ -1355,15 +1426,27 @@ header .socialMedias_Id_J a:hover {
   gap: 0.3rem;
   --text-color: var(--secondary1);
 }
-.widget_v_LK.first_Ze0d {
-  --widgetBg: var(--primary1);
+.widget_v_LK .icon_zm3l {
+  fill: var(--icon);
+}
+.widget_v_LK .bg_eJ7L {
+  background-color: var(--bg);
 }
 .widget_v_LK.second_pdIh {
   --widgetBg: var(--primary2);
+  --icon: var(--secondary1);
+  --bg: var(--secondary2Text);
+}
+.widget_v_LK.first_Ze0d {
+  --widgetBg: var(--primary1);
+  --icon: var(--primary2);
+  --bg: var(--secondary1);
 }
 .widget_v_LK.third_bqEi {
   --widgetBg: var(--primary3);
   --text-color: var(--secondary3);
+  --icon: var(--primary2);
+  --bg: var(--secondary1);
 }
 .widget_v_LK img {
   width: 10rem;
@@ -1510,6 +1593,11 @@ header .socialMedias_Id_J a:hover {
     padding: 3rem;
     display: flex;
     justify-content: center;
+  }
+}
+@media screen and (max-width: 410px) {
+  .sidebar_Xrt9 {
+    top: 1.5rem;
   }
 }
 /*!*****************************************************************************************************************************************************************!*\
