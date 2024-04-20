@@ -2,7 +2,7 @@ import Template from "src/sections/main_content/components/template";
 import style from './index.sass'
 import cv from 'src/assets/files/HelyaMoradiCV.pdf'
 import Icon from "src/components/icon";
-import downloadIcon from 'src/assets/icons/file-download.svg'
+import {ReactComponent as DownloadIcon} from 'src/assets/icons/file-download.svg'
 
 function About({observerRef}: any) {
     return (
@@ -46,7 +46,7 @@ function About({observerRef}: any) {
 
                         <div className={style.downloadCvContainer}>
                             <a href={cv} download="HelyaMoradiCV.pdf" target='-blank'>
-                                <Icon icon={downloadIcon} classNameIcon={style.icon} classNameBg={style.bg}/>
+                                <Icon IconSvg={DownloadIcon} classNameIcon={style.icon} classNameBg={style.bg}/>
                                 <span className={style.downloadCv}>Download cv</span>
                             </a>
                         </div>

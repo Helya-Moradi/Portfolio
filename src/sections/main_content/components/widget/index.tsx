@@ -11,7 +11,7 @@ interface WidgetProps {
 function Widget({icon, color, text}: WidgetProps) {
     return (
         <div className={cls(style.widget, style[color])}>
-            <Icon icon={icon} classNameIcon={style.icon} classNameBg={style.bg}/>
+            <Icon IconSvg={icon} classNameIcon={style.icon} classNameBg={style.bg}/>
             <span className={style.text}>
                 {text}
             </span>
