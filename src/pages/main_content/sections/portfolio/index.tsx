@@ -11,6 +11,7 @@ import ticTacToeImg from 'src/assets/images/projects/tictactoe.png'
 import todoImg from 'src/assets/images/projects/todo.png'
 import weatherAppImg from 'src/assets/images/projects/weather-app.png'
 import TriangleAnimation from "src/components/triangleAnimation";
+import {Link} from "react-router-dom";
 
 
 function Portfolio({observerRef}: any) {
@@ -38,9 +39,7 @@ function Portfolio({observerRef}: any) {
                         }
                     </div>
                     <div className={style.loadMoreButton}>
-                        <a href="https://helya-moradi.github.io/Projects/" target='-blank'>
-                            load more
-                        </a>
+                        <Link to='/projects'>load more</Link>
                     </div>
                 </div>
             </Template>

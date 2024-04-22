@@ -299,9 +299,9 @@ header .socialMedias_Id_J a:hover {
     height: 1.3rem;
   }
 }
-/*!***************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/index.sass ***!
-  \***************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/index.sass ***!
+  \************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
   --white: #fff;
@@ -321,15 +321,15 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.mainContent_YXDl {
+.mainContentPage_MhGg {
   position: relative;
   width: 100%;
   max-width: 72rem;
   margin: 0 auto 4rem auto;
 }
-/*!*****************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/home/index.sass ***!
-  \*****************************************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/sections/home/index.sass ***!
+  \**************************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
   --white: #fff;
@@ -349,7 +349,7 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.home_hGOr {
+.home_Iyqi {
   position: relative;
   height: 100vh;
   padding: 4rem;
@@ -357,7 +357,7 @@ header .socialMedias_Id_J a:hover {
   align-items: center;
   gap: 4rem;
 }
-.home_hGOr .imageContainer_FFJY {
+.home_Iyqi .imageContainer_JZdr {
   position: relative;
   display: flex;
   justify-content: center;
@@ -366,7 +366,7 @@ header .socialMedias_Id_J a:hover {
   border-radius: 50%;
   width: clamp(18rem, 30vw, 30rem);
 }
-.home_hGOr .imageContainer_FFJY::after {
+.home_Iyqi .imageContainer_JZdr::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -375,49 +375,49 @@ header .socialMedias_Id_J a:hover {
   height: 4rem;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--primaryBg));
 }
-.home_hGOr .imageContainer_FFJY img {
+.home_Iyqi .imageContainer_JZdr img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   filter: brightness(85%) drop-shadow(0 10px 10px var(--primaryBg));
 }
-.home_hGOr .introduce_e3iB {
+.home_Iyqi .introduce_Zmp3 {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 3rem;
 }
-.home_hGOr .introduce_e3iB .title_VgM4 {
+.home_Iyqi .introduce_Zmp3 .title_aWvm {
   font-size: clamp(2rem, 7.5vw, 5.4rem);
   font-weight: 300;
   line-height: clamp(2.2rem, 8vw, 5rem);
 }
-.home_hGOr .introduce_e3iB .description_RaNS {
+.home_Iyqi .introduce_Zmp3 .description_i9_M {
   line-height: 1.9rem;
 }
 
 @media screen and (max-width: 770px) {
-  .home_hGOr {
+  .home_Iyqi {
     flex-direction: column;
     align-items: start;
     height: auto;
     padding-top: 6rem;
   }
-  .home_hGOr .imageContainer_FFJY {
+  .home_Iyqi .imageContainer_JZdr {
     width: 18rem;
   }
 }
 @media screen and (max-width: 410px) {
-  .home_hGOr {
+  .home_Iyqi {
     padding: 5rem 1.5rem 1.5rem;
     align-items: center;
     gap: 2rem;
   }
-  .home_hGOr .imageContainer_FFJY {
+  .home_Iyqi .imageContainer_JZdr {
     width: 14rem;
   }
-  .home_hGOr .introduce_e3iB {
+  .home_Iyqi .introduce_Zmp3 {
     gap: 2rem;
   }
 }
@@ -450,9 +450,9 @@ header .socialMedias_Id_J a:hover {
   object-fit: contain;
   z-index: 2;
 }
-/*!***********************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/components/template/index.sass ***!
-  \***********************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/components/template/index.sass ***!
+  \********************************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
   --white: #fff;
@@ -472,72 +472,72 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.template_CA9o {
+.template_Zji4 {
   display: flex;
 }
-.template_CA9o.ltr_dItg {
+.template_Zji4.ltr_y0f9 {
   flex-direction: row;
 }
-.template_CA9o.rtl_ztIt {
+.template_Zji4.rtl_dXjK {
   flex-direction: row-reverse;
 }
-.template_CA9o.first_rV6O {
+.template_Zji4.first_EhQx {
   --titleContainerBg: var(--primary1);
   --childrenContainerBg: var(--secondary1);
 }
-.template_CA9o.second_admX {
+.template_Zji4.second_kYE9 {
   --titleContainerBg: var(--primary2);
   --childrenContainerBg: var(--secondary2);
 }
-.template_CA9o.third_W8Nj {
+.template_Zji4.third__OKd {
   --titleContainerBg: var(--primary3);
   --childrenContainerBg: var(--secondary1);
 }
-.template_CA9o.third_W8Nj .title_e082 {
+.template_Zji4.third__OKd .title_xWqD {
   color: var(--secondary3) !important;
 }
-.template_CA9o .titleContainer_rWOJ {
+.template_Zji4 .titleContainer_ZXX4 {
   background-color: var(--titleContainerBg);
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.template_CA9o .titleContainer_rWOJ .title_e082 {
+.template_Zji4 .titleContainer_ZXX4 .title_xWqD {
   font-size: 3.3rem;
   font-weight: 300;
   letter-spacing: -0.2rem;
   color: var(--secondary1);
 }
-.template_CA9o .childrenContainer_glye {
+.template_Zji4 .childrenContainer_HWwk {
   background-color: var(--childrenContainerBg);
   flex: 2;
 }
 
 @media screen and (max-width: 1000px) {
-  .template_CA9o .titleContainer_rWOJ .title_e082 {
+  .template_Zji4 .titleContainer_ZXX4 .title_xWqD {
     font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 770px) {
-  .template_CA9o {
+  .template_Zji4 {
     flex-direction: column !important;
   }
-  .template_CA9o .titleContainer_rWOJ {
+  .template_Zji4 .titleContainer_ZXX4 {
     padding: 1.5rem;
   }
 }
 @media screen and (max-width: 410px) {
-  .template_CA9o .titleContainer_rWOJ {
+  .template_Zji4 .titleContainer_ZXX4 {
     padding: 1.2rem;
   }
-  .template_CA9o .titleContainer_rWOJ .title_e082 {
+  .template_Zji4 .titleContainer_ZXX4 .title_xWqD {
     font-size: 1.9rem;
   }
 }
-/*!******************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/about/index.sass ***!
-  \******************************************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/sections/about/index.sass ***!
+  \***************************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
   --white: #fff;
@@ -557,45 +557,45 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.about_BX1l {
+.about_VKDy {
   padding: 6rem 8rem;
   color: var(--secondaryText);
 }
-.about_BX1l > *:not(:last-child) {
+.about_VKDy > *:not(:last-child) {
   margin-bottom: 3rem;
 }
-.about_BX1l h3, .about_BX1l p {
+.about_VKDy h3, .about_VKDy p {
   line-height: 2rem;
 }
-.about_BX1l h3 {
+.about_VKDy h3 {
   font-size: 1.3rem;
   font-weight: 600;
 }
-.about_BX1l p {
+.about_VKDy p {
   font-size: 1rem;
 }
-.about_BX1l .aboutContainer_jkCB {
+.about_VKDy .aboutContainer_hQqL {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.about_BX1l .aboutContainer_jkCB .list_NMqk {
+.about_VKDy .aboutContainer_hQqL .list_AWm6 {
   list-style: none;
 }
-.about_BX1l .aboutContainer_jkCB .list_NMqk > *:not(:last-child) {
+.about_VKDy .aboutContainer_hQqL .list_AWm6 > *:not(:last-child) {
   margin-bottom: 0.8rem;
 }
-.about_BX1l .aboutContainer_jkCB .list_NMqk li .label_DiUf {
+.about_VKDy .aboutContainer_hQqL .list_AWm6 li .label_pDNK {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1rem;
 }
-.about_BX1l .aboutContainer_jkCB .list_NMqk li .value_Nz4B {
+.about_VKDy .aboutContainer_hQqL .list_AWm6 li .value_yINL {
   margin-inline-start: 0.4rem;
   font-weight: 400;
   font-size: 1rem;
 }
-.about_BX1l .aboutContainer_jkCB .downloadCvContainer_dvja a {
+.about_VKDy .aboutContainer_hQqL .downloadCvContainer_hh4Y a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -603,13 +603,13 @@ header .socialMedias_Id_J a:hover {
   color: inherit;
   text-decoration: none;
 }
-.about_BX1l .aboutContainer_jkCB .downloadCvContainer_dvja a .icon_HQx2 {
+.about_VKDy .aboutContainer_hQqL .downloadCvContainer_hh4Y a .icon__h18 {
   fill: var(--secondaryText);
 }
-.about_BX1l .aboutContainer_jkCB .downloadCvContainer_dvja a .bg__hjf {
+.about_VKDy .aboutContainer_hQqL .downloadCvContainer_hh4Y a .bg_flAW {
   background-color: var(--primary1);
 }
-.about_BX1l .aboutContainer_jkCB .downloadCvContainer_dvja a .downloadCv_DU9C {
+.about_VKDy .aboutContainer_hQqL .downloadCvContainer_hh4Y a .downloadCv_ahvN {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -617,25 +617,25 @@ header .socialMedias_Id_J a:hover {
 }
 
 @media screen and (max-width: 1000px) {
-  .about_BX1l {
+  .about_VKDy {
     padding: 4rem 5rem;
   }
 }
 @media screen and (max-width: 900px) {
-  .about_BX1l > *:not(:last-child) {
+  .about_VKDy > *:not(:last-child) {
     margin-bottom: 2rem;
   }
-  .about_BX1l .aboutContainer_jkCB {
+  .about_VKDy .aboutContainer_hQqL {
     flex-direction: column;
     align-items: start;
     gap: 2rem;
   }
-  .about_BX1l .aboutContainer_jkCB .downloadCvContainer_dvja {
+  .about_VKDy .aboutContainer_hQqL .downloadCvContainer_hh4Y {
     margin: auto;
   }
 }
 @media screen and (max-width: 770px) {
-  .about_BX1l {
+  .about_VKDy {
     padding: 1.5rem;
   }
 }
@@ -680,9 +680,9 @@ header .socialMedias_Id_J a:hover {
   left: 2rem;
   border-radius: 2rem 0.4rem;
 }
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/portfolio/index.sass ***!
-  \**********************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/sections/portfolio/index.sass ***!
+  \*******************************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
   --white: #fff;
@@ -702,24 +702,24 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.portfolioContainer_wj13 {
+.portfolioContainer_Cxfw {
   position: relative;
 }
-.portfolioContainer_wj13 .portfolio_KWtV {
+.portfolioContainer_Cxfw .portfolio_ZpGQ {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.portfolioContainer_wj13 .portfolio_KWtV .projects_DKyF {
+.portfolioContainer_Cxfw .portfolio_ZpGQ .projects_PQXg {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.portfolioContainer_wj13 .portfolio_KWtV .loadMoreButton_Upu6 {
+.portfolioContainer_Cxfw .portfolio_ZpGQ .loadMoreButton_aBu4 {
   text-align: center;
   width: 100%;
   background-color: var(--primary1);
 }
-.portfolioContainer_wj13 .portfolio_KWtV .loadMoreButton_Upu6 a {
+.portfolioContainer_Cxfw .portfolio_ZpGQ .loadMoreButton_aBu4 a {
   color: var(--secondary1);
   text-transform: uppercase;
   text-decoration: none;
@@ -729,18 +729,18 @@ header .socialMedias_Id_J a:hover {
   display: block;
   padding: 1.5rem;
 }
-.portfolioContainer_wj13 .portfolio_KWtV .loadMoreButton_Upu6 a:hover {
+.portfolioContainer_Cxfw .portfolio_ZpGQ .loadMoreButton_aBu4 a:hover {
   color: var(--primary1Darker);
 }
 
 @media screen and (max-width: 770px) {
-  .portfolioContainer_wj13 .portfolio_KWtV .projects_DKyF {
+  .portfolioContainer_Cxfw .portfolio_ZpGQ .projects_PQXg {
     grid-template-columns: 1fr;
   }
 }
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/components/project/index.sass ***!
-  \**********************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/components/project/index.sass ***!
+  \*******************************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
   --white: #fff;
@@ -760,21 +760,21 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.projectWrapper_r2nL {
+.projectWrapper_t41v {
   overflow: hidden;
 }
-.projectWrapper_r2nL a {
+.projectWrapper_t41v a {
   text-decoration: none;
   color: var(--primaryText);
   position: relative;
 }
-.projectWrapper_r2nL a img {
+.projectWrapper_t41v a img {
   display: block;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.projectWrapper_r2nL a .showMore_EMmo {
+.projectWrapper_t41v a .showMore_fwG2 {
   position: absolute;
   background-color: var(--primaryBg);
   bottom: -3rem;
@@ -783,7 +783,7 @@ header .socialMedias_Id_J a:hover {
   font-size: 0.9rem;
   transition: 0.4s;
 }
-.projectWrapper_r2nL a:hover .showMore_EMmo {
+.projectWrapper_t41v a:hover .showMore_fwG2 {
   bottom: 0;
 }
 /*!**********************************************************************************************************************************************************************************************!*\
@@ -815,9 +815,9 @@ header .socialMedias_Id_J a:hover {
   object-fit: contain;
   z-index: 2;
 }
-/*!*******************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/skills/index.sass ***!
-  \*******************************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/sections/skills/index.sass ***!
+  \****************************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
   --white: #fff;
@@ -837,10 +837,10 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.skillsContainer_UkSd {
+.skillsContainer_pCGD {
   position: relative;
 }
-.skillsContainer_UkSd .skills_aps3 {
+.skillsContainer_pCGD .skills_Jty4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -850,18 +850,18 @@ header .socialMedias_Id_J a:hover {
 }
 
 @media screen and (max-width: 1000px) {
-  .skillsContainer_UkSd .skills_aps3 {
+  .skillsContainer_pCGD .skills_Jty4 {
     padding: 4rem 5rem;
   }
 }
 @media screen and (max-width: 770px) {
-  .skillsContainer_UkSd .skills_aps3 {
+  .skillsContainer_pCGD .skills_Jty4 {
     padding: 1.5rem;
   }
 }
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/components/skill/index.sass ***!
-  \********************************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/components/skill/index.sass ***!
+  \*****************************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
   --white: #fff;
@@ -881,19 +881,19 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.mainContainer_J6QR {
+.mainContainer_y_7c {
   width: 100%;
   display: flex;
   align-items: center;
   color: var(--secondary2Text);
   gap: 1.7rem;
 }
-.mainContainer_J6QR .rangeContainer_R2i_ {
+.mainContainer_y_7c .rangeContainer_Mwh8 {
   flex: 1;
   background-color: var(--white);
   height: 0.8rem;
 }
-.mainContainer_J6QR .rangeContainer_R2i_ .range_jxDw {
+.mainContainer_y_7c .rangeContainer_Mwh8 .range_i_Iw {
   background-color: var(--special);
   color: var(--secondary1);
   display: block;
@@ -904,16 +904,16 @@ header .socialMedias_Id_J a:hover {
   font-size: 0.7rem;
   white-space: nowrap;
 }
-.mainContainer_J6QR .rangeContainer_R2i_ .range_jxDw.rangeAnimation_MXvN {
-  animation: 0.5s rangeWidthAnimation_QaIV linear;
+.mainContainer_y_7c .rangeContainer_Mwh8 .range_i_Iw.rangeAnimation_Ozf0 {
+  animation: 0.5s rangeWidthAnimation_KxH9 linear;
   animation-fill-mode: forwards;
 }
-.mainContainer_J6QR .percent_nHdw {
+.mainContainer_y_7c .percent_eq4d {
   font-size: 1.3rem;
   font-weight: 500;
 }
 
-@keyframes rangeWidthAnimation_QaIV {
+@keyframes rangeWidthAnimation_KxH9 {
   from {
     width: 0;
   }
@@ -947,9 +947,9 @@ header .socialMedias_Id_J a:hover {
   object-fit: contain;
   z-index: 2;
 }
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/Education/index.sass ***!
-  \**********************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/sections/Education/index.sass ***!
+  \*******************************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
   --white: #fff;
@@ -969,10 +969,10 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.educationContainer_u1dk {
+.educationContainer_C4Ub {
   position: relative;
 }
-.educationContainer_u1dk .education_tVMp {
+.educationContainer_C4Ub .education_jycK {
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -981,18 +981,18 @@ header .socialMedias_Id_J a:hover {
 }
 
 @media screen and (max-width: 1000px) {
-  .educationContainer_u1dk .education_tVMp {
+  .educationContainer_C4Ub .education_jycK {
     padding: 4rem 5rem;
   }
 }
 @media screen and (max-width: 770px) {
-  .educationContainer_u1dk .education_tVMp {
+  .educationContainer_C4Ub .education_jycK {
     padding: 1.5rem;
   }
 }
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/components/educationItem/index.sass ***!
-  \****************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/components/educationItem/index.sass ***!
+  \*************************************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
   --white: #fff;
@@ -1012,12 +1012,12 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.educationWrapper_nzVP {
+.educationWrapper_flZc {
   position: relative;
   display: flex;
   gap: 1.5rem;
 }
-.educationWrapper_nzVP:not(.lastItem_F1ZJ)::before {
+.educationWrapper_flZc:not(.lastItem_RbK7)::before {
   content: "";
   position: absolute;
   width: 3px;
@@ -1026,17 +1026,17 @@ header .socialMedias_Id_J a:hover {
   top: 2.5rem;
   left: 4.6rem;
 }
-.educationWrapper_nzVP:hover .descriptionWrapper_IbVe {
+.educationWrapper_flZc:hover .descriptionWrapper_YzNG {
   margin-inline-start: 1rem;
 }
-.educationWrapper_nzVP:hover .circle_SEVd::after {
+.educationWrapper_flZc:hover .circle_iFty::after {
   background-color: var(--special);
 }
-.educationWrapper_nzVP .date_hrXq {
+.educationWrapper_flZc .date_oC_2 {
   font-weight: 600;
   color: var(--special);
 }
-.educationWrapper_nzVP .circle_SEVd {
+.educationWrapper_flZc .circle_iFty {
   position: relative;
   min-width: 2rem;
   width: 2rem;
@@ -1045,7 +1045,7 @@ header .socialMedias_Id_J a:hover {
   border-radius: 50%;
   margin-top: -0.5rem;
 }
-.educationWrapper_nzVP .circle_SEVd::after {
+.educationWrapper_flZc .circle_iFty::after {
   position: absolute;
   content: "";
   width: 1rem;
@@ -1057,128 +1057,17 @@ header .socialMedias_Id_J a:hover {
   border-radius: 50%;
   transition: 0.3s;
 }
-.educationWrapper_nzVP .descriptionWrapper_IbVe {
+.educationWrapper_flZc .descriptionWrapper_YzNG {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
   transition: 0.3s;
 }
-.educationWrapper_nzVP .descriptionWrapper_IbVe .degree_kE6L {
-  font-weight: 600;
-}
-/*!***********************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/Experience/index.sass ***!
-  \***********************************************************************************************************************************************************************************************************/
-:root {
-  --black: #000;
-  --white: #fff;
-  --primaryText: #fff;
-  --secondaryText: #605777;
-  --secondary2Text: #605777;
-  --primaryBg: #171321;
-  --primary1: #f393a4;
-  --primary1Darker: #ed5c76;
-  --secondary1: #f8f3f7;
-  --primary2: #362f47;
-  --secondary2: #eae0e9;
-  --primary3: #7e5a7b;
-  --secondary3: #f8f3f7;
-  --special: #605777;
-  --success: #46b450;
-  --danger: #bb1d3b;
-}
-
-.experienceContainer_L15l {
-  position: relative;
-}
-.experienceContainer_L15l .experience_J_O0 {
-  padding: 6rem 8rem;
-  color: var(--secondaryText);
-}
-.experienceContainer_L15l .experience_J_O0 p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 3rem;
-}
-.experienceContainer_L15l .experience_J_O0 .experienceItems_DIT9 {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-@media screen and (max-width: 1000px) {
-  .experienceContainer_L15l .experience_J_O0 {
-    padding: 4rem 5rem;
-  }
-}
-@media screen and (max-width: 770px) {
-  .experienceContainer_L15l .experience_J_O0 {
-    padding: 1.5rem;
-  }
-}
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/components/experienceItem/index.sass ***!
-  \*****************************************************************************************************************************************************************************************************************/
-:root {
-  --black: #000;
-  --white: #fff;
-  --primaryText: #fff;
-  --secondaryText: #605777;
-  --secondary2Text: #605777;
-  --primaryBg: #171321;
-  --primary1: #f393a4;
-  --primary1Darker: #ed5c76;
-  --secondary1: #f8f3f7;
-  --primary2: #362f47;
-  --secondary2: #eae0e9;
-  --primary3: #7e5a7b;
-  --secondary3: #f8f3f7;
-  --special: #605777;
-  --success: #46b450;
-  --danger: #bb1d3b;
-}
-
-.experienceItem_Brzo {
-  cursor: pointer;
-}
-.experienceItem_Brzo.open_K2Ym .titleContainer_yHHa .icon_U_rh {
-  transform: rotate(180deg);
-}
-.experienceItem_Brzo.open_K2Ym .collapseWrapper_YMWL {
-  height: 6rem;
-  opacity: 1;
-  visibility: visible;
-}
-.experienceItem_Brzo .titleContainer_yHHa {
-  background-color: var(--special);
-  color: var(--white);
-  padding: 0.8rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-}
-.experienceItem_Brzo .titleContainer_yHHa .title_wtli {
-  font-weight: 600;
-}
-.experienceItem_Brzo .collapseWrapper_YMWL {
-  background-color: var(--white);
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-  font-size: 0.9rem;
-}
-.experienceItem_Brzo .collapseWrapper_YMWL .collapseContent_jBCU {
-  padding: 1.6rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-}
-.experienceItem_Brzo .collapseWrapper_YMWL .collapseContent_jBCU .date_UimO {
+.educationWrapper_flZc .descriptionWrapper_YzNG .degree_cRvi {
   font-weight: 600;
 }
 /*!********************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/contact/index.sass ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/sections/Experience/index.sass ***!
   \********************************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
@@ -1199,28 +1088,139 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.contactContainer_WjIV {
+.experienceContainer_NpRw {
   position: relative;
 }
-.contactContainer_WjIV .contact_lcw3 {
+.experienceContainer_NpRw .experience_oQ7C {
   padding: 6rem 8rem;
   color: var(--secondaryText);
 }
-.contactContainer_WjIV .contact_lcw3 p {
+.experienceContainer_NpRw .experience_oQ7C p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.experienceContainer_NpRw .experience_oQ7C .experienceItems_S92J {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .experienceContainer_NpRw .experience_oQ7C {
+    padding: 4rem 5rem;
+  }
+}
+@media screen and (max-width: 770px) {
+  .experienceContainer_NpRw .experience_oQ7C {
+    padding: 1.5rem;
+  }
+}
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/components/experienceItem/index.sass ***!
+  \**************************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --secondary2Text: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.experienceItem_u2eM {
+  cursor: pointer;
+}
+.experienceItem_u2eM.open_z1Ma .titleContainer_DGgx .icon_FLHO {
+  transform: rotate(180deg);
+}
+.experienceItem_u2eM.open_z1Ma .collapseWrapper_VF5O {
+  height: 6rem;
+  opacity: 1;
+  visibility: visible;
+}
+.experienceItem_u2eM .titleContainer_DGgx {
+  background-color: var(--special);
+  color: var(--white);
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.experienceItem_u2eM .titleContainer_DGgx .title_PpRr {
+  font-weight: 600;
+}
+.experienceItem_u2eM .collapseWrapper_VF5O {
+  background-color: var(--white);
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  font-size: 0.9rem;
+}
+.experienceItem_u2eM .collapseWrapper_VF5O .collapseContent_CRxk {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.experienceItem_u2eM .collapseWrapper_VF5O .collapseContent_CRxk .date_vF8q {
+  font-weight: 600;
+}
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/sections/contact/index.sass ***!
+  \*****************************************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --secondary2Text: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.contactContainer_VC5E {
+  position: relative;
+}
+.contactContainer_VC5E .contact__YEz {
+  padding: 6rem 8rem;
+  color: var(--secondaryText);
+}
+.contactContainer_VC5E .contact__YEz p {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 5rem;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 3.4rem;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV.invalid_v4pY {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g.invalid_eBCp {
   padding-bottom: 3rem;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV.invalid_v4pY:after {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g.invalid_eBCp:after {
   position: absolute;
   content: "One or more fields have an error. Please check and try again.";
   color: var(--secondary1);
@@ -1232,7 +1232,7 @@ header .socialMedias_Id_J a:hover {
   left: 0;
   right: 0;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV.invalid_v4pY .inputWrapper_RAw9.required_zkHr:after {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g.invalid_eBCp .inputWrapper_GGfp.required_ALBR:after {
   position: absolute;
   content: "The field is required.";
   bottom: 0.1rem;
@@ -1243,22 +1243,22 @@ header .socialMedias_Id_J a:hover {
   padding: 0.4rem;
   font-size: 0.7rem;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g .inputWrapper_GGfp {
   position: relative;
   display: flex;
   flex-direction: column;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 label {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g .inputWrapper_GGfp label {
   position: absolute;
   top: -1.5rem;
   font-weight: 600;
   font-size: 1.2rem;
   transition: 0.3s;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 label:has(+ input:focus, + textarea:focus) {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g .inputWrapper_GGfp label:has(+ input:focus, + textarea:focus) {
   font-size: 0.8rem;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 input, .contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 textarea {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g .inputWrapper_GGfp input, .contactContainer_VC5E .contact__YEz .contactForm_FX9g .inputWrapper_GGfp textarea {
   border: none;
   background-color: inherit;
   border-bottom: 2px solid var(--secondaryText);
@@ -1266,14 +1266,14 @@ header .socialMedias_Id_J a:hover {
   font-size: 1.1rem;
   color: var(--secondaryText);
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 input:focus, .contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 textarea:focus {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g .inputWrapper_GGfp input:focus, .contactContainer_VC5E .contact__YEz .contactForm_FX9g .inputWrapper_GGfp textarea:focus {
   outline: none;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .inputWrapper_RAw9 textarea {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g .inputWrapper_GGfp textarea {
   resize: vertical;
   font-family: montserrat;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g button {
   position: relative;
   padding: 1.4rem;
   border: 2px solid var(--secondaryText);
@@ -1283,14 +1283,14 @@ header .socialMedias_Id_J a:hover {
   justify-content: center;
   overflow: hidden;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button span {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g button span {
   z-index: 1;
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--secondaryText);
   transition: 0.6s;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button::after {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g button::after {
   content: "";
   position: absolute;
   aspect-ratio: 1;
@@ -1302,21 +1302,21 @@ header .socialMedias_Id_J a:hover {
   background-color: var(--secondaryText);
   transition: 0.6s ease-out, top 0s, left 0s;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button:hover span {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g button:hover span {
   color: var(--secondary1);
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button:hover::after {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g button:hover::after {
   width: 65rem;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button .loader_Z_oE {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g button .loader_nwCK {
   position: relative;
   width: 2rem;
   height: 2rem;
   background-color: var(--primaryBg);
   border-radius: 50%;
-  animation: 1s loaderAnimation_K4Gl infinite linear;
+  animation: 1s loaderAnimation_Uboj infinite linear;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV button .loader_Z_oE:after {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g button .loader_nwCK:after {
   position: absolute;
   content: "";
   display: block;
@@ -1327,21 +1327,21 @@ header .socialMedias_Id_J a:hover {
   background-color: var(--primary1);
   border-radius: 50%;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .messageStatus_kTjn {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g .messageStatus_m__V {
   padding: 0.7rem 1rem;
   display: none;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .messageStatus_kTjn.show_MyOq {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g .messageStatus_m__V.show_L8te {
   display: block;
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .messageStatus_kTjn.show_MyOq.success_QOUT {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g .messageStatus_m__V.show_L8te.success_fYBV {
   border: 2px solid var(--success);
 }
-.contactContainer_WjIV .contact_lcw3 .contactForm_mijV .messageStatus_kTjn.show_MyOq.wrong_hGum {
+.contactContainer_VC5E .contact__YEz .contactForm_FX9g .messageStatus_m__V.show_L8te.wrong_I7zk {
   border: 2px solid var(--danger);
 }
 
-@keyframes loaderAnimation_K4Gl {
+@keyframes loaderAnimation_Uboj {
   from {
     transform: rotate(0);
   }
@@ -1350,18 +1350,18 @@ header .socialMedias_Id_J a:hover {
   }
 }
 @media screen and (max-width: 1000px) {
-  .contactContainer_WjIV .contact_lcw3 {
+  .contactContainer_VC5E .contact__YEz {
     padding: 4rem 5rem;
   }
 }
 @media screen and (max-width: 770px) {
-  .contactContainer_WjIV .contact_lcw3 {
+  .contactContainer_VC5E .contact__YEz {
     padding: 1.5rem;
   }
 }
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/sections/widgets/index.sass ***!
-  \********************************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/sections/widgets/index.sass ***!
+  \*****************************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
   --white: #fff;
@@ -1381,21 +1381,21 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.widgetContainer_EGLh {
+.widgetContainer_KmR1 {
   position: relative;
 }
-.widgetContainer_EGLh .widgets_IcsN {
+.widgetContainer_KmR1 .widgets_HGRT {
   display: flex;
 }
 
 @media screen and (max-width: 770px) {
-  .widgetContainer_EGLh .widgets_IcsN {
+  .widgetContainer_KmR1 .widgets_HGRT {
     flex-direction: column;
   }
 }
-/*!*********************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/sections/main_content/components/widget/index.sass ***!
-  \*********************************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/main_content/components/widget/index.sass ***!
+  \******************************************************************************************************************************************************************************************************/
 :root {
   --black: #000;
   --white: #fff;
@@ -1415,7 +1415,7 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.widget_v_LK {
+.widget_yxRH {
   background-color: var(--widgetBg);
   padding: 9rem 0;
   flex: 1;
@@ -1426,34 +1426,34 @@ header .socialMedias_Id_J a:hover {
   gap: 0.3rem;
   --text-color: var(--secondary1);
 }
-.widget_v_LK .icon_zm3l {
+.widget_yxRH .icon_zwFJ {
   fill: var(--icon);
 }
-.widget_v_LK .bg_eJ7L {
+.widget_yxRH .bg_DzGF {
   background-color: var(--bg);
 }
-.widget_v_LK.second_pdIh {
+.widget_yxRH.second_vZWS {
   --widgetBg: var(--primary2);
   --icon: var(--secondary1);
   --bg: var(--secondary2Text);
 }
-.widget_v_LK.first_Ze0d {
+.widget_yxRH.first_Nu0J {
   --widgetBg: var(--primary1);
   --icon: var(--primary2);
   --bg: var(--secondary1);
 }
-.widget_v_LK.third_bqEi {
+.widget_yxRH.third_KLii {
   --widgetBg: var(--primary3);
   --text-color: var(--secondary3);
   --icon: var(--primary2);
   --bg: var(--secondary1);
 }
-.widget_v_LK img {
+.widget_yxRH img {
   width: 10rem;
   height: 10rem;
   object-fit: contain;
 }
-.widget_v_LK .text_Pec_ {
+.widget_yxRH .text_P5DR {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1462,7 +1462,7 @@ header .socialMedias_Id_J a:hover {
 }
 
 @media screen and (max-width: 770px) {
-  .widget_v_LK {
+  .widget_yxRH {
     padding: 2rem;
   }
 }
@@ -1598,6 +1598,67 @@ header .socialMedias_Id_J a:hover {
 @media screen and (max-width: 410px) {
   .sidebar_Xrt9 {
     top: 1.5rem;
+  }
+}
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/notfound/index.sass ***!
+  \********************************************************************************************************************************************************************************/
+:root {
+  --black: #000;
+  --white: #fff;
+  --primaryText: #fff;
+  --secondaryText: #605777;
+  --secondary2Text: #605777;
+  --primaryBg: #171321;
+  --primary1: #f393a4;
+  --primary1Darker: #ed5c76;
+  --secondary1: #f8f3f7;
+  --primary2: #362f47;
+  --secondary2: #eae0e9;
+  --primary3: #7e5a7b;
+  --secondary3: #f8f3f7;
+  --special: #605777;
+  --success: #46b450;
+  --danger: #bb1d3b;
+}
+
+.notFoundPage_rw5C {
+  position: relative;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto 4rem auto;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  color: var(--primaryText);
+}
+.notFoundPage_rw5C h3 {
+  font-size: 2.5rem;
+}
+.notFoundPage_rw5C p {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+.notFoundPage_rw5C span {
+  font-size: 17rem;
+  font-weight: 700;
+  color: var(--primary1);
+}
+.notFoundPage_rw5C .tryAgain_s6Op {
+  font-size: 1rem;
+}
+.notFoundPage_rw5C .tryAgain_s6Op a {
+  text-decoration: none;
+  color: var(--primary1);
+}
+
+@media screen and (max-width: 750px) {
+  .notFoundPage_rw5C span {
+    font-size: 6rem;
   }
 }
 /*!*****************************************************************************************************************************************************************!*\

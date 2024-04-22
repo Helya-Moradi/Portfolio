@@ -39,7 +39,7 @@ function App() {
                     element={<MainContent activeItem={activeItem} setActiveItem={setActiveItem}/>}
                 />
 
-                {/*<Route path='/projects' element={<Projects/>}/>*/}
+                <Route path='/projects' element={<Projects/>}/>
 
                 <Route path='/*' element={<NotFound/>}/>
             </Routes>
