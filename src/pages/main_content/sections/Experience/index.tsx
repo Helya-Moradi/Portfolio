@@ -1,6 +1,6 @@
-import Template from "src/sections/main_content/components/template";
+import Template from "src/pages/main_content/components/template";
 import style from "./index.sass"
-import ExperienceItem from "src/sections/main_content/components/experienceItem";
+import ExperienceItem from "src/pages/main_content/components/experienceItem";
 import CircleAnimation from "src/components/circleAnimation";
 
 function Experience({observerRef}:any) {

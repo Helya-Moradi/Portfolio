@@ -1,4 +1,4 @@
-import Template from "src/sections/main_content/components/template";
+import Template from "src/pages/main_content/components/template";
 import style from "./index.sass"
 import {useEffect, useState} from "react";
 import emailjs from '@emailjs/browser';

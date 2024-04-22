@@ -1,5 +1,5 @@
 import style from './index.sass'
-import Widget from "src/sections/main_content/components/widget";
+import Widget from "src/pages/main_content/components/widget";
 import ZigzagAnimation from "src/components/zigzagAnimation";
 import {ReactComponent as StarIcon} from 'src/assets/icons/galaxy-star.svg'
 import {ReactComponent as DesktopIcon} from 'src/assets/icons/devices.svg'

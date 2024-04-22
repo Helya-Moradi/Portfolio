@@ -1,4 +1,4 @@
-import Template from "src/sections/main_content/components/template";
+import Template from "src/pages/main_content/components/template";
 import style from './index.sass'
 import cv from 'src/assets/files/HelyaMoradiCV.pdf'
 import Icon from "src/components/icon";

@@ -1,6 +1,6 @@
-import Template from "src/sections/main_content/components/template";
+import Template from "src/pages/main_content/components/template";
 import style from "./index.sass"
-import Project from "src/sections/main_content/components/project";
+import Project from "src/pages/main_content/components/project";
 
 import amiriImg from 'src/assets/images/projects/amiri.png'
 import dashboardImg from 'src/assets/images/projects/dashboard.png'

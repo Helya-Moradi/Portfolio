@@ -1,13 +1,13 @@
 import {Fragment, useEffect, useRef} from "react";
 import style from './index.sass'
 import Home from "./sections/home";
-import About from "src/sections/main_content/sections/about";
-import Portfolio from "src/sections/main_content/sections/portfolio";
-import Skills from "src/sections/main_content/sections/skills";
-import Education from "src/sections/main_content/sections/Education";
-import Experience from "src/sections/main_content/sections/Experience";
-import Contact from "src/sections/main_content/sections/contact";
-import Widgets from "src/sections/main_content/sections/widgets";
+import About from "src/pages/main_content/sections/about";
+import Portfolio from "src/pages/main_content/sections/portfolio";
+import Skills from "src/pages/main_content/sections/skills";
+import Education from "src/pages/main_content/sections/Education";
+import Experience from "src/pages/main_content/sections/Experience";
+import Contact from "src/pages/main_content/sections/contact";
+import Widgets from "src/pages/main_content/sections/widgets";
 
 interface MainContentPops {
     activeItem: string;
@@ -40,7 +40,7 @@ function MainContent({activeItem, setActiveItem}: MainContentPops) {
     const componentsArray = [Home, About, Portfolio, Skills, Education, Experience, Contact];
 
     return (
-        <div className={style.mainContent}>
+        <div className={style.mainContentPage}>
             {
                 componentsArray.map((CMP, index) => (
                     <Fragment key={`section-${index + 1}`}>

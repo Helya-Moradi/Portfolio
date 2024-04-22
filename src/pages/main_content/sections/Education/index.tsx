@@ -1,6 +1,6 @@
-import Template from "src/sections/main_content/components/template";
+import Template from "src/pages/main_content/components/template";
 import style from "./index.sass"
-import EducationItem from "src/sections/main_content/components/educationItem";
+import EducationItem from "src/pages/main_content/components/educationItem";
 import TriangleAnimation from "src/components/triangleAnimation";
 
 function Education({observerRef}:any) {

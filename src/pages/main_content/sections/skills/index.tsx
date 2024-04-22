@@ -1,6 +1,6 @@
-import Template from "src/sections/main_content/components/template";
+import Template from "src/pages/main_content/components/template";
 import style from "./index.sass"
-import Skill from "src/sections/main_content/components/skill";
+import Skill from "src/pages/main_content/components/skill";
 import ZigzagAnimation from "src/components/zigzagAnimation";
 import CircleAnimation from "src/components/circleAnimation";
 
