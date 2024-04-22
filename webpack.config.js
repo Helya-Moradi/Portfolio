@@ -96,17 +96,19 @@ module.exports = {
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
-                generator: {
-                    filename: 'assets/fonts/[contenthash][ext]',
-                },
             },
 
             {
                 test: /\.(png|svg|jpg|gif|pdf)$/,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'assets/images/[contenthash][ext]',
-                },
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'assets/images'
+                        }
+                    }
+                ]
             }
         ],
     },

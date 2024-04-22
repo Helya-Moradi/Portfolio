@@ -1052,6 +1052,134 @@ var convertCurry = convert.bind(null, (react__WEBPACK_IMPORTED_MODULE_1___defaul
 
 /***/ }),
 
+/***/ "./src/assets/icons/devices.svg":
+/*!**************************************!*\
+  !*** ./src/assets/icons/devices.svg ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ReactComponent: () => (/* binding */ SvgDevices),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _path;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var SvgDevices = function SvgDevices(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 512,
+    height: 512,
+    "data-name": "Layer 1",
+    viewBox: "0 0 24 24"
+  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M12 17.5v4c0 .28-.22.5-.5.5H7c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h4v-3H4.5C2.02 18 0 15.98 0 13.5v-8C0 3.02 2.02 1 4.5 1h14C20.98 1 23 3.02 23 5.5v1c0 .28-.22.5-.5.5s-.5-.22-.5-.5v-1C22 3.57 20.43 2 18.5 2h-14C2.57 2 1 3.57 1 5.5v8C1 15.43 2.57 17 4.5 17h7c.28 0 .5.22.5.5m12-5v8c0 1.93-1.57 3.5-3.5 3.5h-3c-1.93 0-3.5-1.57-3.5-3.5v-8c0-1.93 1.57-3.5 3.5-3.5h3c1.93 0 3.5 1.57 3.5 3.5m-1 0a2.5 2.5 0 0 0-2.5-2.5h-3a2.5 2.5 0 0 0-2.5 2.5v8a2.5 2.5 0 0 0 2.5 2.5h3a2.5 2.5 0 0 0 2.5-2.5z"
+  })));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/devices.svg");
+
+/***/ }),
+
+/***/ "./src/assets/icons/file-download.svg":
+/*!********************************************!*\
+  !*** ./src/assets/icons/file-download.svg ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ReactComponent: () => (/* binding */ SvgFileDownload),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _path;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var SvgFileDownload = function SvgFileDownload(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 512,
+    height: 512,
+    "data-name": "Layer 1",
+    viewBox: "0 0 24 24"
+  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M15.904 16.143a.5.5 0 0 1 .008.707l-2.515 2.57c-.381.381-.88.574-1.378.579a2.05 2.05 0 0 1-1.413-.575L8.087 16.85a.5.5 0 0 1 .715-.699l2.515 2.57a1 1 0 0 0 .183.143v-7.363a.5.5 0 0 1 1 0v7.363a1 1 0 0 0 .187-.146l2.511-2.566a.5.5 0 0 1 .707-.008ZM22 9.986v9.515c0 2.481-2.019 4.5-4.5 4.5h-11a4.505 4.505 0 0 1-4.5-4.5V4.5C2 2.019 4.019 0 6.5 0h5.515c1.735 0 3.368.676 4.597 1.904l3.484 3.485A6.45 6.45 0 0 1 22 9.985Zm-8-3.485c0 .827.673 1.5 1.5 1.5h5.132a5.5 5.5 0 0 0-1.244-1.904l-3.484-3.485A5.5 5.5 0 0 0 14 1.369zm7 3.485q0-.502-.088-.985H15.5a2.503 2.503 0 0 1-2.5-2.5V1.088A5.6 5.6 0 0 0 12.015 1H6.5C4.57 1 3 2.57 3 4.5v15C3 21.43 4.57 23 6.5 23h11c1.93 0 3.5-1.57 3.5-3.5V9.985ZM12.019 20c-.007 0 .006 0 0 0"
+  })));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/file-download.svg");
+
+/***/ }),
+
+/***/ "./src/assets/icons/galaxy-star.svg":
+/*!******************************************!*\
+  !*** ./src/assets/icons/galaxy-star.svg ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ReactComponent: () => (/* binding */ SvgGalaxyStar),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _path;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var SvgGalaxyStar = function SvgGalaxyStar(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    "data-name": "Layer 1",
+    viewBox: "0 0 24 24"
+  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M.004 5.014a1 1 0 1 1 2 0 1 1 0 0 1-2 0m20 15a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-14-18a1 1 0 1 0 0-2 1 1 0 0 0 0 2M23.5 10.513l-1.908 1.555.79 2.404a1.417 1.417 0 0 1-2.117 1.631l-2.248-1.463-2.208 1.477a1.41 1.41 0 0 1-1.64-.043 1.42 1.42 0 0 1-.501-1.559l.761-2.439-1.917-1.56c-.46-.39-.626-1.021-.421-1.575s.739-.928 1.33-.928h2.402l.853-2.288c.204-.551.738-.922 1.327-.922s1.122.371 1.328.922l.852 2.288h2.406c.592 0 1.126.373 1.33.929a1.42 1.42 0 0 1-.418 1.57Zm-.521-1.228a.42.42 0 0 0-.392-.272h-2.751a.5.5 0 0 1-.469-.325l-.974-2.613c-.12-.324-.66-.325-.78 0l-.974 2.614a.5.5 0 0 1-.469.325h-2.75a.418.418 0 0 0-.269.734l2.171 1.767a.5.5 0 0 1 .162.536l-.862 2.764a.417.417 0 0 0 .629.472l2.481-1.66a.5.5 0 0 1 .551-.004l2.524 1.644a.416.416 0 0 0 .622-.48l-.897-2.733a.5.5 0 0 1 .159-.544l2.168-1.767a.42.42 0 0 0 .117-.457ZM6.231 7.168a.5.5 0 1 0 .722.692q.219-.227.443-.452c5.431-5.43 12.13-7.91 14.626-5.413.764.764 1.092 1.964.948 3.471a.5.5 0 0 0 .45.546.51.51 0 0 0 .545-.45c.173-1.814-.254-3.292-1.236-4.273C19.748-1.69 12.703.686 6.689 6.701q-.233.232-.458.468Zm9.306 10.476c-5.276 4.786-11.228 6.713-13.552 4.389-.994-.994-1.248-2.729-.713-4.885a.5.5 0 1 0-.97-.24c-.622 2.51-.274 4.581.977 5.832.853.854 2.06 1.261 3.491 1.261 3.178 0 7.464-2.01 11.439-5.616a.499.499 0 1 0-.672-.74ZM.849 11.841l1.438-.542.548-1.456a1.235 1.235 0 0 1 1.72-.699c.296.147.518.401.623.716l.548 1.451 1.441.531a1.24 1.24 0 0 1-.009 2.346l-1.447.533-.538 1.46c-.1.3-.321.554-.618.701a1.23 1.23 0 0 1-.945.066 1.24 1.24 0 0 1-.781-.78l-.527-1.433-1.469-.554a1.23 1.23 0 0 1-.764-.774A1.24 1.24 0 0 1 .85 11.84Zm.167 1.25c.023.07.08.126.15.149l1.915.721.69 1.876a.24.24 0 0 0 .155.164.23.23 0 0 0 .183-.012.24.24 0 0 0 .12-.138l.703-1.908 1.895-.697a.25.25 0 0 0 .165-.156.24.24 0 0 0-.151-.302l-.014-.005-1.876-.69-.715-1.897a.25.25 0 0 0-.126-.156.24.24 0 0 0-.332.139l-.713 1.896-1.878.708c-.142.048-.21.184-.168.309Z"
+  })));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/galaxy-star.svg");
+
+/***/ }),
+
+/***/ "./src/assets/icons/shield-alt.svg":
+/*!*****************************************!*\
+  !*** ./src/assets/icons/shield-alt.svg ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ReactComponent: () => (/* binding */ SvgShieldAlt),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _path;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var SvgShieldAlt = function SvgShieldAlt(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    "data-name": "Layer 1",
+    viewBox: "0 0 24 24"
+  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M20.212 2.722 12 0 3.788 2.722A2.6 2.6 0 0 0 2 5.195v6.664c0 6.609 7.159 10.703 9.354 11.8l.626.313.65-.262C15.447 22.577 22 19.165 22 11.967V5.195a2.605 2.605 0 0 0-1.788-2.473M3 11.858V5.194c0-.692.443-1.305 1.103-1.523L11.5 1.219v21.39C9.161 21.392 3 17.636 3 11.859Zm18 .108c0 6.399-5.76 9.568-8.5 10.713V1.219l7.397 2.452A1.605 1.605 0 0 1 21 5.194z"
+  })));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/shield-alt.svg");
+
+/***/ }),
+
 /***/ "./src/App.tsx":
 /*!*********************!*\
   !*** ./src/App.tsx ***!
@@ -1169,7 +1297,7 @@ function CircleAnimation(_ref) {
     }
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-    src: _assets_images_shapes_circle_png__WEBPACK_IMPORTED_MODULE_2__,
+    src: _assets_images_shapes_circle_png__WEBPACK_IMPORTED_MODULE_2__["default"],
     alt: "circle",
     className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].circle,
     ref: circle,
@@ -1303,7 +1431,7 @@ function TriangleAnimation(_ref) {
     }
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-    src: _assets_images_shapes_triangle_png__WEBPACK_IMPORTED_MODULE_2__,
+    src: _assets_images_shapes_triangle_png__WEBPACK_IMPORTED_MODULE_2__["default"],
     alt: "triangle",
     className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].triangle,
     ref: triangle,
@@ -1359,7 +1487,7 @@ function ZigzagAnimation(_ref) {
     }
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-    src: _assets_images_shapes_zigzag_png__WEBPACK_IMPORTED_MODULE_1__,
+    src: _assets_images_shapes_zigzag_png__WEBPACK_IMPORTED_MODULE_1__["default"],
     alt: "zigzag",
     className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].zigzag,
     ref: zigzag,
@@ -2123,11 +2251,11 @@ function About(_ref) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             className: _index_sass__WEBPACK_IMPORTED_MODULE_1__["default"].downloadCvContainer,
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("a", {
-              href: _assets_files_HelyaMoradiCV_pdf__WEBPACK_IMPORTED_MODULE_2__,
+              href: _assets_files_HelyaMoradiCV_pdf__WEBPACK_IMPORTED_MODULE_2__["default"],
               download: "HelyaMoradiCV.pdf",
               target: "-blank",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_icon__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                IconSvg: /* non-default import from non-esm module */undefined,
+                IconSvg: _assets_icons_file_download_svg__WEBPACK_IMPORTED_MODULE_4__.ReactComponent,
                 classNameIcon: _index_sass__WEBPACK_IMPORTED_MODULE_1__["default"].icon,
                 classNameBg: _index_sass__WEBPACK_IMPORTED_MODULE_1__["default"].bg
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
@@ -2369,7 +2497,7 @@ function Home(_ref) {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].imageContainer,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-        src: _assets_images_i_png__WEBPACK_IMPORTED_MODULE_1__,
+        src: _assets_images_i_png__WEBPACK_IMPORTED_MODULE_1__["default"],
         alt: "image"
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -2431,28 +2559,28 @@ __webpack_require__.r(__webpack_exports__);
 function Portfolio(_ref) {
   var observerRef = _ref.observerRef;
   var projects = [{
-    img: _assets_images_projects_dashboard_png__WEBPACK_IMPORTED_MODULE_4__,
+    img: _assets_images_projects_dashboard_png__WEBPACK_IMPORTED_MODULE_4__["default"],
     url: 'https://helya-moradi.github.io/Figma-Dashboard/'
   }, {
-    img: _assets_images_projects_todo_png__WEBPACK_IMPORTED_MODULE_9__,
+    img: _assets_images_projects_todo_png__WEBPACK_IMPORTED_MODULE_9__["default"],
     url: 'https://helya-moradi.github.io/Todo-List/'
   }, {
-    img: _assets_images_projects_music_player_png__WEBPACK_IMPORTED_MODULE_5__,
+    img: _assets_images_projects_music_player_png__WEBPACK_IMPORTED_MODULE_5__["default"],
     url: 'https://helya-moradi.github.io/Music-Player/'
   }, {
-    img: _assets_images_projects_ninjamail_png__WEBPACK_IMPORTED_MODULE_6__,
+    img: _assets_images_projects_ninjamail_png__WEBPACK_IMPORTED_MODULE_6__["default"],
     url: 'https://helya-moradi.github.io/NinjaMail/'
   }, {
-    img: _assets_images_projects_tictactoe_png__WEBPACK_IMPORTED_MODULE_8__,
+    img: _assets_images_projects_tictactoe_png__WEBPACK_IMPORTED_MODULE_8__["default"],
     url: 'https://helya-moradi.github.io/Tic-Tac-Toe/'
   }, {
-    img: _assets_images_projects_amiri_png__WEBPACK_IMPORTED_MODULE_3__,
+    img: _assets_images_projects_amiri_png__WEBPACK_IMPORTED_MODULE_3__["default"],
     url: 'https://helya-moradi.github.io/AMIRI/'
   }, {
-    img: _assets_images_projects_weather_app_png__WEBPACK_IMPORTED_MODULE_10__,
+    img: _assets_images_projects_weather_app_png__WEBPACK_IMPORTED_MODULE_10__["default"],
     url: 'https://helya-moradi.github.io/Weather-App/'
   }, {
-    img: _assets_images_projects_pinterest_png__WEBPACK_IMPORTED_MODULE_7__,
+    img: _assets_images_projects_pinterest_png__WEBPACK_IMPORTED_MODULE_7__["default"],
     url: 'https://helya-moradi.github.io/Pinterest-Simulation/'
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
@@ -2612,15 +2740,15 @@ function Widgets() {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
       className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].widgets,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_widget__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        icon: /* non-default import from non-esm module */undefined,
+        icon: _assets_icons_galaxy_star_svg__WEBPACK_IMPORTED_MODULE_3__.ReactComponent,
         color: "third",
         text: "pixel precise"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_widget__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        icon: /* non-default import from non-esm module */undefined,
+        icon: _assets_icons_devices_svg__WEBPACK_IMPORTED_MODULE_4__.ReactComponent,
         color: "first",
         text: "secure"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_widget__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        icon: /* non-default import from non-esm module */undefined,
+        icon: _assets_icons_shield_alt_svg__WEBPACK_IMPORTED_MODULE_5__.ReactComponent,
         color: "second",
         text: "responsive"
       })]
@@ -2693,6 +2821,201 @@ function cls() {
   return classNames.filter(Boolean).join(' ');
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cls);
+
+/***/ }),
+
+/***/ "./src/assets/files/HelyaMoradiCV.pdf":
+/*!********************************************!*\
+  !*** ./src/assets/files/HelyaMoradiCV.pdf ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/HelyaMoradiCV.pdf");
+
+/***/ }),
+
+/***/ "./src/assets/images/i.png":
+/*!*********************************!*\
+  !*** ./src/assets/images/i.png ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/i.png");
+
+/***/ }),
+
+/***/ "./src/assets/images/projects/amiri.png":
+/*!**********************************************!*\
+  !*** ./src/assets/images/projects/amiri.png ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/amiri.png");
+
+/***/ }),
+
+/***/ "./src/assets/images/projects/dashboard.png":
+/*!**************************************************!*\
+  !*** ./src/assets/images/projects/dashboard.png ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/dashboard.png");
+
+/***/ }),
+
+/***/ "./src/assets/images/projects/music-player.png":
+/*!*****************************************************!*\
+  !*** ./src/assets/images/projects/music-player.png ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/music-player.png");
+
+/***/ }),
+
+/***/ "./src/assets/images/projects/ninjamail.png":
+/*!**************************************************!*\
+  !*** ./src/assets/images/projects/ninjamail.png ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/ninjamail.png");
+
+/***/ }),
+
+/***/ "./src/assets/images/projects/pinterest.png":
+/*!**************************************************!*\
+  !*** ./src/assets/images/projects/pinterest.png ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pinterest.png");
+
+/***/ }),
+
+/***/ "./src/assets/images/projects/tictactoe.png":
+/*!**************************************************!*\
+  !*** ./src/assets/images/projects/tictactoe.png ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/tictactoe.png");
+
+/***/ }),
+
+/***/ "./src/assets/images/projects/todo.png":
+/*!*********************************************!*\
+  !*** ./src/assets/images/projects/todo.png ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/todo.png");
+
+/***/ }),
+
+/***/ "./src/assets/images/projects/weather-app.png":
+/*!****************************************************!*\
+  !*** ./src/assets/images/projects/weather-app.png ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/weather-app.png");
+
+/***/ }),
+
+/***/ "./src/assets/images/shapes/circle.png":
+/*!*********************************************!*\
+  !*** ./src/assets/images/shapes/circle.png ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/circle.png");
+
+/***/ }),
+
+/***/ "./src/assets/images/shapes/triangle.png":
+/*!***********************************************!*\
+  !*** ./src/assets/images/shapes/triangle.png ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/triangle.png");
+
+/***/ }),
+
+/***/ "./src/assets/images/shapes/zigzag.png":
+/*!*********************************************!*\
+  !*** ./src/assets/images/shapes/zigzag.png ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/zigzag.png");
 
 /***/ }),
 
@@ -38916,193 +39239,6 @@ if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/scheduler.development.js */ "./node_modules/scheduler/cjs/scheduler.development.js");
 }
 
-
-/***/ }),
-
-/***/ "./src/assets/icons/devices.svg":
-/*!**************************************!*\
-  !*** ./src/assets/icons/devices.svg ***!
-  \**************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/5fc088a73993d1578f39.svg";
-
-/***/ }),
-
-/***/ "./src/assets/icons/file-download.svg":
-/*!********************************************!*\
-  !*** ./src/assets/icons/file-download.svg ***!
-  \********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/7433affda48eca4da359.svg";
-
-/***/ }),
-
-/***/ "./src/assets/icons/galaxy-star.svg":
-/*!******************************************!*\
-  !*** ./src/assets/icons/galaxy-star.svg ***!
-  \******************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/5cb9087db70913d41068.svg";
-
-/***/ }),
-
-/***/ "./src/assets/icons/shield-alt.svg":
-/*!*****************************************!*\
-  !*** ./src/assets/icons/shield-alt.svg ***!
-  \*****************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/e7b6703ee712bc3f1de0.svg";
-
-/***/ }),
-
-/***/ "./src/assets/files/HelyaMoradiCV.pdf":
-/*!********************************************!*\
-  !*** ./src/assets/files/HelyaMoradiCV.pdf ***!
-  \********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/93ad777b06be3f78b71d.pdf";
-
-/***/ }),
-
-/***/ "./src/assets/images/i.png":
-/*!*********************************!*\
-  !*** ./src/assets/images/i.png ***!
-  \*********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/8960ae1e6722737f1f3f.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/projects/amiri.png":
-/*!**********************************************!*\
-  !*** ./src/assets/images/projects/amiri.png ***!
-  \**********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/9c105da890cc269e6c3b.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/projects/dashboard.png":
-/*!**************************************************!*\
-  !*** ./src/assets/images/projects/dashboard.png ***!
-  \**************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/017fbf927ce8ce425266.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/projects/music-player.png":
-/*!*****************************************************!*\
-  !*** ./src/assets/images/projects/music-player.png ***!
-  \*****************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/2387f80824255c335e51.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/projects/ninjamail.png":
-/*!**************************************************!*\
-  !*** ./src/assets/images/projects/ninjamail.png ***!
-  \**************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/503a66b053bce97921b3.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/projects/pinterest.png":
-/*!**************************************************!*\
-  !*** ./src/assets/images/projects/pinterest.png ***!
-  \**************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/3718b381906037ed221c.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/projects/tictactoe.png":
-/*!**************************************************!*\
-  !*** ./src/assets/images/projects/tictactoe.png ***!
-  \**************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/e269992af8a0f23b710f.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/projects/todo.png":
-/*!*********************************************!*\
-  !*** ./src/assets/images/projects/todo.png ***!
-  \*********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/6067b0811a420b687bee.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/projects/weather-app.png":
-/*!****************************************************!*\
-  !*** ./src/assets/images/projects/weather-app.png ***!
-  \****************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/760c50c14de013260604.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/shapes/circle.png":
-/*!*********************************************!*\
-  !*** ./src/assets/images/shapes/circle.png ***!
-  \*********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/0d7e9b84578a8f4b2a44.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/shapes/triangle.png":
-/*!***********************************************!*\
-  !*** ./src/assets/images/shapes/triangle.png ***!
-  \***********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/a64cfb35f8a0f465fa78.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/shapes/zigzag.png":
-/*!*********************************************!*\
-  !*** ./src/assets/images/shapes/zigzag.png ***!
-  \*********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/4ace9723953f5500c424.png";
 
 /***/ }),
 
