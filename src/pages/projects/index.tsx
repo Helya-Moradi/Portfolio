@@ -9,7 +9,7 @@ function Projects() {
     const hoverDim = useRef(null);
     const projectPage = useRef(null);
 
-    const mouseEnterHandler = async (e) => {
+    const mouseEnterHandler = (e) => {
         const currentProjectBound = e.currentTarget.getBoundingClientRect();
         setHoverData(currentProjectBound)
         addHover();
