@@ -7,6 +7,7 @@ import Footer from "src/sections/footer";
 import Sidebar from "src/sections/sidebar";
 import {useEffect, useRef, useState} from "react";
 import NotFound from "src/pages/notfound";
+import scrollToTop from "src/utils/scroll_to_top";
 
 function App() {
     const [openMenu, setOpenMenu] = useState(false);
@@ -24,6 +25,8 @@ function App() {
             stalkerRef.current.style.transform = `translate(${x}px,${y}px)`;
         })
     });
+
+    scrollToTop();
 
     return (
         <div className={style.app}>
