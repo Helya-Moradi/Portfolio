@@ -1,5 +1,6 @@
 import style from './index.sass'
 import cls from "src/utils/class_names";
+import {HashLink} from 'react-router-hash-link'
 
 interface SidebarProps {
     open: boolean;
@@ -7,8 +8,7 @@ interface SidebarProps {
 }
 
 function Sidebar({open, activeItem}: SidebarProps) {
-    const sidebarData = ['home', 'about', 'portfolio', 'skills', 'education', 'experience', 'contact'
-    ];
+    const sidebarData = ['home', 'about', 'portfolio', 'skills', 'education', 'experience', 'contact'];
 
     return (
         <div className={cls(style.sidebar, open && style.open)}>
@@ -16,7 +16,9 @@ function Sidebar({open, activeItem}: SidebarProps) {
                 {
                     sidebarData.map((item, index) => (
                         <li key={`menu-item-${index + 1}`}>
-                            <a href={`#${item}`} className={cls(activeItem === item && style.active)}>{item}</a>
+                            <HashLink to={`/#${item}`}
+                                      className={cls(activeItem === item && style.active)}>{item}
+                            </HashLink>
                         </li>
                     ))
                 }
