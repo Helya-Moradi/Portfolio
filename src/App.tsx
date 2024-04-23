@@ -1,4 +1,4 @@
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, useLocation} from 'react-router-dom'
 import style from './App.sass'
 import Header from "./sections/header";
 import MainContent from "./pages/main_content";
@@ -7,9 +7,10 @@ import Footer from "src/sections/footer";
 import Sidebar from "src/sections/sidebar";
 import {useEffect, useRef, useState} from "react";
 import NotFound from "src/pages/notfound";
-import scrollToTop from "src/utils/scroll_to_top";
 
 function App() {
+    const {pathname} = useLocation();
+
     const [openMenu, setOpenMenu] = useState(false);
     const [activeItem, setActiveItem] = useState('');
 
@@ -26,7 +27,11 @@ function App() {
         })
     });
 
-    scrollToTop();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        setOpenMenu(false);
+    }, [pathname])
 
     return (
         <div className={style.app}>
