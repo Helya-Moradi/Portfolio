@@ -7,7 +7,7 @@ function Projects() {
         <div className={style.projectsPage}>
             {
                 projectsData.map((project, index) => (
-                    <ProjectItem key={`project_item_${index + 1}`} img={project.img} link={project.link}/>
+                    <ProjectItem key={`project_item_${index + 1}`} img={project.img} link={project.link} description={project.description}/>
                 ))
             }
         </div>

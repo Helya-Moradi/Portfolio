@@ -39,151 +39,188 @@ import workboxNoteAppImg from "src/assets/images/projects/workboxNoteApp.png";
 const projectsData = [
     {
         img: amiriImg,
-        link: 'https://helya-moradi.github.io/AMIRI/'
+        link: 'https://helya-moradi.github.io/AMIRI/',
+        description: 'Pure JS'
     },
     {
         img: dashboardImg,
-        link: 'https://helya-moradi.github.io/Figma-Dashboard/'
+        link: 'https://helya-moradi.github.io/Figma-Dashboard/',
+        description: 'Pure JS'
     },
     {
         img: musicPlayerImg,
-        link: 'https://helya-moradi.github.io/Music-Player/'
+        link: 'https://helya-moradi.github.io/Music-Player/',
+        description: 'Pure JS'
     },
     {
         img: ninjaMilImg,
-        link: 'https://helya-moradi.github.io/NinjaMail/'
+        link: 'https://helya-moradi.github.io/NinjaMail/',
+        description: 'Pure JS'
     },
     {
         img: pinterestImg,
-        link: 'https://helya-moradi.github.io/Pinterest-Simulation/'
+        link: 'https://helya-moradi.github.io/Pinterest-Simulation/',
+        description: 'Pure JS'
     },
     {
         img: ticTacToeImg,
-        link: 'https://helya-moradi.github.io/Tic-Tac-Toe/'
+        link: 'https://helya-moradi.github.io/Tic-Tac-Toe/',
+        description: 'Pure JS'
     },
     {
         img: todoImg,
-        link: 'https://helya-moradi.github.io/Todo-List/'
+        link: 'https://helya-moradi.github.io/Todo-List/',
+        description: 'Pure JS'
     },
     {
         img: weatherAppImg,
-        link: 'https://helya-moradi.github.io/Weather-App/'
+        link: 'https://helya-moradi.github.io/Weather-App/',
+        description: 'Pure JS'
     },
     {
         img: game2048Img,
-        link: 'https://helya-moradi.github.io/2048Game/'
+        link: 'https://helya-moradi.github.io/2048Game/',
+        description: 'Typescript'
     },
     {
         img: acmeImg,
-        link: 'https://helya-moradi.github.io/AcmePhotography/'
+        link: 'https://helya-moradi.github.io/AcmePhotography/',
+        description: 'Pure JS'
     },
     {
         img: BootstrapTemplateImg,
-        link: 'https://helya-moradi.github.io/Bootstrap-Template/'
+        link: 'https://helya-moradi.github.io/Bootstrap-Template/',
+        description: 'Bootstrap'
     },
     {
         img: circleCubeImg,
-        link: 'https://helya-moradi.github.io/circleCube/'
+        link: 'https://helya-moradi.github.io/circleCube/',
+        description: 'Three JS'
     },
     {
         img: customNavbarImg,
-        link: 'https://helya-moradi.github.io/customNavbar/'
+        link: 'https://helya-moradi.github.io/customNavbar/',
+        description: 'Pure JS'
     },
     {
         img: dashboardAdminImg,
-        link: 'https://helya-moradi.github.io/dashboard-admin/'
+        link: 'https://helya-moradi.github.io/dashboard-admin/',
+        description: 'React JS'
     },
     {
         img: earthThreeJsImg,
-        link: 'https://helya-moradi.github.io/earthThreeJs/'
+        link: 'https://helya-moradi.github.io/earthThreeJs/',
+        description: 'Three JS'
     },
     {
         img: formImg,
-        link: 'https://helya-moradi.github.io/freeCodeCamp-Form/'
+        link: 'https://helya-moradi.github.io/freeCodeCamp-Form/',
+        description: 'Pure JS'
     },
     {
         img: glowHoverImg,
-        link: 'https://helya-moradi.github.io/glowHover/'
+        link: 'https://helya-moradi.github.io/glowHover/',
+        description: 'Pure JS'
     },
     {
         img: googleSimulationImg,
-        link: 'https://helya-moradi.github.io/Google-Simulation/'
+        link: 'https://helya-moradi.github.io/Google-Simulation/',
+        description: 'Pure JS'
     },
     {
         img: imageBlurImg,
-        link: 'https://helya-moradi.github.io/imageBlur/'
+        link: 'https://helya-moradi.github.io/imageBlur/',
+        description: 'Canvas'
     },
     {
         img: imageDotImg,
-        link: 'https://helya-moradi.github.io/imageDot/'
+        link: 'https://helya-moradi.github.io/imageDot/',
+        description: 'Canvas'
     },
     {
         img: jsDocumentationImg,
-        link: 'https://helya-moradi.github.io/TechnicalDocumentation/'
+        link: 'https://helya-moradi.github.io/TechnicalDocumentation/',
+        description: 'Pure JS'
     },
     {
         img: kasukaImg,
-        link: 'https://helya-moradi.github.io/kasuka-template/'
+        link: 'https://helya-moradi.github.io/kasuka-template/',
+        description: 'React JS'
     },
     {
         img: keyboardTesterImg,
-        link: 'https://helya-moradi.github.io/Keyboard-Tester/'
+        link: 'https://helya-moradi.github.io/Keyboard-Tester/',
+        description: 'Pure JS'
     },
     {
         img: landingPageImg,
-        link: 'https://helya-moradi.github.io/Landing-Page/'
+        link: 'https://helya-moradi.github.io/Landing-Page/',
+        description: 'Pure JS'
     },
     {
         img: lineHoverImg,
-        link: 'https://helya-moradi.github.io/lineHover/'
+        link: 'https://helya-moradi.github.io/lineHover/',
+        description: 'Pure JS'
     },
     {
         img: MoradiTemplateImg,
-        link: 'https://helya-moradi.github.io/Moradi-Template/'
+        link: 'https://helya-moradi.github.io/Moradi-Template/',
+        description: 'Bootstrap'
     },
     {
         img: myTunesImg,
-        link: 'https://helya-moradi.github.io/myTunes/'
+        link: 'https://helya-moradi.github.io/myTunes/',
+        description: 'Pure JS'
     },
     {
         img: myWebImg,
-        link: 'https://helya-moradi.github.io/CSS_Grid_Site/'
+        link: 'https://helya-moradi.github.io/CSS_Grid_Site/',
+        description: 'Pure JS'
     },
     {
         img: parallaxImg,
-        link: 'https://helya-moradi.github.io/Parallax/'
+        link: 'https://helya-moradi.github.io/Parallax/',
+        description: 'Pure JS'
     },
     {
         img: pingPongGameImg,
-        link: 'https://github.com/Helya-Moradi/pingPongGame/'
+        link: 'https://github.com/Helya-Moradi/pingPongGame/',
+        description: 'Websocket'
     },
     {
         img: restaurantImg,
-        link: 'https://helya-moradi.github.io/Sass-Project/'
+        link: 'https://helya-moradi.github.io/Sass-Project/',
+        description: 'Pure JS'
     },
     {
         img: reverseHoverImg,
-        link: 'https://helya-moradi.github.io/reverseHover/'
+        link: 'https://helya-moradi.github.io/reverseHover/',
+        description: 'Pure JS'
     },
     {
         img: scrollSnapProjectImg,
-        link: 'https://helya-moradi.github.io/scrollSnapProject/'
+        link: 'https://helya-moradi.github.io/scrollSnapProject/',
+        description: 'Pure JS'
     },
     {
         img: shapelyTemplateImg,
-        link: 'https://helya-moradi.github.io/ShapelyTemplate/'
+        link: 'https://helya-moradi.github.io/ShapelyTemplate/',
+        description: 'React JS'
     },
     {
         img: styleConferenceImg,
-        link: 'https://helya-moradi.github.io/Styles_Conference/'
+        link: 'https://helya-moradi.github.io/Styles_Conference/',
+        description: 'Pure JS'
     },
     {
         img: webComImg,
-        link: 'https://helya-moradi.github.io/WEB.com/'
+        link: 'https://helya-moradi.github.io/WEB.com/',
+        description: 'Bootstrap'
     },
     {
         img: workboxNoteAppImg,
-        link: 'https://helya-moradi.github.io/workboxNoteApp/'
+        link: 'https://helya-moradi.github.io/workboxNoteApp/',
+        description: 'PWA'
     }
 ]
 
