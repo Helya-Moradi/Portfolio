@@ -2,6 +2,9 @@ import style from './index.sass'
 import ProjectItem from "src/pages/projects/components/projectItem";
 import projectsData from "src/data/projects";
 import {useEffect, useRef, useState} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 function Projects() {
     const [hoverData, setHoverData]: any = useState({});
@@ -49,6 +52,11 @@ function Projects() {
 
     return (
         <div className={style.projectsPage} ref={projectPage}>
+            <Link to='/' className={style.backWrapper}>
+                <FontAwesomeIcon icon={faArrowLeft} className={style.icon}/>
+                <span>Back To Home</span>
+            </Link>
+
             {
                 projectsData.map((project, index) => (
                     <ProjectItem
@@ -68,7 +76,8 @@ function Projects() {
                   onMouseLeave={deleteHover}
             />
         </div>
-    );
+    )
+        ;
 }
 
 export default Projects

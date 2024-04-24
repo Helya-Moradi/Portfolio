@@ -10,6 +10,17 @@
   grid-auto-rows: 1fr
   justify-items: center
 
+  .backWrapper
+    position: absolute
+    display: flex
+    align-items: center
+    gap: 1rem
+    font-size: 1.1rem
+    color: $primaryText
+    left: 1.2rem
+    top: 3.5rem
+    text-decoration: none
+
   .hoverDim
     position: absolute
     background-color: $specialLowerOpacity
@@ -23,6 +34,13 @@
       visibility: visible
       opacity: 1
 
+@media screen and (max-width: 1299px)
+  .projectsPage
+    padding-top: 8rem
+
+    .backWrapper
+      top: 6rem
+
 @media screen and (max-width: 850px)
   .projectsPage
     grid-template-columns: repeat(2, 1fr)
@@ -30,3 +48,6 @@
 @media screen and (max-width: 550px)
   .projectsPage
     grid-template-columns: repeat(1, 1fr)
+
+    .backWrapper
+      font-size: 1rem
