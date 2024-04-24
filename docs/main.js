@@ -6563,7 +6563,9 @@ function MainContent(_ref) {
     });
   };
   var options = {
-    threshold: 0.5
+    root: document.getElementById('mainContentPage'),
+    rootMargin: "0px",
+    threshold: .6
   };
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var observer = new IntersectionObserver(observerHandler, options);
@@ -6574,6 +6576,7 @@ function MainContent(_ref) {
   var componentsArray = [_sections_home__WEBPACK_IMPORTED_MODULE_2__["default"], _sections_about__WEBPACK_IMPORTED_MODULE_3__["default"], _sections_portfolio__WEBPACK_IMPORTED_MODULE_4__["default"], _sections_skills__WEBPACK_IMPORTED_MODULE_5__["default"], _sections_Education__WEBPACK_IMPORTED_MODULE_6__["default"], _sections_Experience__WEBPACK_IMPORTED_MODULE_7__["default"], _sections_contact__WEBPACK_IMPORTED_MODULE_8__["default"]];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
     className: _index_sass__WEBPACK_IMPORTED_MODULE_1__["default"].mainContentPage,
+    id: "mainContentPage",
     children: componentsArray.map(function (CMP, index) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(CMP, {
@@ -7763,9 +7766,9 @@ function Sidebar(_ref) {
   var sidebarData = ['home', 'about', 'portfolio', 'skills', 'education', 'experience', 'contact'];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: (0,_utils_class_names__WEBPACK_IMPORTED_MODULE_1__["default"])(_index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].sidebar, open && _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].open),
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("ul", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
       className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].list,
-      children: sidebarData.map(function (item, index) {
+      children: [sidebarData.map(function (item, index) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
           onMouseEnter: addPointer,
           onMouseLeave: deletePointer,
@@ -7774,8 +7777,10 @@ function Sidebar(_ref) {
             className: (0,_utils_class_names__WEBPACK_IMPORTED_MODULE_1__["default"])(activeItem === item && _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].active),
             children: item
           })
-        }, "menu-item-".concat(index + 1));
-      })
+        }, "menu-item -".concat(index + 1));
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].line
+      })]
     })
   });
 }
@@ -8878,7 +8883,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"sidebar":"sidebar_Xrt9","list":"list_BQZn","active":"active_a3Cz","open":"open_HTlS"});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"sidebar":"sidebar_Xrt9","list":"list_BQZn","active":"active_a3Cz","line":"line_pYdb","open":"open_HTlS"});
 
 /***/ }),
 

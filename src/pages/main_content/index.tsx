@@ -12,19 +12,15 @@ import Widgets from "src/pages/main_content/sections/widgets";
 interface MainContentPops {
     activeItem: string;
     setActiveItem: CallableFunction;
-    setPrevActiveItem: CallableFunction;
 }
 
-function MainContent({activeItem, setActiveItem, setPrevActiveItem}: MainContentPops) {
+function MainContent({activeItem, setActiveItem}: MainContentPops) {
     const observerRef = useRef([]);
 
     const observerHandler = (entries: any[]) => {
         entries.forEach(entry => {
             if (entry.target.id !== activeItem && entry.isIntersecting) {
-                setActiveItem((prev ) => {
-                    setPrevActiveItem(prev)
-                    return entry.target.id
-                });
+                setActiveItem(entry.target.id);
             }
         })
     }
@@ -32,7 +28,7 @@ function MainContent({activeItem, setActiveItem, setPrevActiveItem}: MainContent
     const options = {
         root: document.getElementById('mainContentPage'),
         rootMargin: "0px",
-        threshold: 1
+        threshold: .6
     }
 
     useEffect(() => {

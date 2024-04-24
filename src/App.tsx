@@ -15,7 +15,6 @@ function App() {
 
     const [openMenu, setOpenMenu] = useState(false);
     const [activeItem, setActiveItem] = useState('');
-    const [previousActiveItem, setPreviousActiveItem] = useState('');
     const [isPointer, setIsPointer] = useState(false);
 
     const cursorRef = useRef(null);
@@ -43,7 +42,7 @@ function App() {
                 <div className={cls(style.stalker, isPointer && style.pointer)} ref={stalkerRef}/>
 
                 <Header open={openMenu} setOpen={setOpenMenu}/>
-                <Sidebar open={openMenu} activeItem={activeItem} prevActiveItem={previousActiveItem}/>
+                <Sidebar open={openMenu} activeItem={activeItem}/>
 
                 <Routes>
                     <Route
@@ -52,7 +51,7 @@ function App() {
                             <MainContent
                                 activeItem={activeItem}
                                 setActiveItem={setActiveItem}
-                                setPrevActiveItem={setPreviousActiveItem}/>
+                            />
                         }
                     />
 
