@@ -7746,8 +7746,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _index_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.sass */ "./src/sections/sidebar/index.sass");
 /* harmony import */ var _utils_class_names__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/class_names */ "./src/utils/class_names.ts");
-/* harmony import */ var react_router_hash_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-hash-link */ "./node_modules/react-router-hash-link/dist/react-router-hash-link.esm.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_router_hash_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-hash-link */ "./node_modules/react-router-hash-link/dist/react-router-hash-link.esm.js");
+/* harmony import */ var _contexts_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../contexts/scroll */ "./src/contexts/scroll.tsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -7755,14 +7757,19 @@ __webpack_require__.r(__webpack_exports__);
 function Sidebar(_ref) {
   var open = _ref.open,
     activeItem = _ref.activeItem;
+  var _usePointer = (0,_contexts_scroll__WEBPACK_IMPORTED_MODULE_2__.usePointer)(),
+    addPointer = _usePointer.addPointer,
+    deletePointer = _usePointer.deletePointer;
   var sidebarData = ['home', 'about', 'portfolio', 'skills', 'education', 'experience', 'contact'];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: (0,_utils_class_names__WEBPACK_IMPORTED_MODULE_1__["default"])(_index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].sidebar, open && _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].open),
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("ul", {
       className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].list,
       children: sidebarData.map(function (item, index) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_hash_link__WEBPACK_IMPORTED_MODULE_3__.HashLink, {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+          onMouseEnter: addPointer,
+          onMouseLeave: deletePointer,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_hash_link__WEBPACK_IMPORTED_MODULE_4__.HashLink, {
             to: "/#".concat(item),
             className: (0,_utils_class_names__WEBPACK_IMPORTED_MODULE_1__["default"])(activeItem === item && _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].active),
             children: item

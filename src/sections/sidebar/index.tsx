@@ -1,6 +1,7 @@
 import style from './index.sass'
 import cls from "src/utils/class_names";
 import {HashLink} from 'react-router-hash-link'
+import {usePointer} from "src/contexts/scroll";
 
 interface SidebarProps {
     open: boolean;
@@ -8,6 +9,7 @@ interface SidebarProps {
 }
 
 function Sidebar({open, activeItem}: SidebarProps) {
+    const {addPointer, deletePointer} = usePointer();
     const sidebarData = ['home', 'about', 'portfolio', 'skills', 'education', 'experience', 'contact'];
 
     return (
@@ -15,7 +17,11 @@ function Sidebar({open, activeItem}: SidebarProps) {
             <ul className={style.list}>
                 {
                     sidebarData.map((item, index) => (
-                        <li key={`menu-item-${index + 1}`}>
+                        <li
+                            key={`menu-item-${index + 1}`}
+                            onMouseEnter={addPointer}
+                            onMouseLeave={deletePointer}
+                        >
                             <HashLink to={`/#${item}`}
                                       className={cls(activeItem === item && style.active)}>{item}
                             </HashLink>
