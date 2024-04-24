@@ -5,14 +5,14 @@
     position: fixed
     width: 10px
     height: 10px
-    background-color: $primary1
+    background-color: $primary1Darker
     border-radius: 50%
     z-index: 1000
     pointer-events: none
     transition: transform ease-out 5ms, background-color .3s
 
     &.pointer
-      background-color: $primary1Darker
+      background-color: $primary2
 
   .stalker
     position: fixed
@@ -20,14 +20,14 @@
     margin-left: -10px
     width: 30px
     height: 30px
-    border: 2px solid $primary1
+    border: 2px solid $primary1Darker
     border-radius: 50%
     z-index: 999
     pointer-events: none
     transition: transform ease-out 160ms, width ease .3s, height ease .3s, margin-top .3s, margin-left .3s, border-color .3s
 
     &.pointer
-      border-color: $primary1Darker
+      border-color: $primary2
       width: 50px
       height: 50px
       margin-top: -20px
