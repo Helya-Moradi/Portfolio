@@ -1,7 +1,7 @@
-# Hello
+# Portfolio Website
 
 I'm helya moradi,
-This is my own portfolio
+This is my portfolio.
 
 Link:
 [helyamoradi.ir](https://helyamoradi.ir)

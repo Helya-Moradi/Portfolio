@@ -28,14 +28,14 @@
   position: fixed;
   width: 10px;
   height: 10px;
-  background-color: var(--primary1);
+  background-color: var(--primary1Darker);
   border-radius: 50%;
   z-index: 1000;
   pointer-events: none;
   transition: transform ease-out 5ms, background-color 0.3s;
 }
 .app_OXwE .cursor_Gwnb.pointer_Sj3w {
-  background-color: var(--primary1Darker);
+  display: none;
 }
 .app_OXwE .stalker_efM4 {
   position: fixed;
@@ -43,14 +43,14 @@
   margin-left: -10px;
   width: 30px;
   height: 30px;
-  border: 2px solid var(--primary1);
+  border: 2px solid var(--primary1Darker);
   border-radius: 50%;
   z-index: 999;
   pointer-events: none;
   transition: transform ease-out 160ms, width ease 0.3s, height ease 0.3s, margin-top 0.3s, margin-left 0.3s, border-color 0.3s;
 }
 .app_OXwE .stalker_efM4.pointer_Sj3w {
-  border-color: var(--primary1Darker);
+  border-color: var(--primary2);
   width: 50px;
   height: 50px;
   margin-top: -20px;
@@ -100,7 +100,7 @@ header {
   align-items: center;
   box-shadow: none;
   overflow: hidden;
-  z-index: 2;
+  z-index: 6;
 }
 header.open_GO5z .socialMedias_Id_J {
   right: 8.3rem;
@@ -1520,7 +1520,7 @@ header .socialMedias_Id_J a:hover {
   width: 100%;
   max-width: 72rem;
   margin: 0 auto 4rem auto;
-  padding: 6rem 1.2rem 0 1.2rem;
+  padding: 8rem 1.2rem 0 1.2rem;
   align-self: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1535,7 +1535,7 @@ header .socialMedias_Id_J a:hover {
   font-size: 1.1rem;
   color: var(--primaryText);
   left: 1.2rem;
-  top: 3.5rem;
+  top: 5rem;
   text-decoration: none;
   transition: 0.35s;
 }
@@ -1557,9 +1557,6 @@ header .socialMedias_Id_J a:hover {
 }
 
 @media screen and (max-width: 1299px) {
-  .projectsPage_cQdy {
-    padding-top: 8rem;
-  }
   .projectsPage_cQdy .backWrapper_Xj5r {
     top: 6rem;
   }
@@ -1711,12 +1708,13 @@ header .socialMedias_Id_J a:hover {
   top: 4rem;
   right: -100%;
   padding: 3rem 7.3rem 3rem 3rem;
-  z-index: 1;
+  z-index: 5;
   height: 100vh;
   background-color: var(--primaryBg);
   transition: 0.35s;
 }
 .sidebar_Xrt9 .list_BQZn {
+  position: relative;
   display: flex;
   list-style: none;
   flex-direction: column;
@@ -1725,6 +1723,7 @@ header .socialMedias_Id_J a:hover {
 }
 .sidebar_Xrt9 .list_BQZn li a {
   text-decoration: none;
+  text-transform: capitalize;
   color: var(--primaryText);
   font-weight: 500;
   transition: 0.3s;
@@ -1734,6 +1733,14 @@ header .socialMedias_Id_J a:hover {
 }
 .sidebar_Xrt9 .list_BQZn li a.active_a3Cz {
   color: var(--primary1);
+}
+.sidebar_Xrt9 .list_BQZn .line_pYdb {
+  position: absolute;
+  height: 3px;
+  background-color: var(--primary1);
+  bottom: -0.5rem;
+  z-index: 1;
+  transition: 0.3s;
 }
 
 .sidebar_Xrt9.open_HTlS {
