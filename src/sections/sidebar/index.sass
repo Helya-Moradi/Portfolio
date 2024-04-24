@@ -9,6 +9,7 @@
   transition: .35s
 
   .list
+    position: relative
     display: flex
     list-style: none
     flex-direction: column
@@ -18,6 +19,7 @@
     li
       a
         text-decoration: none
+        text-transform: capitalize
         color: $primaryText
         font-weight: 500
         transition: .3s
@@ -27,6 +29,14 @@
 
         &.active
           color: $primary1
+
+    .line
+      position: absolute
+      height: 3px
+      background-color: $primary1
+      bottom: -.5rem
+      z-index: 1
+      transition: .3s
 
 .sidebar.open
   right: 0

@@ -11,22 +11,28 @@ import Widgets from "src/pages/main_content/sections/widgets";
 
 interface MainContentPops {
     activeItem: string;
-    setActiveItem: (activeItem: string) => void;
+    setActiveItem: CallableFunction;
+    setPrevActiveItem: CallableFunction;
 }
 
-function MainContent({activeItem, setActiveItem}: MainContentPops) {
+function MainContent({activeItem, setActiveItem, setPrevActiveItem}: MainContentPops) {
     const observerRef = useRef([]);
 
     const observerHandler = (entries: any[]) => {
         entries.forEach(entry => {
             if (entry.target.id !== activeItem && entry.isIntersecting) {
-                setActiveItem(entry.target.id);
+                setActiveItem((prev ) => {
+                    setPrevActiveItem(prev)
+                    return entry.target.id
+                });
             }
         })
     }
 
     const options = {
-        threshold: 0.5
+        root: document.getElementById('mainContentPage'),
+        rootMargin: "0px",
+        threshold: 1
     }
 
     useEffect(() => {
@@ -40,7 +46,7 @@ function MainContent({activeItem, setActiveItem}: MainContentPops) {
     const componentsArray = [Home, About, Portfolio, Skills, Education, Experience, Contact];
 
     return (
-        <div className={style.mainContentPage}>
+        <div className={style.mainContentPage} id='mainContentPage'>
             {
                 componentsArray.map((CMP, index) => (
                     <Fragment key={`section-${index + 1}`}>
