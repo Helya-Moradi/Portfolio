@@ -2,6 +2,7 @@ import style from './index.sass'
 import cls from "src/utils/class_names";
 import HamburgerMenu from "src/components/hamburgerMenu";
 import {useEffect, useState} from "react";
+import {usePointer} from "src/contexts/scroll";
 
 interface HeaderProps {
     open: boolean;
@@ -10,6 +11,7 @@ interface HeaderProps {
 
 function Header({open, setOpen}: HeaderProps) {
     const [light, setLight] = useState(false);
+    const {addPointer, deletePointer} = usePointer();
 
     useEffect(() => {
         const theme = localStorage.getItem('theme');
@@ -47,13 +49,33 @@ function Header({open, setOpen}: HeaderProps) {
             <span className={style.logo}>Helya Moradi</span>
 
             <div className={style.wrapper}>
-                <div className={cls(style.themeButton, !light && style.light)} title={light ? 'Dark' : 'Light'} onClick={changeThemeHandler}/>
+                <div
+                    className={cls(style.themeButton, !light && style.light)}
+                    title={light ? 'Dark' : 'Light'}
+                    onClick={changeThemeHandler}
+                    onMouseEnter={addPointer}
+                    onMouseLeave={deletePointer}
+                />
+
                 <HamburgerMenu open={open} setOpen={setOpen} classNames={style.hamburgerIcon}/>
             </div>
 
             <div className={style.socialMedias}>
-                <a href="https://www.linkedin.com/in/helya-moradi" target='_blank'>li.</a>
-                <a href="https://github.com/Helya-Moradi" target='_blank'>gh.</a>
+                <a
+                    href="https://www.linkedin.com/in/helya-moradi"
+                    target='_blank'
+                    onMouseEnter={addPointer}
+                    onMouseLeave={deletePointer}>
+                    li.
+                </a>
+
+                <a
+                    href="https://github.com/Helya-Moradi"
+                    target='_blank'
+                    onMouseEnter={addPointer}
+                    onMouseLeave={deletePointer}>
+                    gh.
+                </a>
             </div>
         </header>
     );

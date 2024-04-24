@@ -1,5 +1,6 @@
 import style from "./index.sass";
 import cls from "src/utils/class_names";
+import {usePointer} from "src/contexts/scroll";
 
 interface HamburgerMenuProps {
     open: boolean;
@@ -8,7 +9,11 @@ interface HamburgerMenuProps {
 }
 
 function HamburgerMenu({open, setOpen, classNames}: HamburgerMenuProps) {
+    const {addPointer, deletePointer} = usePointer();
+
     return (<div
+            onMouseEnter={addPointer}
+            onMouseLeave={deletePointer}
             className={cls(style.hamburgerIcon, open && style.open, classNames)}
             onClick={() => {
                 setOpen((prev: boolean) => !prev)

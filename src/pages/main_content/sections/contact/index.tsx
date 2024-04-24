@@ -4,9 +4,10 @@ import {useEffect, useState} from "react";
 import emailjs from '@emailjs/browser';
 import cls from "src/utils/class_names";
 import ZigzagAnimation from "src/components/zigzagAnimation";
-import * as events from "events";
+import {usePointer} from "src/contexts/scroll";
 
 function Contact({observerRef}: any) {
+    const {addPointer, deletePointer} = usePointer();
     const [contactData, setContactData] = useState({
         name: '',
         email: '',
@@ -135,7 +136,12 @@ function Contact({observerRef}: any) {
                                 }}/>
                         </div>
 
-                        <button type="submit" onMouseOver={buttonMouseOverHandler}>
+                        <button
+                            type="submit"
+                            onMouseOver={buttonMouseOverHandler}
+                            onMouseEnter={addPointer}
+                            onMouseLeave={deletePointer}
+                        >
                             {isLoading && <div className={style.loader}/>}
                             {!isLoading && <span> Send Message </span>}
                         </button>

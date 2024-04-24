@@ -5,11 +5,14 @@
     position: fixed
     width: 10px
     height: 10px
-    background-color: $special
+    background-color: $primary1
     border-radius: 50%
     z-index: 1000
     pointer-events: none
     transition: transform ease-out 10ms
+
+    &.pointer
+      //display: none
 
   .stalker
     position: fixed
@@ -17,15 +20,22 @@
     margin-left: -10px
     width: 30px
     height: 30px
-    border: .7px solid $special
+    border: 2px solid $primary1
     border-radius: 50%
     z-index: 999
     pointer-events: none
-    transition: transform ease-out 120ms
+    transition: transform ease-out 120ms, width ease .3s, height ease .3s
+
+    &.pointer
+      width: 50px
+      height: 50px
+      margin-top: -20px
+      margin-left: -20px
 
 @media screen and (max-width: 460px)
   .app
     .cursor
       display: none
+
     .stalker
       display: none

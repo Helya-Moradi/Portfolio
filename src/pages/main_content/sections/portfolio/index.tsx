@@ -12,9 +12,11 @@ import todoImg from 'src/assets/images/projects/todo.png'
 import weatherAppImg from 'src/assets/images/projects/weather-app.png'
 import TriangleAnimation from "src/components/triangleAnimation";
 import {Link} from "react-router-dom";
+import {usePointer} from "src/contexts/scroll";
 
 
 function Portfolio({observerRef}: any) {
+    const {addPointer, deletePointer} = usePointer();
 
     const projects = [
         {img: dashboardImg, url: 'https://helya-moradi.github.io/Figma-Dashboard/'},
@@ -34,12 +36,17 @@ function Portfolio({observerRef}: any) {
                     <div className={style.projects}>
                         {
                             projects.map((project, index) => (
-                                <Project key={`project-${index+1}`} img={project.img} url={project.url}/>
+                                <Project key={`project-${index + 1}`} img={project.img} url={project.url}/>
                             ))
                         }
                     </div>
                     <div className={style.loadMoreButton}>
-                        <Link to='/projects'>load more</Link>
+                        <Link
+                            to='/projects'
+                            onMouseEnter={addPointer}
+                            onMouseLeave={deletePointer}
+                        >load more
+                        </Link>
                     </div>
                 </div>
             </Template>

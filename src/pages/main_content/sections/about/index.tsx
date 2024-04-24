@@ -3,8 +3,11 @@ import style from './index.sass'
 import cv from 'src/assets/files/HelyaMoradiCV.pdf'
 import Icon from "src/components/icon";
 import {ReactComponent as DownloadIcon} from 'src/assets/icons/file-download.svg'
+import {usePointer} from "src/contexts/scroll";
 
 function About({observerRef}: any) {
+    const {addPointer, deletePointer} = usePointer();
+
     return (
         <div ref={observerRef} id='about'>
             <Template color='first' title='About' direction='ltr'>
@@ -45,7 +48,13 @@ function About({observerRef}: any) {
                         </ul>
 
                         <div className={style.downloadCvContainer}>
-                            <a href={cv} download="HelyaMoradiCV.pdf" target='-blank'>
+                            <a
+                                href={cv}
+                                download="HelyaMoradiCV.pdf"
+                                target='-blank'
+                                onMouseEnter={addPointer}
+                                onMouseLeave={deletePointer}
+                            >
                                 <Icon IconSvg={DownloadIcon} classNameIcon={style.icon} classNameBg={style.bg}/>
                                 <span className={style.downloadCv}>Download cv</span>
                             </a>

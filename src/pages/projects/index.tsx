@@ -5,8 +5,10 @@ import {useEffect, useRef, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
+import {usePointer} from "src/contexts/scroll";
 
 function Projects() {
+    const {addPointer, deletePointer} = usePointer();
     const [hoverData, setHoverData]: any = useState({});
     const [isHover, setIsHover] = useState(false);
     const hoverDim = useRef(null);
@@ -14,12 +16,14 @@ function Projects() {
 
     const mouseEnterHandler = (e) => {
         const currentProjectBound = e.currentTarget.getBoundingClientRect();
-        setHoverData(currentProjectBound)
+        setHoverData(currentProjectBound);
+        addPointer();
         addHover();
     }
 
     const mouseLeaveHandler = () => {
         setHoverData({});
+        deletePointer();
         deleteHover();
     }
 
@@ -52,7 +56,12 @@ function Projects() {
 
     return (
         <div className={style.projectsPage} ref={projectPage}>
-            <Link to='/' className={style.backWrapper}>
+            <Link
+                to='/'
+                className={style.backWrapper}
+                onMouseEnter={addPointer}
+                onMouseLeave={deletePointer}
+            >
                 <FontAwesomeIcon icon={faArrowLeft} className={style.icon}/>
                 <span>Back To Home</span>
             </Link>

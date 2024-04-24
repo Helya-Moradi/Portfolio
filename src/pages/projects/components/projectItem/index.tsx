@@ -1,5 +1,6 @@
 import style from './index.sass'
 import {MouseEventHandler} from "react";
+import {usePointer} from "src/contexts/scroll";
 
 interface ProjectItemProps {
     img: string;

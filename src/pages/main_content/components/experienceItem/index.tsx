@@ -3,6 +3,7 @@ import {useState} from "react";
 import cls from "src/utils/class_names";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCaretDown} from '@fortawesome/free-solid-svg-icons';
+import {usePointer} from "src/contexts/scroll";
 
 interface ExperienceItemProps {
     data: {
@@ -14,13 +15,18 @@ interface ExperienceItemProps {
 
 function ExperienceItem({data}: ExperienceItemProps) {
     const [open, setOpen] = useState(false);
+    const {addPointer, deletePointer} = usePointer();
 
     const openCollapseHandler = () => {
         setOpen(prev => !prev)
     }
 
     return (
-        <div className={cls(style.experienceItem, open && style.open)}>
+        <div
+            className={cls(style.experienceItem, open && style.open)}
+            onMouseEnter={addPointer}
+            onMouseLeave={deletePointer}
+        >
             <div className={style.titleContainer} onClick={openCollapseHandler}>
                 <span className={style.title}>
                   {data.title}
