@@ -28,11 +28,14 @@
   position: fixed;
   width: 10px;
   height: 10px;
-  background-color: var(--special);
+  background-color: var(--primary1);
   border-radius: 50%;
   z-index: 1000;
   pointer-events: none;
-  transition: transform ease-out 10ms;
+  transition: transform ease-out 5ms, background-color 0.3s;
+}
+.app_OXwE .cursor_Gwnb.pointer_Sj3w {
+  background-color: var(--primary1Darker);
 }
 .app_OXwE .stalker_efM4 {
   position: fixed;
@@ -40,11 +43,18 @@
   margin-left: -10px;
   width: 30px;
   height: 30px;
-  border: 0.7px solid var(--special);
+  border: 2px solid var(--primary1);
   border-radius: 50%;
   z-index: 999;
   pointer-events: none;
-  transition: transform ease-out 120ms;
+  transition: transform ease-out 160ms, width ease 0.3s, height ease 0.3s, margin-top 0.3s, margin-left 0.3s, border-color 0.3s;
+}
+.app_OXwE .stalker_efM4.pointer_Sj3w {
+  border-color: var(--primary1Darker);
+  width: 50px;
+  height: 50px;
+  margin-top: -20px;
+  margin-left: -20px;
 }
 
 @media screen and (max-width: 460px) {
@@ -109,7 +119,6 @@ header .wrapper_EJU1 {
   gap: 1.2rem;
 }
 header .wrapper_EJU1 .themeButton_LU9Q {
-  cursor: pointer;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -258,7 +267,6 @@ header .socialMedias_Id_J a:hover {
   width: 2rem;
   height: 1.5rem;
   position: relative;
-  cursor: pointer;
 }
 .hamburgerIcon_dvBd.open_Rx5P .line1_qCxy,
 .hamburgerIcon_dvBd.open_Rx5P .line3_Dc82 {
@@ -1157,9 +1165,6 @@ header .socialMedias_Id_J a:hover {
   --danger: #bb1d3b;
 }
 
-.experienceItem_u2eM {
-  cursor: pointer;
-}
 .experienceItem_u2eM.open_z1Ma .titleContainer_DGgx .icon_FLHO {
   transform: rotate(180deg);
 }
@@ -1298,7 +1303,6 @@ header .socialMedias_Id_J a:hover {
   padding: 1.4rem;
   border: 2px solid var(--secondaryText);
   background-color: inherit;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -1523,6 +1527,21 @@ header .socialMedias_Id_J a:hover {
   grid-auto-rows: 1fr;
   justify-items: center;
 }
+.projectsPage_cQdy .backWrapper_Xj5r {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  color: var(--primaryText);
+  left: 1.2rem;
+  top: 3.5rem;
+  text-decoration: none;
+  transition: 0.35s;
+}
+.projectsPage_cQdy .backWrapper_Xj5r:hover {
+  color: var(--primary1);
+}
 .projectsPage_cQdy .hoverDim_cpUw {
   position: absolute;
   background-color: var(--specialLowerOpacity);
@@ -1537,6 +1556,14 @@ header .socialMedias_Id_J a:hover {
   opacity: 1;
 }
 
+@media screen and (max-width: 1299px) {
+  .projectsPage_cQdy {
+    padding-top: 8rem;
+  }
+  .projectsPage_cQdy .backWrapper_Xj5r {
+    top: 6rem;
+  }
+}
 @media screen and (max-width: 850px) {
   .projectsPage_cQdy {
     grid-template-columns: repeat(2, 1fr);
@@ -1545,6 +1572,9 @@ header .socialMedias_Id_J a:hover {
 @media screen and (max-width: 550px) {
   .projectsPage_cQdy {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .projectsPage_cQdy .backWrapper_Xj5r {
+    font-size: 1rem;
   }
 }
 /*!*******************************************************************************************************************************************************************************************************!*\
