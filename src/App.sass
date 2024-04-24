@@ -9,10 +9,10 @@
     border-radius: 50%
     z-index: 1000
     pointer-events: none
-    transition: transform ease-out 10ms
+    transition: transform ease-out 5ms, background-color .3s
 
     &.pointer
-      //display: none
+      background-color: $primary1Darker
 
   .stalker
     position: fixed
@@ -24,9 +24,10 @@
     border-radius: 50%
     z-index: 999
     pointer-events: none
-    transition: transform ease-out 120ms, width ease .3s, height ease .3s
+    transition: transform ease-out 160ms, width ease .3s, height ease .3s, margin-top .3s, margin-left .3s, border-color .3s
 
     &.pointer
+      border-color: $primary1Darker
       width: 50px
       height: 50px
       margin-top: -20px

@@ -25,12 +25,6 @@ function App() {
             const x = e.clientX;
             const y = e.clientY;
 
-            // const cursorRect = cursorRef.current.getBoundingClientRect();
-            // const stalkerRect = stalkerRef.current.getBoundingClientRect();
-            //
-            // cursorRef.current.style.transform = `translate(${x - (cursorRect.width / 2)}px,${y - (cursorRect.height / 2)}px)`;
-            // stalkerRef.current.style.transform = `translate(${x - (stalkerRect.width / 2)}px,${y - (stalkerRect.height / 2)}px)`;
-
             cursorRef.current.style.transform = `translate(${x}px,${y}px)`;
             stalkerRef.current.style.transform = `translate(${x}px,${y}px)`;
         })
