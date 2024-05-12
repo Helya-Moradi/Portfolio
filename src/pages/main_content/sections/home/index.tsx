@@ -64,7 +64,7 @@ function Home({observerRef}: any) {
                 this.height = height;
                 this.particlesArray = [];
                 this.image = image;
-                this.gap = 2;
+                this.gap = 3;
                 this.mouse = {
                     radius: 3000,
                     x: undefined,

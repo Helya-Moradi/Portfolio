@@ -162,80 +162,6 @@ const init = (options, origin = 'https://api.emailjs.com') => {
 
 /***/ }),
 
-/***/ "./node_modules/@emailjs/browser/es/methods/sendForm/sendForm.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@emailjs/browser/es/methods/sendForm/sendForm.js ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   sendForm: () => (/* binding */ sendForm)
-/* harmony export */ });
-/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../store/store */ "./node_modules/@emailjs/browser/es/store/store.js");
-/* harmony import */ var _api_sendPost__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../api/sendPost */ "./node_modules/@emailjs/browser/es/api/sendPost.js");
-/* harmony import */ var _utils_buildOptions_buildOptions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/buildOptions/buildOptions */ "./node_modules/@emailjs/browser/es/utils/buildOptions/buildOptions.js");
-/* harmony import */ var _utils_validateForm_validateForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/validateForm/validateForm */ "./node_modules/@emailjs/browser/es/utils/validateForm/validateForm.js");
-/* harmony import */ var _utils_validateParams_validateParams__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/validateParams/validateParams */ "./node_modules/@emailjs/browser/es/utils/validateParams/validateParams.js");
-/* harmony import */ var _utils_isHeadless_isHeadless__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/isHeadless/isHeadless */ "./node_modules/@emailjs/browser/es/utils/isHeadless/isHeadless.js");
-/* harmony import */ var _errors_headlessError_headlessError__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../errors/headlessError/headlessError */ "./node_modules/@emailjs/browser/es/errors/headlessError/headlessError.js");
-/* harmony import */ var _utils_isBlockedValueInParams_isBlockedValueInParams__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils/isBlockedValueInParams/isBlockedValueInParams */ "./node_modules/@emailjs/browser/es/utils/isBlockedValueInParams/isBlockedValueInParams.js");
-/* harmony import */ var _errors_blockedEmailError_blockedEmailError__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../errors/blockedEmailError/blockedEmailError */ "./node_modules/@emailjs/browser/es/errors/blockedEmailError/blockedEmailError.js");
-/* harmony import */ var _utils_isLimitRateHit_isLimitRateHit__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../utils/isLimitRateHit/isLimitRateHit */ "./node_modules/@emailjs/browser/es/utils/isLimitRateHit/isLimitRateHit.js");
-/* harmony import */ var _errors_limitRateError_limitRateError__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../errors/limitRateError/limitRateError */ "./node_modules/@emailjs/browser/es/errors/limitRateError/limitRateError.js");
-
-
-
-
-
-
-
-
-
-
-
-const findHTMLForm = (form) => {
-    return typeof form === 'string' ? document.querySelector(form) : form;
-};
-/**
- * Send a form the specific EmailJS service
- * @param {string} serviceID - the EmailJS service ID
- * @param {string} templateID - the EmailJS template ID
- * @param {string | HTMLFormElement} form - the form element or selector
- * @param {object} options - the EmailJS SDK config options
- * @returns {Promise<EmailJSResponseStatus>}
- */
-const sendForm = async (serviceID, templateID, form, options) => {
-    const opts = (0,_utils_buildOptions_buildOptions__WEBPACK_IMPORTED_MODULE_2__.buildOptions)(options);
-    const publicKey = opts.publicKey || _store_store__WEBPACK_IMPORTED_MODULE_0__.store.publicKey;
-    const blockHeadless = opts.blockHeadless || _store_store__WEBPACK_IMPORTED_MODULE_0__.store.blockHeadless;
-    const storageProvider = _store_store__WEBPACK_IMPORTED_MODULE_0__.store.storageProvider || opts.storageProvider;
-    const blockList = { ..._store_store__WEBPACK_IMPORTED_MODULE_0__.store.blockList, ...opts.blockList };
-    const limitRate = { ..._store_store__WEBPACK_IMPORTED_MODULE_0__.store.limitRate, ...opts.limitRate };
-    if (blockHeadless && (0,_utils_isHeadless_isHeadless__WEBPACK_IMPORTED_MODULE_5__.isHeadless)(navigator)) {
-        return Promise.reject((0,_errors_headlessError_headlessError__WEBPACK_IMPORTED_MODULE_6__.headlessError)());
-    }
-    const currentForm = findHTMLForm(form);
-    (0,_utils_validateParams_validateParams__WEBPACK_IMPORTED_MODULE_4__.validateParams)(publicKey, serviceID, templateID);
-    (0,_utils_validateForm_validateForm__WEBPACK_IMPORTED_MODULE_3__.validateForm)(currentForm);
-    const formData = new FormData(currentForm);
-    if ((0,_utils_isBlockedValueInParams_isBlockedValueInParams__WEBPACK_IMPORTED_MODULE_7__.isBlockedValueInParams)(blockList, formData)) {
-        return Promise.reject((0,_errors_blockedEmailError_blockedEmailError__WEBPACK_IMPORTED_MODULE_8__.blockedEmailError)());
-    }
-    if (await (0,_utils_isLimitRateHit_isLimitRateHit__WEBPACK_IMPORTED_MODULE_9__.isLimitRateHit)(location.pathname, limitRate, storageProvider)) {
-        return Promise.reject((0,_errors_limitRateError_limitRateError__WEBPACK_IMPORTED_MODULE_10__.limitRateError)());
-    }
-    formData.append('lib_version', '4.3.3');
-    formData.append('service_id', serviceID);
-    formData.append('template_id', templateID);
-    formData.append('user_id', publicKey);
-    return (0,_api_sendPost__WEBPACK_IMPORTED_MODULE_1__.sendPost)('/api/v1.0/email/send-form', formData);
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/@emailjs/browser/es/methods/send/send.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@emailjs/browser/es/methods/send/send.js ***!
@@ -305,6 +231,80 @@ const send = async (serviceID, templateID, templateParams, options) => {
     return (0,_api_sendPost__WEBPACK_IMPORTED_MODULE_1__.sendPost)('/api/v1.0/email/send', JSON.stringify(params), {
         'Content-type': 'application/json',
     });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/@emailjs/browser/es/methods/sendForm/sendForm.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@emailjs/browser/es/methods/sendForm/sendForm.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   sendForm: () => (/* binding */ sendForm)
+/* harmony export */ });
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../store/store */ "./node_modules/@emailjs/browser/es/store/store.js");
+/* harmony import */ var _api_sendPost__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../api/sendPost */ "./node_modules/@emailjs/browser/es/api/sendPost.js");
+/* harmony import */ var _utils_buildOptions_buildOptions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/buildOptions/buildOptions */ "./node_modules/@emailjs/browser/es/utils/buildOptions/buildOptions.js");
+/* harmony import */ var _utils_validateForm_validateForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/validateForm/validateForm */ "./node_modules/@emailjs/browser/es/utils/validateForm/validateForm.js");
+/* harmony import */ var _utils_validateParams_validateParams__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/validateParams/validateParams */ "./node_modules/@emailjs/browser/es/utils/validateParams/validateParams.js");
+/* harmony import */ var _utils_isHeadless_isHeadless__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/isHeadless/isHeadless */ "./node_modules/@emailjs/browser/es/utils/isHeadless/isHeadless.js");
+/* harmony import */ var _errors_headlessError_headlessError__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../errors/headlessError/headlessError */ "./node_modules/@emailjs/browser/es/errors/headlessError/headlessError.js");
+/* harmony import */ var _utils_isBlockedValueInParams_isBlockedValueInParams__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils/isBlockedValueInParams/isBlockedValueInParams */ "./node_modules/@emailjs/browser/es/utils/isBlockedValueInParams/isBlockedValueInParams.js");
+/* harmony import */ var _errors_blockedEmailError_blockedEmailError__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../errors/blockedEmailError/blockedEmailError */ "./node_modules/@emailjs/browser/es/errors/blockedEmailError/blockedEmailError.js");
+/* harmony import */ var _utils_isLimitRateHit_isLimitRateHit__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../utils/isLimitRateHit/isLimitRateHit */ "./node_modules/@emailjs/browser/es/utils/isLimitRateHit/isLimitRateHit.js");
+/* harmony import */ var _errors_limitRateError_limitRateError__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../errors/limitRateError/limitRateError */ "./node_modules/@emailjs/browser/es/errors/limitRateError/limitRateError.js");
+
+
+
+
+
+
+
+
+
+
+
+const findHTMLForm = (form) => {
+    return typeof form === 'string' ? document.querySelector(form) : form;
+};
+/**
+ * Send a form the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {string | HTMLFormElement} form - the form element or selector
+ * @param {object} options - the EmailJS SDK config options
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+const sendForm = async (serviceID, templateID, form, options) => {
+    const opts = (0,_utils_buildOptions_buildOptions__WEBPACK_IMPORTED_MODULE_2__.buildOptions)(options);
+    const publicKey = opts.publicKey || _store_store__WEBPACK_IMPORTED_MODULE_0__.store.publicKey;
+    const blockHeadless = opts.blockHeadless || _store_store__WEBPACK_IMPORTED_MODULE_0__.store.blockHeadless;
+    const storageProvider = _store_store__WEBPACK_IMPORTED_MODULE_0__.store.storageProvider || opts.storageProvider;
+    const blockList = { ..._store_store__WEBPACK_IMPORTED_MODULE_0__.store.blockList, ...opts.blockList };
+    const limitRate = { ..._store_store__WEBPACK_IMPORTED_MODULE_0__.store.limitRate, ...opts.limitRate };
+    if (blockHeadless && (0,_utils_isHeadless_isHeadless__WEBPACK_IMPORTED_MODULE_5__.isHeadless)(navigator)) {
+        return Promise.reject((0,_errors_headlessError_headlessError__WEBPACK_IMPORTED_MODULE_6__.headlessError)());
+    }
+    const currentForm = findHTMLForm(form);
+    (0,_utils_validateParams_validateParams__WEBPACK_IMPORTED_MODULE_4__.validateParams)(publicKey, serviceID, templateID);
+    (0,_utils_validateForm_validateForm__WEBPACK_IMPORTED_MODULE_3__.validateForm)(currentForm);
+    const formData = new FormData(currentForm);
+    if ((0,_utils_isBlockedValueInParams_isBlockedValueInParams__WEBPACK_IMPORTED_MODULE_7__.isBlockedValueInParams)(blockList, formData)) {
+        return Promise.reject((0,_errors_blockedEmailError_blockedEmailError__WEBPACK_IMPORTED_MODULE_8__.blockedEmailError)());
+    }
+    if (await (0,_utils_isLimitRateHit_isLimitRateHit__WEBPACK_IMPORTED_MODULE_9__.isLimitRateHit)(location.pathname, limitRate, storageProvider)) {
+        return Promise.reject((0,_errors_limitRateError_limitRateError__WEBPACK_IMPORTED_MODULE_10__.limitRateError)());
+    }
+    formData.append('lib_version', '4.3.3');
+    formData.append('service_id', serviceID);
+    formData.append('template_id', templateID);
+    formData.append('user_id', publicKey);
+    return (0,_api_sendPost__WEBPACK_IMPORTED_MODULE_1__.sendPost)('/api/v1.0/email/send-form', formData);
 };
 
 
@@ -7054,35 +7054,178 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _index_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.sass */ "./src/pages/main_content/sections/home/index.sass");
-/* harmony import */ var _assets_images_i_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../assets/images/i.png */ "./src/assets/images/i.png");
+/* harmony import */ var _assets_images_myImg_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../assets/images/myImg.png */ "./src/assets/images/myImg.png");
 /* harmony import */ var _components_zigzagAnimation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../components/zigzagAnimation */ "./src/components/zigzagAnimation/index.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
 
 function Home(_ref) {
   var observerRef = _ref.observerRef;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+  var canvasRef = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);
+  var imgRef = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(null),
+    _useState2 = _slicedToArray(_useState, 2),
+    windowSize = _useState2[0],
+    setWindowSize = _useState2[1];
+  (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(function () {
+    var canvas = canvasRef.current;
+    canvas.width = canvas.parentElement.clientWidth;
+    canvas.height = canvas.parentElement.clientHeight;
+    var image = imgRef.current;
+    image.style.border = '1px solid red';
+    var ctx = canvas.getContext("2d");
+    var Particle = /*#__PURE__*/function () {
+      function Particle(effect, x, y, color) {
+        _classCallCheck(this, Particle);
+        this.effect = effect;
+        this.x = Math.random() * this.effect.width;
+        this.y = Math.random() * this.effect.height;
+        this.originX = Math.floor(x);
+        this.originY = Math.floor(y);
+        this.color = color;
+        this.size = this.effect.gap;
+        this.vx = 0;
+        this.vy = 0;
+        this.ease = 0.2;
+        this.friction = 0.9;
+        this.dx = 0;
+        this.dy = 0;
+        this.distance = 0;
+        this.force = 0;
+        this.angle = 0;
+      }
+      return _createClass(Particle, [{
+        key: "draw",
+        value: function draw(context) {
+          context.fillStyle = this.color;
+          context.fillRect(this.x, this.y, this.size, this.size);
+        }
+      }, {
+        key: "update",
+        value: function update() {
+          this.dx = this.effect.mouse.x - this.x;
+          this.dy = this.effect.mouse.y - this.y;
+          this.distance = this.dx * this.dx + this.dy * this.dy;
+          this.force = -this.effect.mouse.radius / this.distance;
+          if (this.distance < this.effect.mouse.radius) {
+            this.angle = Math.atan2(this.dy, this.dx);
+            this.vx += this.force * Math.cos(this.angle);
+            this.vy += this.force * Math.sin(this.angle);
+          }
+          this.x += (this.vx *= this.friction) + (this.originX - this.x) * this.ease;
+          this.y += (this.vy *= this.friction) + (this.originY - this.y) * this.ease;
+        }
+      }]);
+    }();
+    var Effect = /*#__PURE__*/function () {
+      function Effect(width, height) {
+        var _this = this;
+        _classCallCheck(this, Effect);
+        this.width = width;
+        this.height = height;
+        this.particlesArray = [];
+        this.image = image;
+        this.gap = 3;
+        this.mouse = {
+          radius: 3000,
+          x: undefined,
+          y: undefined
+        };
+        var canvasRect = canvas.getBoundingClientRect();
+        window.addEventListener('mousemove', function (e) {
+          _this.mouse.x = e.x - canvasRect.x;
+          _this.mouse.y = e.y - canvasRect.y;
+        });
+      }
+      return _createClass(Effect, [{
+        key: "init",
+        value: function init(context) {
+          context.drawImage(this.image, 20, 40, this.width - 40, this.height - 40);
+          var pixels = context.getImageData(0, 0, this.width, this.height).data;
+          for (var y = 0; y < this.height; y += this.gap) {
+            for (var x = 0; x < this.width; x += this.gap) {
+              var index = (y * this.width + x) * 4;
+              var red = pixels[index];
+              var green = pixels[index + 1];
+              var blue = pixels[index + 2];
+              var alpha = pixels[index + 3];
+              var color = "rgb(".concat(red, ",").concat(green, ",").concat(blue, ")");
+              if (alpha > 0) {
+                this.particlesArray.push(new Particle(this, x, y, color));
+              }
+            }
+          }
+        }
+      }, {
+        key: "draw",
+        value: function draw(context) {
+          this.particlesArray.forEach(function (particle) {
+            return particle.draw(context);
+          });
+        }
+      }, {
+        key: "update",
+        value: function update() {
+          this.particlesArray.forEach(function (particle) {
+            return particle.update();
+          });
+        }
+      }]);
+    }();
+    var effect = new Effect(canvas.width, canvas.height);
+    effect.init(ctx);
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      effect.draw(ctx);
+      effect.update();
+      requestAnimationFrame(animate);
+    }
+    animate();
+  }, [windowSize]);
+  window.addEventListener('resize', function () {
+    setWindowSize(window.innerWidth);
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].home,
     id: "home",
     ref: observerRef,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].imageContainer,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-        src: _assets_images_i_png__WEBPACK_IMPORTED_MODULE_1__["default"],
-        alt: "image"
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+        src: _assets_images_myImg_png__WEBPACK_IMPORTED_MODULE_1__["default"],
+        alt: "image",
+        ref: imgRef
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("canvas", {
+        id: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].canvas,
+        ref: canvasRef
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].introduce,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
         className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].title,
-        children: ["Hello ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), "I\u2019m Helya Moradi"]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+        children: ["Hello ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), "I\u2019m Helya Moradi"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
         className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].description,
         children: "Self-motivated and creative web designer and front-end developer. Interested in learning, programming, web design, artwork and problem solving."
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_zigzagAnimation__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_zigzagAnimation__WEBPACK_IMPORTED_MODULE_2__["default"], {
       right: -9,
       bottom: 3
     })]
@@ -7824,10 +7967,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/assets/images/i.png":
-/*!*********************************!*\
-  !*** ./src/assets/images/i.png ***!
-  \*********************************/
+/***/ "./src/assets/images/myImg.png":
+/*!*************************************!*\
+  !*** ./src/assets/images/myImg.png ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -7835,7 +7978,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/i.png");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/myImg.png");
 
 /***/ }),
 
