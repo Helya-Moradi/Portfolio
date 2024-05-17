@@ -377,8 +377,8 @@ header .socialMedias_Id_J a:hover {
   align-items: center;
   background-color: var(--secondary2);
   border-radius: 50%;
-  height: clamp(18rem, 30vw, 30rem);
-  width: clamp(18rem, 30vw, 30rem);
+  height: clamp(15rem, 27vw, 30rem);
+  width: clamp(15rem, 27vw, 30rem);
 }
 .home_Iyqi .imageContainer_JZdr::after {
   position: absolute;
@@ -415,18 +415,12 @@ header .socialMedias_Id_J a:hover {
     height: auto;
     padding-top: 6rem;
   }
-  .home_Iyqi .imageContainer_JZdr {
-    width: 18rem;
-  }
 }
 @media screen and (max-width: 410px) {
   .home_Iyqi {
     padding: 5rem 1.5rem 1.5rem;
     align-items: center;
     gap: 2rem;
-  }
-  .home_Iyqi .imageContainer_JZdr {
-    width: 14rem;
   }
   .home_Iyqi .introduce_Zmp3 {
     gap: 2rem;
