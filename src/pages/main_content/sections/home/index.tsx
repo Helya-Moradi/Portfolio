@@ -8,6 +8,14 @@ function Home({observerRef}: any) {
     const imgRef = useRef(null);
     const [windowSize,setWindowSize] =useState(null);
 
+    window.addEventListener('resize',()=>{
+        setWindowSize(window.innerWidth)
+    })
+
+    useEffect(() => {
+        setWindowSize(window.innerWidth)
+    }, []);
+
     useEffect(() => {
         const canvas = canvasRef.current;
         canvas.width = canvas.parentElement.clientWidth;
@@ -64,7 +72,7 @@ function Home({observerRef}: any) {
                 this.height = height;
                 this.particlesArray = [];
                 this.image = image;
-                this.gap = 3;
+                this.gap = 2;
                 this.mouse = {
                     radius: 3000,
                     x: undefined,
@@ -120,9 +128,6 @@ function Home({observerRef}: any) {
         animate();
     }, [windowSize])
 
-    window.addEventListener('resize',()=>{
-        setWindowSize(window.innerWidth)
-    })
 
     return (<div className={style.home} id='home' ref={observerRef}>
         <div className={style.imageContainer}>
