@@ -35,7 +35,7 @@ function Home({observerRef}: any) {
                 this.size = this.effect.gap;
                 this.vx = 0;
                 this.vy = 0;
-                this.ease = 0.2;
+                this.ease = 0.3;
                 this.friction = 0.9;
                 this.dx = 0;
                 this.dy = 0;
