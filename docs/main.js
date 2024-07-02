@@ -5722,6 +5722,177 @@ function CircleAnimation(_ref) {
 
 /***/ }),
 
+/***/ "./src/components/dottedCanvas/index.tsx":
+/*!***********************************************!*\
+  !*** ./src/components/dottedCanvas/index.tsx ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _pages_main_content_sections_home_index_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../pages/main_content/sections/home/index.sass */ "./src/pages/main_content/sections/home/index.sass");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+function DottedCanvas(_ref) {
+  var img = _ref.img,
+    container = _ref.container;
+  var canvasRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(window.innerWidth),
+    _useState2 = _slicedToArray(_useState, 2),
+    windowSize = _useState2[0],
+    setWindowSize = _useState2[1];
+  window.addEventListener('resize', function () {
+    setWindowSize(window.innerWidth);
+  });
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    var canvas = canvasRef.current;
+    canvas.width = canvas.parentElement.clientWidth;
+    canvas.height = canvas.parentElement.clientHeight;
+    var image = document.createElement('img');
+    image.src = img;
+    var ctx = canvas.getContext("2d");
+    var Particle = /*#__PURE__*/function () {
+      function Particle(effect, x, y, color) {
+        _classCallCheck(this, Particle);
+        this.effect = effect;
+        this.x = Math.random() * this.effect.width;
+        this.y = Math.random() * this.effect.height;
+        this.originX = Math.floor(x);
+        this.originY = Math.floor(y);
+        this.color = color;
+        this.size = this.effect.gap;
+        this.vx = 0;
+        this.vy = 0;
+        this.ease = 0.3;
+        this.friction = 0.9;
+        this.dx = 0;
+        this.dy = 0;
+        this.distance = 0;
+        this.force = 0;
+        this.angle = 0;
+      }
+      return _createClass(Particle, [{
+        key: "draw",
+        value: function draw(context) {
+          context.fillStyle = this.color;
+          context.fillRect(this.x, this.y, this.size, this.size);
+        }
+      }, {
+        key: "update",
+        value: function update() {
+          this.dx = this.effect.mouse.x - this.x;
+          this.dy = this.effect.mouse.y - this.y;
+          this.distance = this.dx * this.dx + this.dy * this.dy;
+          this.force = -this.effect.mouse.radius / this.distance;
+          if (this.distance < this.effect.mouse.radius) {
+            this.angle = Math.atan2(this.dy, this.dx);
+            this.vx += this.force * Math.cos(this.angle);
+            this.vy += this.force * Math.sin(this.angle);
+          }
+          this.x += (this.vx *= this.friction) + (this.originX - this.x) * this.ease;
+          this.y += (this.vy *= this.friction) + (this.originY - this.y) * this.ease;
+        }
+      }]);
+    }();
+    var Effect = /*#__PURE__*/function () {
+      function Effect(width, height) {
+        var _this = this;
+        _classCallCheck(this, Effect);
+        this.width = width;
+        this.height = height;
+        this.particlesArray = [];
+        this.image = image;
+        this.gap = 2;
+        this.mouse = {
+          radius: 3000,
+          x: undefined,
+          y: undefined
+        };
+        var canvasRect = canvas.getBoundingClientRect();
+        if (container) {
+          container.addEventListener('mousemove', function (e) {
+            _this.mouse.x = e.clientX - canvasRect.left;
+            _this.mouse.y = e.clientY - canvasRect.top + window.scrollY;
+          });
+          container.addEventListener('mouseleave', function () {
+            _this.mouse.x = undefined;
+            _this.mouse.y = undefined;
+          });
+        }
+      }
+      return _createClass(Effect, [{
+        key: "init",
+        value: function init(context) {
+          context.drawImage(this.image, 20, 40, this.width - 40, this.height - 40);
+          var pixels = context.getImageData(0, 0, this.width, this.height).data;
+          for (var y = 0; y < this.height; y += this.gap) {
+            for (var x = 0; x < this.width; x += this.gap) {
+              var index = (y * this.width + x) * 4;
+              var red = pixels[index];
+              var green = pixels[index + 1];
+              var blue = pixels[index + 2];
+              var alpha = pixels[index + 3];
+              var color = "rgb(".concat(red, ",").concat(green, ",").concat(blue, ")");
+              if (alpha > 0) {
+                this.particlesArray.push(new Particle(this, x, y, color));
+              }
+            }
+          }
+        }
+      }, {
+        key: "draw",
+        value: function draw(context) {
+          this.particlesArray.forEach(function (particle) {
+            return particle.draw(context);
+          });
+        }
+      }, {
+        key: "update",
+        value: function update() {
+          this.particlesArray.forEach(function (particle) {
+            return particle.update();
+          });
+        }
+      }]);
+    }();
+    var effect = new Effect(canvas.width, canvas.height);
+    effect.init(ctx);
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      effect.draw(ctx);
+      effect.update();
+      requestAnimationFrame(animate);
+    }
+    animate();
+  }, [windowSize, container, img]);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("canvas", {
+    id: _pages_main_content_sections_home_index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].canvas,
+    ref: canvasRef
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DottedCanvas);
+
+/***/ }),
+
 /***/ "./src/components/hamburgerMenu/index.tsx":
 /*!************************************************!*\
   !*** ./src/components/hamburgerMenu/index.tsx ***!
@@ -7056,34 +7227,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.sass */ "./src/pages/main_content/sections/home/index.sass");
 /* harmony import */ var _assets_images_myImg_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../assets/images/myImg.png */ "./src/assets/images/myImg.png");
 /* harmony import */ var _components_zigzagAnimation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../components/zigzagAnimation */ "./src/components/zigzagAnimation/index.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_dottedCanvas__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../components/dottedCanvas */ "./src/components/dottedCanvas/index.tsx");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 
 
 function Home(_ref) {
   var observerRef = _ref.observerRef;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+  var imageContainer = (0,react__WEBPACK_IMPORTED_MODULE_4__.useRef)(null);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].home,
     id: "home",
     ref: observerRef,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
       className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].imageContainer,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-        src: _assets_images_myImg_png__WEBPACK_IMPORTED_MODULE_1__["default"],
-        alt: "myImg",
-        className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].myImg
+      ref: imageContainer,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_dottedCanvas__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        img: _assets_images_myImg_png__WEBPACK_IMPORTED_MODULE_1__["default"],
+        container: imageContainer.current
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].introduce,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
         className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].title,
-        children: ["Hello ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), "I\u2019m Helya Moradi"]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+        children: ["Hello ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {}), "I\u2019m Helya Moradi"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
         className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].description,
         children: "Self-motivated and creative web designer and front-end developer. Interested in learning, programming, web design, artwork and problem solving."
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_zigzagAnimation__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_zigzagAnimation__WEBPACK_IMPORTED_MODULE_2__["default"], {
       right: -9,
       bottom: 3
     })]
@@ -8740,7 +8917,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"home":"home_Iyqi","imageContainer":"imageContainer_JZdr","myImg":"myImg_eyaw","introduce":"introduce_Zmp3","title":"title_aWvm","description":"description_i9_M"});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"home":"home_Iyqi","imageContainer":"imageContainer_JZdr","introduce":"introduce_Zmp3","title":"title_aWvm","description":"description_i9_M"});
 
 /***/ }),
 

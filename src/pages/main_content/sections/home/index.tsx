@@ -2,12 +2,14 @@ import style from './index.sass'
 import myImg from "src/assets/images/myImg.png"
 import ZigzagAnimation from "src/components/zigzagAnimation";
 import DottedCanvas from "src/components/dottedCanvas";
+import {useRef} from "react";
 
 function Home({observerRef}: any) {
+    const imageContainer = useRef(null);
+
     return (<div className={style.home} id='home' ref={observerRef}>
-        <div className={style.imageContainer}>
-            {/*<DottedCanvas img={myImg}/>*/}
-            <img src={myImg} alt="myImg" className={style.myImg}/>
+        <div className={style.imageContainer} ref={imageContainer}>
+            <DottedCanvas img={myImg} container={imageContainer.current}/>
         </div>
 
         <div className={style.introduce}>

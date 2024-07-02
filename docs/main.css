@@ -389,11 +389,6 @@ header .socialMedias_Id_J a:hover {
   height: 4rem;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--primaryBg));
 }
-.home_Iyqi .imageContainer_JZdr .myImg_eyaw {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .home_Iyqi .introduce_Zmp3 {
   flex: 1;
   display: flex;

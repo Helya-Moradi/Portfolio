@@ -2,10 +2,11 @@ import style from "src/pages/main_content/sections/home/index.sass";
 import {useEffect, useRef, useState} from "react";
 
 interface DottedCanvasProps {
-    img: string
+    img: string,
+    container: HTMLElement
 }
 
-function DottedCanvas({img}: DottedCanvasProps) {
+function DottedCanvas({img, container}: DottedCanvasProps) {
     const canvasRef = useRef(null);
     const [windowSize, setWindowSize] = useState(window.innerWidth);
 
@@ -24,6 +25,23 @@ function DottedCanvas({img}: DottedCanvasProps) {
         const ctx = canvas.getContext("2d");
 
         class Particle {
+            effect: any;
+            x: number;
+            y: number;
+            originX: number;
+            originY: number;
+            color: string;
+            size: number;
+            vx: number;
+            vy: number;
+            ease: number;
+            friction: number;
+            dx: number;
+            dy: number;
+            distance: number;
+            force: number;
+            angle: number;
+
             constructor(effect, x, y, color) {
                 this.effect = effect;
                 this.x = Math.random() * this.effect.width;
@@ -66,6 +84,17 @@ function DottedCanvas({img}: DottedCanvasProps) {
         }
 
         class Effect {
+            width: number;
+            height: number;
+            particlesArray: any;
+            image: object;
+            gap: number;
+            mouse: {
+                radius: number;
+                x: number;
+                y: number;
+            };
+
             constructor(width, height) {
                 this.width = width;
                 this.height = height;
@@ -80,10 +109,17 @@ function DottedCanvas({img}: DottedCanvasProps) {
 
                 let canvasRect = canvas.getBoundingClientRect();
 
-                window.addEventListener('mousemove', (e) => {
-                    this.mouse.x = e.clientX - canvasRect.left;
-                    this.mouse.y = e.clientY - canvasRect.top + window.scrollY;
-                })
+                if (container) {
+                    container.addEventListener('mousemove', (e) => {
+                        this.mouse.x = e.clientX - canvasRect.left;
+                        this.mouse.y = e.clientY - canvasRect.top + window.scrollY;
+                    })
+
+                    container.addEventListener('mouseleave', () => {
+                        this.mouse.x = undefined;
+                        this.mouse.y = undefined;
+                    })
+                }
             }
 
             init(context) {
@@ -125,7 +161,7 @@ function DottedCanvas({img}: DottedCanvasProps) {
         }
 
         animate();
-    }, [])
+    }, [windowSize, container, img]);
 
     return (
         <canvas id={style.canvas} ref={canvasRef}/>
