@@ -6,7 +6,8 @@ import DottedCanvas from "src/components/dottedCanvas";
 function Home({observerRef}: any) {
     return (<div className={style.home} id='home' ref={observerRef}>
         <div className={style.imageContainer}>
-            <DottedCanvas img={myImg}/>
+            {/*<DottedCanvas img={myImg}/>*/}
+            <img src={myImg} alt="myImg" className={style.myImg}/>
         </div>
 
         <div className={style.introduce}>

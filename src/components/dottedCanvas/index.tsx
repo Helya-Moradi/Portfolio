@@ -7,24 +7,20 @@ interface DottedCanvasProps {
 
 function DottedCanvas({img}: DottedCanvasProps) {
     const canvasRef = useRef(null);
-    const imgRef = useRef(null);
-    const [windowSize,setWindowSize] =useState(null);
+    const [windowSize, setWindowSize] = useState(window.innerWidth);
 
-    window.addEventListener('resize',()=>{
+    window.addEventListener('resize', () => {
         setWindowSize(window.innerWidth)
     })
-
-    useEffect(() => {
-        setWindowSize(window.innerWidth)
-    }, []);
 
     useEffect(() => {
         const canvas = canvasRef.current;
         canvas.width = canvas.parentElement.clientWidth;
         canvas.height = canvas.parentElement.clientHeight;
-        const image = imgRef.current;
 
-        image.style.border = '1px solid red'
+        const image = document.createElement('img');
+        image.src = img;
+
         const ctx = canvas.getContext("2d");
 
         class Particle {
@@ -85,8 +81,8 @@ function DottedCanvas({img}: DottedCanvasProps) {
                 let canvasRect = canvas.getBoundingClientRect();
 
                 window.addEventListener('mousemove', (e) => {
-                    this.mouse.x = e.x - canvasRect.x;
-                    this.mouse.y = e.y - canvasRect.y;
+                    this.mouse.x = e.clientX - canvasRect.left;
+                    this.mouse.y = e.clientY - canvasRect.top + window.scrollY;
                 })
             }
 
@@ -129,13 +125,10 @@ function DottedCanvas({img}: DottedCanvasProps) {
         }
 
         animate();
-    }, [windowSize])
+    }, [])
 
     return (
-        <>
-            <img src={img} alt="image" ref={imgRef} style={{display: "none"}}/>
-            <canvas id={style.canvas} ref={canvasRef}/>
-        </>
+        <canvas id={style.canvas} ref={canvasRef}/>
     )
 }
 
