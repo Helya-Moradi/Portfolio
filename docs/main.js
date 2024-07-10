@@ -5733,10 +5733,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _pages_main_content_sections_home_index_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../pages/main_content/sections/home/index.sass */ "./src/pages/main_content/sections/home/index.sass");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -5751,23 +5750,21 @@ function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" !=
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
-
 function DottedCanvas(_ref) {
-  var img = _ref.img,
-    container = _ref.container;
-  var canvasRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(window.innerWidth),
+  var img = _ref.img;
+  var canvasRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(window.innerWidth),
     _useState2 = _slicedToArray(_useState, 2),
-    windowSize = _useState2[0],
-    setWindowSize = _useState2[1];
+    windowWidth = _useState2[0],
+    setWindowWidth = _useState2[1];
   window.addEventListener('resize', function () {
-    setWindowSize(window.innerWidth);
+    setWindowWidth(window.innerWidth);
   });
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var canvas = canvasRef.current;
     canvas.width = canvas.parentElement.clientWidth;
     canvas.height = canvas.parentElement.clientHeight;
-    var image = document.createElement('img');
+    var image = new Image();
     image.src = img;
     var ctx = canvas.getContext("2d");
     var Particle = /*#__PURE__*/function () {
@@ -5828,12 +5825,13 @@ function DottedCanvas(_ref) {
           y: undefined
         };
         var canvasRect = canvas.getBoundingClientRect();
-        if (container) {
-          container.addEventListener('mousemove', function (e) {
+        var canvasParent = canvas.parentElement;
+        if (canvasParent) {
+          canvasParent.addEventListener('mousemove', function (e) {
             _this.mouse.x = e.clientX - canvasRect.left;
             _this.mouse.y = e.clientY - canvasRect.top + window.scrollY;
           });
-          container.addEventListener('mouseleave', function () {
+          canvasParent.addEventListener('mouseleave', function () {
             _this.mouse.x = undefined;
             _this.mouse.y = undefined;
           });
@@ -5842,21 +5840,24 @@ function DottedCanvas(_ref) {
       return _createClass(Effect, [{
         key: "init",
         value: function init(context) {
-          context.drawImage(this.image, 20, 40, this.width - 40, this.height - 40);
-          var pixels = context.getImageData(0, 0, this.width, this.height).data;
-          for (var y = 0; y < this.height; y += this.gap) {
-            for (var x = 0; x < this.width; x += this.gap) {
-              var index = (y * this.width + x) * 4;
-              var red = pixels[index];
-              var green = pixels[index + 1];
-              var blue = pixels[index + 2];
-              var alpha = pixels[index + 3];
-              var color = "rgb(".concat(red, ",").concat(green, ",").concat(blue, ")");
-              if (alpha > 0) {
-                this.particlesArray.push(new Particle(this, x, y, color));
+          var _this2 = this;
+          this.image.onload = function () {
+            context.drawImage(_this2.image, 20, 40, _this2.width - 40, _this2.height - 40);
+            var pixels = context.getImageData(0, 0, _this2.width, _this2.height).data;
+            for (var y = 0; y < _this2.height; y += _this2.gap) {
+              for (var x = 0; x < _this2.width; x += _this2.gap) {
+                var index = (y * _this2.width + x) * 4;
+                var red = pixels[index];
+                var green = pixels[index + 1];
+                var blue = pixels[index + 2];
+                var alpha = pixels[index + 3];
+                var color = "rgb(".concat(red, ",").concat(green, ",").concat(blue, ")");
+                if (alpha > 0) {
+                  _this2.particlesArray.push(new Particle(_this2, x, y, color));
+                }
               }
             }
-          }
+          };
         }
       }, {
         key: "draw",
@@ -5883,9 +5884,8 @@ function DottedCanvas(_ref) {
       requestAnimationFrame(animate);
     }
     animate();
-  }, [windowSize, container, img]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("canvas", {
-    id: _pages_main_content_sections_home_index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].canvas,
+  }, [windowWidth, canvasRef]);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("canvas", {
     ref: canvasRef
   });
 }
@@ -7248,14 +7248,15 @@ function Home(_ref) {
       className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].imageContainer,
       ref: imageContainer,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_dottedCanvas__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        img: _assets_images_myImg_png__WEBPACK_IMPORTED_MODULE_1__["default"],
-        container: imageContainer.current
+        img: _assets_images_myImg_png__WEBPACK_IMPORTED_MODULE_1__["default"]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].introduce,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
         className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].title,
-        children: ["Hello ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {}), "I\u2019m Helya Moradi"]
+        children: ["Hello, I am ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+          children: "Helya Moradi"
+        })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
         className: _index_sass__WEBPACK_IMPORTED_MODULE_0__["default"].description,
         children: "Self-motivated and creative web designer and front-end developer. Interested in learning, programming, web design, artwork and problem solving."

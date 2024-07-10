@@ -9,12 +9,12 @@ function Home({observerRef}: any) {
 
     return (<div className={style.home} id='home' ref={observerRef}>
         <div className={style.imageContainer} ref={imageContainer}>
-            <DottedCanvas img={myImg} container={imageContainer.current}/>
+            <DottedCanvas img={myImg}/>
         </div>
 
         <div className={style.introduce}>
                 <span className={style.title}>
-                    Hello <br/>I’m Helya Moradi
+                    Hello, I am <span>Helya Moradi</span>
                 </span>
 
             <span className={style.description}>

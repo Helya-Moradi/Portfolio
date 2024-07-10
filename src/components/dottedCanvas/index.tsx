@@ -1,17 +1,15 @@
-import style from "src/pages/main_content/sections/home/index.sass";
 import {useEffect, useRef, useState} from "react";
 
 interface DottedCanvasProps {
-    img: string,
-    container: HTMLElement
+    img: string
 }
 
-function DottedCanvas({img, container}: DottedCanvasProps) {
+function DottedCanvas({img}: DottedCanvasProps) {
     const canvasRef = useRef(null);
-    const [windowSize, setWindowSize] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     window.addEventListener('resize', () => {
-        setWindowSize(window.innerWidth)
+        setWindowWidth(window.innerWidth)
     })
 
     useEffect(() => {
@@ -19,7 +17,7 @@ function DottedCanvas({img, container}: DottedCanvasProps) {
         canvas.width = canvas.parentElement.clientWidth;
         canvas.height = canvas.parentElement.clientHeight;
 
-        const image = document.createElement('img');
+        const image = new Image();
         image.src = img;
 
         const ctx = canvas.getContext("2d");
@@ -87,7 +85,7 @@ function DottedCanvas({img, container}: DottedCanvasProps) {
             width: number;
             height: number;
             particlesArray: any;
-            image: object;
+            image: HTMLImageElement;
             gap: number;
             mouse: {
                 radius: number;
@@ -107,15 +105,16 @@ function DottedCanvas({img, container}: DottedCanvasProps) {
                     y: undefined,
                 };
 
-                let canvasRect = canvas.getBoundingClientRect();
+                const canvasRect = canvas.getBoundingClientRect();
+                const canvasParent = canvas.parentElement;
 
-                if (container) {
-                    container.addEventListener('mousemove', (e) => {
+                if (canvasParent) {
+                    canvasParent.addEventListener('mousemove', (e) => {
                         this.mouse.x = e.clientX - canvasRect.left;
                         this.mouse.y = e.clientY - canvasRect.top + window.scrollY;
                     })
 
-                    container.addEventListener('mouseleave', () => {
+                    canvasParent.addEventListener('mouseleave', () => {
                         this.mouse.x = undefined;
                         this.mouse.y = undefined;
                     })
@@ -123,19 +122,21 @@ function DottedCanvas({img, container}: DottedCanvasProps) {
             }
 
             init(context) {
-                context.drawImage(this.image, 20, 40, this.width - 40, this.height - 40);
-                const pixels = context.getImageData(0, 0, this.width, this.height).data;
-                for (let y = 0; y < this.height; y += this.gap) {
-                    for (let x = 0; x < this.width; x += this.gap) {
-                        const index = (y * this.width + x) * 4;
-                        const red = pixels[index];
-                        const green = pixels[index + 1];
-                        const blue = pixels[index + 2];
-                        const alpha = pixels[index + 3];
-                        const color = `rgb(${red},${green},${blue})`;
+                this.image.onload = () => {
+                    context.drawImage(this.image, 20, 40, this.width - 40, this.height - 40);
+                    const pixels = context.getImageData(0, 0, this.width, this.height).data;
+                    for (let y = 0; y < this.height; y += this.gap) {
+                        for (let x = 0; x < this.width; x += this.gap) {
+                            const index = (y * this.width + x) * 4;
+                            const red = pixels[index];
+                            const green = pixels[index + 1];
+                            const blue = pixels[index + 2];
+                            const alpha = pixels[index + 3];
+                            const color = `rgb(${red},${green},${blue})`;
 
-                        if (alpha > 0) {
-                            this.particlesArray.push(new Particle(this, x, y, color));
+                            if (alpha > 0) {
+                                this.particlesArray.push(new Particle(this, x, y, color));
+                            }
                         }
                     }
                 }
@@ -161,10 +162,11 @@ function DottedCanvas({img, container}: DottedCanvasProps) {
         }
 
         animate();
-    }, [windowSize, container, img]);
+
+    }, [windowWidth, canvasRef]);
 
     return (
-        <canvas id={style.canvas} ref={canvasRef}/>
+        <canvas ref={canvasRef}/>
     )
 }
 

@@ -399,7 +399,12 @@ header .socialMedias_Id_J a:hover {
 .home_Iyqi .introduce_Zmp3 .title_aWvm {
   font-size: clamp(2rem, 7.5vw, 5.4rem);
   font-weight: 300;
-  line-height: clamp(2.2rem, 8vw, 5rem);
+  line-height: clamp(2.2rem, 8vw, 5.5rem);
+}
+.home_Iyqi .introduce_Zmp3 .title_aWvm span {
+  font-weight: 500;
+  display: block;
+  font-size: clamp(1rem, 6.6vw, 4.5rem);
 }
 .home_Iyqi .introduce_Zmp3 .description_i9_M {
   line-height: 1.9rem;
